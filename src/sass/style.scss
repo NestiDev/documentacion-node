@@ -1,0 +1,601 @@
+/*
+	variables para definir altura para los elementos
+	que tienen position: fixed
+*/
+$heightFixed: 70px;
+
+/*
+	variables para definir colores
+*/
+$colorOne: #4caf50;
+$colorThree: #fff;
+$colorFour: #5c5b5b;
+$colorFive: #ccc;
+
+/*
+	variables para definir bordes
+*/
+$borderOne: #eaecef;
+
+/*
+	formatiamos las margenes y espaciados que definen los
+	navegadores por defecto
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*
+	body
+*/
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	min-height: 100vh;
+}
+
+/*  
+    header_component: definimos position: fixed junto con sus 
+	propiedades top, left, right y z-index para fijar el menu
+	de navegacion en la parte superior
+*/
+.header_component {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	background-color: $colorThree;
+	border-bottom: 1px solid $borderOne;
+	transition: box-shadow 0.2s;
+
+	/*
+		js_header_scroll: clase añadida con javascript en "./src/js/main.js"
+		definimos una sombra cuando inicia el scroll
+	*/
+	&.js_header_scroll {
+		box-shadow: 0 2px 5px #b3b1b14d;
+	}
+
+	/*
+		header_container: definimos display flex junto con sus 
+		propiedades justify-content y align-items mas una altura 
+		para centrar de manera vertical y horizontal los elementos 
+		que este contiene	
+	*/
+	.header_container {
+		display: flex;
+		justify-content: space-around;
+		height: $heightFixed;
+		align-items: center;
+
+		/*
+			header_box_logo
+		*/
+		.header_box_logo {
+			/*
+				tag-a	
+			*/
+			a {
+				text-decoration: none;
+
+				/*
+					tag-img: definimos vertical-align: top para remover un 
+					espaciado que generan los navegadores en las img, finalmente 
+					con object-fit ajustamos la img a su contenedor 
+				*/
+				img {
+					vertical-align: top;
+					width: 70px;
+					height: 70px;
+					object-fit: cover;
+				}
+			}
+		}
+
+		/*
+			header_box_menu_icon
+		*/
+		.header_box_menu_icon {
+			cursor: pointer;
+
+			/*
+				tag-span: definimos la propiedad display: block para hacer 
+				visible las lineas del menu hamburgesa, finalmente definimos
+				un ancho y alto para darles tamaño	
+			*/
+			span {
+				display: block;
+				width: 26px;
+				height: 3px;
+				background-color: $colorFour;
+				border-radius: 10px;
+
+				/*
+					seleccionamos el segundo elemento tag-span y generamos
+					un margen en el eje-Y
+				*/
+				&:nth-child(2) {
+					margin: 4px 0;
+				}
+
+				/*
+					dispositivos mayores a 720px: definimos display: none 
+					para ocultar el icono de menu de la vista
+				*/
+				@media (min-width: 720px) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+/*  
+    components_container
+*/
+.components_container {
+	/* 
+        nav_component: definimos position: fixed junto con sus propiedades 
+		top, left y z-index para fijar el menu de navegacion y
+		posicionarlo en la parte izquierda de la pantalla, con
+		hight: 100vh hacemos que este elemento tome todo el alto de la 
+		pantalla y finalmente definimos un espaciado en el eje-X y con 
+		overflow: auto generamos un scroll en el eje-Y para cuando la altura 
+		de la pantalla sea menor a la altura del menu de navegacion
+    */
+	.nav_component {
+		position: fixed;
+		top: $heightFixed;
+		left: 0;
+		z-index: 8;
+		border-right: 1px solid $borderOne;
+		width: 240px;
+		height: 100vh;
+		padding: 0 25px;
+		overflow: auto;
+
+		/*
+			::-webkit-scrollbar: definimos un ancho del
+			scrollbar
+		*/
+		&::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		/*
+			::-webkit-scrollbar-thumb: definimos display: none
+			para ocultar el scrollbar
+		*/
+		&::-webkit-scrollbar-thumb {
+			background-color: #c1c1c1;
+			border-radius: 4px;
+			display: none;
+		}
+
+		/*
+			cuando hacemos :hover sobre nav_component 
+			seleccionamos el pseudo elemento 
+			::-webkit-scrollbar-thumb y definimos display: block
+			para hacer visible el scrollbar
+		*/
+		&:hover {
+			&::-webkit-scrollbar-thumb {
+				display: block;
+			}
+		}
+
+		/*
+			dispositivos menores a 719px: definimos transform: translateX() 
+			para desplazar el menu de navegacion ocultandolo de la vista
+		*/
+		@media (max-width: 719px) {
+			background-color: $colorThree;
+			transform: translateX(-1000px);
+			transition: transform 0.3s;
+
+			/*
+				js_show_navbar: clase añadida con javascript en "./src/js/main.js"
+				definimos transform: translateX(0px) para retornanr el menu de 
+				navegacion en su posicion original haciendolo nuevamente visible
+			*/
+			&.js_show_navbar {
+				transform: translateX(0px);
+			}
+		}
+
+		/*
+			search_box: definimos flexbox con su propiedad
+			align-items y una altura para centrar de manera vertical 
+			los elementos que este contiene, finalmente definimos 
+			un margen en la parte superior 
+		*/
+		.search_box {
+			display: flex;
+			height: 35px;
+			align-items: center;
+			border: 1px solid $borderOne;
+			border-radius: 50px;
+			margin-top: 30px;
+
+			/*
+				tag-input: definimos border: none y outline: none 
+				para remover un borde que generan los navegadores 
+				en los inputs, finalmente definimos un espaciado 
+				en el eje-Y para este elemento 
+			*/
+			input {
+				border: none;
+				outline: none;
+				background-color: transparent;
+				color: $colorFour;
+				font-size: 17px;
+				letter-spacing: 0.5px;
+				width: 153px;
+				padding: 0 8px 0 14px;
+			}
+
+			/*
+				search_btn
+			*/
+			.search_btn {
+				/*
+					tag-svg: definimos vertical-align: top para remover un 
+					espaciado que generan los navegadores en los iconos 
+				*/
+				svg {
+					vertical-align: top;
+					fill: $colorOne;
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+
+		/*
+			nav_menu: definimos un espaciado en el eje-Y para este elemento 
+		*/
+		.nav_menu {
+			padding: 30px 0;
+
+			/*
+				li_dropdown: definimos un margen en la parte inferior de este 
+				elemento
+			*/
+			.li_dropdown {
+				list-style: none;
+				margin-bottom: 18px;
+
+				/*
+					cuando li_dropdown tiene la clase js_show_dropdown_menu
+					seleccionamos a dropdown_menu y definimos display block
+					y una altura para hacer visible los elementos que este
+					contiene
+				*/
+				&.js_show_dropdown_menu .dropdown_menu {
+					display: block;
+					max-height: 999px;
+				}
+
+				/*
+					cuando li_dropdown tiene la clase js_show_dropdown_menu
+					seleccionamos a la tag-svg que se encuentra dentro de la
+					tag-a y definimos una rotacion de 180 grados
+				*/
+				&.js_show_dropdown_menu a svg {
+					transform: rotate(180deg);
+				}
+
+				/*
+					tag-a: definimos flexbox con su propiedad
+					justify-content para generar un espaciado entre
+					el enlace y el icono y align-items para centrar de manera
+					vertical los elementos que este contiene 
+				*/
+				a {
+					text-decoration: none;
+					color: $colorFour;
+					font-size: 1.1rem;
+					font-weight: 600;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					/*
+						cuando hacemos :hover sobre la tag-a modificamos
+						el color de este elemento
+					*/
+					&:hover {
+						color: $colorOne;
+					}
+
+					&.js_active_link {
+						color: $colorOne;
+					}
+
+					&.js_active_link svg {
+						fill: $colorOne;
+					}
+
+					/*
+						tag-svg: definimos vertical-align: top para remover un 
+						espaciado que generan los navegadores en los iconos, 
+						finalmente una transicion para suavizar el giro del
+						icono al momento de hacer click en li_dropdown
+					*/
+					svg {
+						vertical-align: top;
+						fill: $colorFour;
+						width: 12px;
+						height: 12px;
+						transition: transform 0.3s;
+					}
+				}
+
+				/*
+					dropdown_menu: definimos un max-height: 0 para
+					reducir la altura de este elemento luego
+					con la propiedad overflow: hidden ocultamos 
+					los valores que sobresalen del elemento,
+					finalmente definimos un espaciado en el eje-Y 
+					para este elemento
+				*/
+				.dropdown_menu {
+					max-height: 0;
+					overflow: hidden;
+					padding: 0 13px;
+
+					/*
+						tag-li: definimos un espaciado en el eje-Y para este elemento
+					*/
+					li {
+						list-style: none;
+						padding: 10px 0;
+
+						/*
+							tag-a
+						*/
+						a {
+							font-size: 1rem;
+
+							/*
+								cuando hacemos :hover sobre la tag-a modificamos
+								el color de este elemento
+							*/
+							&:hover {
+								color: $colorOne;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* 
+        main_components: definimos position alsolute junto con su 
+		propiedade top para posicionar este elemento
+    */
+	.main_components {
+		position: absolute;
+		top: $heightFixed;
+		color: $colorFour;
+
+		/*
+			dispositivos mayores a 720px: definimos right: 0 para
+			posicionar este elemento a la parte derecha de la
+			pantalla para que le deje el espacio al menu de navegacion, 
+			tambien definimos un ancho calculado y a 100% y le 
+			restamos el ancho del menu de navegacion, finalmente 
+			definimos un espaciado en el eje-X para este elemento
+		*/
+		@media (min-width: 720px) {
+			right: 0;
+			width: calc(100% - 240px);
+			padding: 0 50px;
+		}
+
+		/*
+			dispositivos mayores a 900px: definimos un espaciado
+			en el eje-X para este elemento
+		*/
+		@media (min-width: 900px) {
+			padding: 0 60px;
+		}
+
+		/*
+			dispositivos mayores a 1200px: modificamos el espaciado
+			en el eje-X para este elemento
+		*/
+		@media (min-width: 1200px) {
+			padding: 0 80px;
+		}
+
+		/*
+			dispositivos menores a 719px: definimos left: 0 para
+			posicionar este elemento a la parte izquierda de la
+			pantalla para que tome el espacio dejado por el 
+			menu de navegacion, finalmente modificamos el ancho a
+			100% para que tome el ancho total de la pantalla y
+			definimos un espaciado en el eje-X para este elemento
+		*/
+		@media (max-width: 719px) {
+			left: 0;
+			width: 100%;
+			padding: 0 30px;
+		}
+
+		/*
+			dispositivos menores a 472px: modificamos el espaciado
+			en el eje-X para este elemento
+		*/
+		@media (max-width: 472px) {
+			padding: 0 20px;
+		}
+
+		/*
+			banner_component
+		*/
+		.banner_component {
+			text-align: center;
+			font-size: 3rem;
+			margin: 30px 0 40px;
+
+			/*
+				dispositivos menores a 952px: modificamos el tamaño de
+				fuente y el margen inferior de este elemento
+			*/
+			@media (max-width: 952px) {
+				font-size: 1.9rem;
+				margin: 30px 0;
+			}
+
+			/*
+				dispositivos menores a 418px: modificamos el tamaño de
+				fuente de este elemento
+			*/
+			@media (max-width: 418px) {
+				font-size: 1.3rem;
+			}
+
+			/*
+				tag-h1
+			*/
+			h1 {
+				color: $colorFour;
+
+				/*
+					tag-span
+				*/
+				span {
+					color: $colorOne;
+				}
+			}
+		}
+
+		/*
+			description_component
+		*/
+		.description_component {
+			/*
+				description_paragraph: definimos una separacion de lineas y un margen
+				en el eje-Y para este elemento
+			*/
+			.description_paragraph {
+				font-size: 1.5rem;
+				line-height: 1.5;
+				margin-bottom: 30px;
+
+				/*
+					tag-strong
+				*/
+				strong {
+					color: $colorOne;
+				}
+			}
+		}
+
+		/*
+			section_banner  
+		*/
+		.section_banner {
+			/*
+				tag-h2: definimos un margen en la parte superior de
+				este elemento
+			*/
+			h2 {
+				font-size: 2.8rem;
+				margin-top: 30px;
+			}
+
+			/*
+				banner_line_titles
+			*/
+			.banner_line_titles {
+				border: 2px solid $colorOne;
+				width: 100px;
+			}
+
+			/*
+				tag-p: definimos una separacion de lineas y un margen 
+				en el eje-Y para este elemento
+			*/
+			p {
+				font-size: 1.5rem;
+				line-height: 1.5;
+				margin: 30px 0 80px;
+
+				/*
+					tag-strong
+				*/
+				strong {
+					color: $colorOne;
+				}
+			}
+		}
+
+		/*
+			sections_container
+		*/
+		.sections_container {
+			/*
+				sect_content
+			*/
+			.sect_content {
+				/*
+					tag-h3: definimos un margen en la parte inferior de
+					este elemento
+				*/
+				h3 {
+					font-size: 2rem;
+					line-height: 1.2;
+					margin-bottom: 40px;
+				}
+
+				/*
+					sect_box_img: definimos un margen en la parte inferior
+					de este elemento
+				*/
+				.sect_box_img {
+					text-align: center;
+					margin-bottom: 80px;
+
+					/*
+						tag-img: definimos vertical-align: top para remover un 
+						espaciado que generan los navegadores en los imagenes, 
+						finalmente con object-fit ajustamos la img a su contenedor 
+					*/
+					img {
+						vertical-align: top;
+						width: 100%;
+						height: auto;
+						object-fit: cover;
+						box-shadow: 0 2px 6px 0 #ccc;
+					}
+				}
+			}
+
+			/*
+				division_line: definimos un margen en la parte
+				inferior para este elemento
+			*/
+			.division_line {
+				text-align: center;
+				color: $colorFive;
+				margin-bottom: 90px;
+			}
+		}
+
+		/*
+			section_footer: definimos un margen personalizado en
+			el eje-Y para este elemento 
+		*/
+		.section_footer {
+			text-align: center;
+			color: $colorFive;
+			font-size: 1.2rem;
+			margin: 60px 0 30px;
+		}
+	}
+}

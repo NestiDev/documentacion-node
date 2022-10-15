@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>07. Auth mysql</title>
+    <link rel="stylesheet" href="./sass/style.css" />
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <header class="box_header">
+        <div class="box_logo">
+            <a href="index.html">
+                <img src="assests/images/node.png" alt="node">
+            </a>
+        </div>
+
+        <div class="box_icon_menu" id="icon_menu">
+            <span class="line_icon_menu"></span>
+        </div>
+    </header>
+
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main>
+
+        <!-- MENU -->
+        <nav id="menu_nav">
+            <ul>
+                <li><a href="node_proyect.html" target="_blank">01. Crear proyecto</a></li>
+                <li><a href="express.html" target="_blank">02. Express</a></li>
+                <li><a href="nodemon.html" target="_blank">03. Nodemon</a></li>
+                <li><a href="credenciales.html" target="_blank">04. Credenciales DB</a></li>
+                <li><a href="environments.html" target="_blank">05. Environments</a></li>
+                <li><a href="mysql.html" target="_blank">06. Mysql connect</a></li>
+                <li><a href="crud-mysql.html" target="_blank">08. Crud mysql</a></li>
+                <li><a href="mongo.html" target="_blank">09. Mongo connect</a></li>
+                <li><a href="schema.html" target="_blank">10. Mongo schema</a></li>
+                <li><a href="auth-mongo.html" target="_blank">11. Auth mongo</a></li>
+                <li><a href="crud-mongo.html" target="_blank">12. Crud mongo</a></li>
+                <li><a href="rutas.html" target="_blank">13. Routes config</a></li>
+                <li><a href="middlewares.html" target="_blank">14. Middlewares</a></li>
+                <li><a href="bcrypt.html" target="_blank">15. Bcrypt</a></li>
+                <li><a href="jwt.html" target="_blank">16. Jsonwebtoken</a></li>
+                <li><a href="exp-validator.html" target="_blank">17. Exp-validator</a></li>
+                <li><a href="authenticate.html" target="_blank">18. Authenticate</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENIDO -->
+        <div class="div_content">
+
+            <!-- auth mysql -->
+            <section class="main_content" id="modules">
+
+                <!-- descripcion de la sesion -->
+                <section class="box_description">
+                    <h2>07. Auth Mysql</h2>
+
+                    <div class="line_titles"></div>
+
+                    <p>
+                        Este nos permite crear un login el cual podra
+                        registrar un usuario para permitirle el acceso al
+                        aplicativo web. Este maneja el <strong>req</strong>
+                        que son datos enviados por el usuario desde el
+                        <strong>frontend</strong> estos son recibidos por el
+                        <strong>backend</strong> el cual devuelve una
+                        <strong>res</strong> a esa peticion.
+                    </p>
+                </section>
+
+                <!-- 01 metodo signup -->
+                <section class="sect_content">
+                    <h4>01. Metodo signup: Permite registrar un usuario</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/a01.png" alt="modulo">
+                    </div>
+                </section>
+
+                <!-- 02. datos requeridos del nuevo usuario -->
+                <section class="sect_content">
+                    <h4>02. Datos requeridos del nuevo usuario</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/a02.png" alt="modulo">
+                    </div>
+                </section>
+
+                <!-- 03. guradando el nuevo usuario -->
+                <section class="sect_content">
+                    <h4>03. Guradando el nuevo usuario</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/a03.png" alt="modulo">
+                    </div>
+                </section>
+
+                <!-- 04. validando el codigo -->
+                <section class="sect_content">
+                    <h4>04. Validando el codigo con postman</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/a04.png" alt="modulo">
+                    </div>
+                </section>
+
+                <div class="line_endsession">
+                    -------------------- End --------------------
+                </div>
+
+                <!-- 01 metodo signin -->
+                <section class="sect_content">
+                    <h4>01. Metodo signin: Permite el acceso de un usuario</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/b01.png" alt="modulo">
+                    </div>
+                </section>
+
+                <!-- 02. datos requeridos para el acceso -->
+                <section class="sect_content">
+                    <h4>02. Datos requeridos para el acceso</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/b02.png" alt="modulo">
+                    </div>
+                </section>
+
+                <!-- 03. mensaje de respuesta -->
+                <section class="sect_content">
+                    <h4>03. Mensaje de respuesta</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/b03.png" alt="modulo">
+                    </div>
+                </section>
+
+                <!-- 04. validando el codigo -->
+                <section class="sect_content">
+                    <h4>04. Validando el codigo con postman</h4>
+
+                    <div class="box_img">
+                        <img src="./assests/images/authmysql/b04.png" alt="modulo">
+                    </div>
+                </section>
+
+                <div class="line_endsession">End Auth Mysql</div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
