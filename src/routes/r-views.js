@@ -23,18 +23,24 @@ router.get("/", (req, res) => {
 /* 
 	______________________ acceder ______________________
 */
-router.get("/node-project", (req, res) => {
-	res.render("pages/node-project", {
-		title: "crear un projecto node",
+router.get("/iniciar-node", (req, res) => {
+	res.render("pages/iniciar-node", {
+		title: "iniciar un proyecto node",
 	});
 });
 
 /* 
 	______________________ express ______________________
 */
-router.get("/express", (req, res) => {
-	res.render("pages/express", {
-		title: "express node",
+router.get("/instalacion-express", (req, res) => {
+	res.render("pages/instalacion-express", {
+		title: "intalacion de express",
+	});
+});
+
+router.get("/servidor-express", (req, res) => {
+	res.render("pages/servidor-express", {
+		title: "servidor de express",
 	});
 });
 
@@ -50,9 +56,15 @@ router.get("/nodemon", (req, res) => {
 /* 
 	______________________ mongo db ______________________
 */
-router.get("/credenciales", (req, res) => {
-	res.render("pages/credenciales", {
+router.get("/mongo-credenciales", (req, res) => {
+	res.render("pages/mongo-credenciales", {
 		title: "credenciales mongodb node",
+	});
+});
+
+router.get("/mysql-credenciales", (req, res) => {
+	res.render("pages/mysql-credenciales", {
+		title: "credenciales mysql node",
 	});
 });
 

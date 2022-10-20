@@ -30,11 +30,36 @@
 		li_dropdown: contenedor de 1 tag-a
 	-->
 	<li class="li_dropdown">
-		<a href="/node-project">01. Crear proyecto</a>
+		<a href="/iniciar-node">01. Iniciar proyecto</a>
 	</li>
 
+	<!--  
+		li_dropdown: contenedor de 1 tag-a y 1 tag-ul, la clase
+		li_dropdown se implementa en javascript
+	-->
 	<li class="li_dropdown">
-		<a href="/express">02. Express</a>
+		<a href="#" data-toggle="dropdown">
+			02. Express
+
+			<!--          
+				tag-svg: en este definimos el icono del del item
+			-->
+			<svg viewBox="0 0 24 24">
+				<path
+					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+				></path>
+			</svg>
+		</a>
+
+		<!--  
+			:dropdown_menu: en esta definimos el menu de 
+			:navegacion interno
+		-->
+		<ul class="dropdown_menu">
+			<li><a href="/instalacion-express">a. Instalacion</a></li>
+
+			<li><a href="/servidor-express">b. Servidor</a></li>
+		</ul>
 	</li>
 
 	<li class="li_dropdown">
@@ -42,7 +67,21 @@
 	</li>
 
 	<li class="li_dropdown">
-		<a href="/credenciales">04. Credenciales DB</a>
+		<a href="#" data-toggle="dropdown">
+			04. Credenciales DB
+
+			<svg viewBox="0 0 24 24">
+				<path
+					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+				></path>
+			</svg>
+		</a>
+
+		<ul class="dropdown_menu">
+			<li><a href="/mongo-credenciales">a. Mongo DB</a></li>
+
+			<li><a href="/mysql-credenciales">b. MySQL</a></li>
+		</ul>
 	</li>
 
 	<li class="li_dropdown">
@@ -107,34 +146,5 @@
 
 	<li class="li_dropdown">
 		<a href="/heroku">15. Heroku</a>
-	</li>
-
-	<!--  
-		li_dropdown: contenedor de 1 tag-a y 1 tag-ul, la clase
-		li_dropdown se implementa en javascript
-	-->
-	<li class="li_dropdown">
-		<a href="#" data-toggle="dropdown">
-			03. Tablas
-
-			<!--          
-				tag-svg: en este definimos el icono del del item
-			-->
-			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
-		</a>
-
-		<!--  
-			:dropdown_menu: en esta definimos el menu de 
-			:navegacion interno
-		-->
-		<ul class="dropdown_menu">
-			<li><a href="/tablas-tablas">a. Tablas</a></li>
-
-			<li><a href="/campos-tablas">b. Campos</a></li>
-		</ul>
 	</li>
 </ul>
