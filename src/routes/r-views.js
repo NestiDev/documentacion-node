@@ -53,18 +53,99 @@ router.get("/nodemon", (req, res) => {
 	});
 });
 
+router.get("/mysql-credenciales", (req, res) => {
+	res.render("pages/mysql-credenciales", {
+		title: "credenciales mysql node",
+	});
+});
+
 /* 
-	______________________ mongo db ______________________
+	______________________ middlewares ______________________
+*/
+router.get("/json-middleware", (req, res) => {
+	res.render("pages/json-middleware", {
+		title: "json middleware",
+	});
+});
+
+router.get("/url-middleware", (req, res) => {
+	res.render("pages/url-middleware", {
+		title: "url middleware",
+	});
+});
+
+router.get("/cors-middleware", (req, res) => {
+	res.render("pages/cors-middleware", {
+		title: "cors middleware",
+	});
+});
+
+router.get("/morgan-middleware", (req, res) => {
+	res.render("pages/morgan-middleware", {
+		title: "morgan middleware",
+	});
+});
+
+/* 
+	______________________ environments ______________________
+*/
+router.get("/environments", (req, res) => {
+	res.render("pages/environments", {
+		title: "environments node",
+	});
+});
+
+/* 
+	______________________ bcrypt ______________________
+*/
+router.get("/bcrypt", (req, res) => {
+	res.render("pages/bcrypt", {
+		title: "bcryptjs node",
+	});
+});
+
+/* 
+	______________________ jwt ______________________
+*/
+router.get("/jwt", (req, res) => {
+	res.render("pages/jwt", {
+		title: "jwt node",
+	});
+});
+
+/* 
+	______________________ exp-validator ______________________
+*/
+router.get("/exp-validator", (req, res) => {
+	res.render("pages/exp-validator", {
+		title: "exp-validator node",
+	});
+});
+
+/* 
+	______________________ nodemailer ______________________
+*/
+router.get("/nodemailer", (req, res) => {
+	res.render("pages/nodemailer", {
+		title: "nodemailer con node",
+	});
+});
+
+/* 
+	______________________ authenticate ______________________
+*/
+router.get("/authenticate", (req, res) => {
+	res.render("pages/authenticate", {
+		title: "authenticate node",
+	});
+});
+
+/* 
+	______________________ credenciales db ______________________
 */
 router.get("/mongo-credenciales", (req, res) => {
 	res.render("pages/mongo-credenciales", {
 		title: "credenciales mongodb node",
-	});
-});
-
-router.get("/mysql-credenciales", (req, res) => {
-	res.render("pages/mysql-credenciales", {
-		title: "credenciales mysql node",
 	});
 });
 
@@ -89,15 +170,6 @@ router.get("/auth-mongo", (req, res) => {
 router.get("/crud-mongo", (req, res) => {
 	res.render("pages/crud-mongo", {
 		title: "crud mongodb con node",
-	});
-});
-
-/* 
-	______________________ environments ______________________
-*/
-router.get("/environments", (req, res) => {
-	res.render("pages/environments", {
-		title: "environments node",
 	});
 });
 
@@ -132,61 +204,7 @@ router.get("/rutas", (req, res) => {
 });
 
 /* 
-	______________________ middlewares ______________________
-*/
-router.get("/middlewares", (req, res) => {
-	res.render("pages/middlewares", {
-		title: "middlewares node",
-	});
-});
-
-/* 
-	______________________ bcrypt ______________________
-*/
-router.get("/bcrypt", (req, res) => {
-	res.render("pages/bcrypt", {
-		title: "bcrypt node",
-	});
-});
-
-/* 
-	______________________ jwt ______________________
-*/
-router.get("/jwt", (req, res) => {
-	res.render("pages/jwt", {
-		title: "jwt node",
-	});
-});
-
-/* 
-	______________________ exp-validator ______________________
-*/
-router.get("/exp-validator", (req, res) => {
-	res.render("pages/exp-validator", {
-		title: "exp-validator node",
-	});
-});
-
-/* 
-	______________________ authenticate ______________________
-*/
-router.get("/authenticate", (req, res) => {
-	res.render("pages/authenticate", {
-		title: "authenticate node",
-	});
-});
-
-/* 
-	______________________ nodemailer ______________________
-*/
-router.get("/nodemailer", (req, res) => {
-	res.render("pages/nodemailer", {
-		title: "nodemailer con node",
-	});
-});
-
-/* 
-	______________________ nodemailer ______________________
+	______________________ heroku  ______________________
 */
 router.get("/heroku", (req, res) => {
 	res.render("pages/heroku", {
