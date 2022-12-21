@@ -225,7 +225,7 @@ body {
   color: #5c5b5b;
   font-size: 17px;
   letter-spacing: 0.5px;
-  width: 153px;
+  width: 145px;
   padding: 0 8px 0 14px;
 }
 .components_container .nav_component .search_box .search_btn {
@@ -521,6 +521,10 @@ body {
   	este elemento
   */
   /*
+  	code_box: definimos un margen en la parte inferior de este 
+  	elemento y un espaciado de 12px para todos los ejes
+  */
+  /*
   	sect_box_img: definimos un margen en la parte inferior
   	de este elemento
   */
@@ -529,6 +533,20 @@ body {
   font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 40px;
+}
+.components_container .main_components .sections_container .sect_content .code_box {
+  background-color: #343d4d;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px 0 #ccc;
+  margin-bottom: 40px;
+  padding: 12px;
+  /*
+  	tag-strong
+  */
+}
+.components_container .main_components .sections_container .sect_content .code_box strong {
+  color: #4caf50;
 }
 .components_container .main_components .sections_container .sect_content .sect_box_img {
   text-align: center;

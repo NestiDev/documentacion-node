@@ -554,6 +554,26 @@ body {
 				}
 
 				/*
+					code_box: definimos un margen en la parte inferior de este 
+					elemento y un espaciado de 12px para todos los ejes
+				*/
+				.code_box {
+					background-color: #343d4d;
+					color: $colorThree;
+					border-radius: 5px;
+					box-shadow: 0 2px 6px 0 #ccc;
+					margin-bottom: 40px;
+					padding: 12px;
+
+					/*
+						tag-strong
+					*/
+					strong {
+						color: $colorOne;
+					}
+				}
+
+				/*
 					sect_box_img: definimos un margen en la parte inferior
 					de este elemento
 				*/

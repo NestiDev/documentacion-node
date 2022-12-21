@@ -21,26 +21,26 @@ router.get("/", (req, res) => {
 });
 
 /* 
-	______________________ acceder ______________________
+	______________________ start ______________________
 */
-router.get("/iniciar-node", (req, res) => {
-	res.render("pages/iniciar-node", {
-		title: "iniciar un proyecto node",
+router.get("/start-node", (req, res) => {
+	res.render("pages/start-node", {
+		title: "iniciar con node",
 	});
 });
 
 /* 
 	______________________ express ______________________
 */
-router.get("/instalacion-express", (req, res) => {
-	res.render("pages/instalacion-express", {
+router.get("/express-install", (req, res) => {
+	res.render("pages/express-install", {
 		title: "intalacion de express",
 	});
 });
 
-router.get("/servidor-express", (req, res) => {
-	res.render("pages/servidor-express", {
-		title: "servidor de express",
+router.get("/express-server", (req, res) => {
+	res.render("pages/express-server", {
+		title: "servidor con express",
 	});
 });
 
