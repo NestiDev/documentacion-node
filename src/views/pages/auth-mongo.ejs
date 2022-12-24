@@ -1,161 +1,170 @@
 <!DOCTYPE html>
 
 <html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <title>11. Auth mongo</title>
-    <link rel="stylesheet" href="./sass/style.css" />
-</head>
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
 
-<body>
-    <!-- CABECERA -->
-    <header class="box_header">
-        <div class="box_logo">
-            <a href="index.html">
-                <img src="assests/images/node.png" alt="node">
-            </a>
-        </div>
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
 
-        <div class="box_icon_menu" id="icon_menu">
-            <span class="line_icon_menu"></span>
-        </div>
-    </header>
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Auth</h2>
 
+					<!--  
+						banner_line_titles: esta tag la definimos para crear la
+						linea del titulo
+					-->
+					<div class="banner_line_titles"></div>
 
-    <!-- CONTENEDOR PRINCIPAL -->
-    <main>
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Este nos permite crear un login el cual podra registrar
+						un usuario para permitirle el acceso al aplicativo web.
+						Este maneja el <strong>req</strong>
+						que son datos enviados por el usuario desde el
+						<strong>frontend</strong> estos son recibidos por el
+						<strong>backend</strong> el cual devuelve una
+						<strong>res</strong> a esa peticion.
+					</p>
+				</section>
 
-        <!-- MENU -->
-        <nav id="menu_nav">
-            <ul>
-                <li><a href="node_proyect.html" target="_blank">01. Crear proyecto</a></li>
-                <li><a href="express.html" target="_blank">02. Express</a></li>
-                <li><a href="nodemon.html" target="_blank">03. Nodemon</a></li>
-                <li><a href="credenciales.html" target="_blank">04. Credenciales DB</a></li>
-                <li><a href="environments.html" target="_blank">05. Environments</a></li>
-                <li><a href="mysql.html" target="_blank">06. Mysql connect</a></li>
-                <li><a href="auth-mysql.html" target="_blank">07. Auth mysql</a></li>
-                <li><a href="crud-mysql.html" target="_blank">08. Crud mysql</a></li>
-                <li><a href="mongo.html" target="_blank">09. Mongo connect</a></li>
-                <li><a href="schema.html" target="_blank">10. Mongo schema</a></li>
-                <li><a href="crud-mongo.html" target="_blank">12. Crud mongo</a></li>
-                <li><a href="rutas.html" target="_blank">13. Routes config</a></li>
-                <li><a href="middlewares.html" target="_blank">14. Middlewares</a></li>
-                <li><a href="bcrypt.html" target="_blank">15. Bcrypt</a></li>
-                <li><a href="jwt.html" target="_blank">16. Jsonwebtoken</a></li>
-                <li><a href="exp-validator.html" target="_blank">17. Exp-validator</a></li>
-                <li><a href="authenticate.html" target="_blank">18. Authenticate</a></li>
-            </ul>
-        </nav>
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<h3>01. Endpoint signup</h3>
 
-        <!-- CONTENIDO -->
-        <div class="div_content">
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/s01.png"
+								alt="endpoint signup"
+							/>
+						</div>
+					</section>
 
-            <!-- auth mongo -->
-            <section class="main_content" id="modules">
+					<section class="sect_content">
+						<h3>02. Datos requeridos por el endpoint</h3>
 
-                <!-- descripcion de la sesion -->
-                <section class="box_description">
-                    <h2>11. Auth Mongo</h2>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/s02.png"
+								alt="datos requeridos por el endpoint"
+							/>
+						</div>
+					</section>
 
-                    <div class="line_titles"></div>
+					<section class="sect_content">
+						<h3>03. Guardando un nuevo usuario</h3>
 
-                    <p>
-                        Este nos permite crear un login el cual podra
-                        registrar un usuario para permitirle el acceso al
-                        aplicativo web. Este maneja el <strong>req</strong>
-                        que son datos enviados por el usuario desde el
-                        <strong>frontend</strong> estos son recibidos por el
-                        <strong>backend</strong> el cual devuelve una
-                        <strong>res</strong> a esa peticion.
-                    </p>
-                </section>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/s03.png"
+								alt="guradando un nuevo usuario"
+							/>
+						</div>
+					</section>
 
-                <!-- 01 metodo signup -->
-                <section class="sect_content">
-                    <h4>01. Metodo signup: Permite registrar un usuario</h4>
+					<section class="sect_content">
+						<h3>04. Validando el endpoint con postman</h3>
 
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/s01.png" alt="modulo">
-                    </div>
-                </section>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/s04.png"
+								alt="validando el endpoint con postman"
+							/>
+						</div>
+					</section>
 
-                <!-- 02. datos requeridos del nuevo usuario -->
-                <section class="sect_content">
-                    <h4>02. Datos requeridos del nuevo usuario</h4>
+					<section class="sect_content">
+						<h3>01. Endpoint signin</h3>
 
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/s02.png" alt="modulo">
-                    </div>
-                </section>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/z01.png"
+								alt="endpoint signin"
+							/>
+						</div>
+					</section>
 
-                <!-- 03. guradando el nuevo usuario -->
-                <section class="sect_content">
-                    <h4>03. Guradando el nuevo usuario</h4>
+					<section class="sect_content">
+						<h3>02. Datos requeridos por el endpoint</h3>
 
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/s03.png" alt="modulo">
-                    </div>
-                </section>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/z02.png"
+								alt="datos requeridos por el endpoint"
+							/>
+						</div>
+					</section>
 
-                <!-- 04. validando el codigo -->
-                <section class="sect_content">
-                    <h4>04. Validando el codigo con postman</h4>
+					<section class="sect_content">
+						<h3>03. Respuesta del endpoint</h3>
 
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/s04.png" alt="modulo">
-                    </div>
-                </section>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/z03.png"
+								alt="respuesta del endpoint"
+							/>
+						</div>
+					</section>
 
-                <div class="line_endsession">
-                    -------------------- End --------------------
-                </div>
+					<section class="sect_content">
+						<h3>04. Validando el endpoint con postman</h3>
 
-                <!-- 01 metodo signin -->
-                <section class="sect_content">
-                    <h4>01. Metodo signin: Permite el acceso de un usuario</h4>
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmongo/z04.png"
+								alt="validando el endpoint con postman"
+							/>
+						</div>
+					</section>
 
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/z01.png" alt="modulo">
-                    </div>
-                </section>
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">Auth - Mongo</footer>
+				</div>
+			</main>
+		</div>
 
-                <!-- 02. datos requeridos para el acceso -->
-                <section class="sect_content">
-                    <h4>02. Datos requeridos para el acceso</h4>
-
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/z02.png" alt="modulo">
-                    </div>
-                </section>
-
-                <!-- 03. mensaje de respuesta -->
-                <section class="sect_content">
-                    <h4>03. Mensaje de respuesta</h4>
-
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/z03.png" alt="modulo">
-                    </div>
-                </section>
-
-                <!-- 04. validando el codigo -->
-                <section class="sect_content">
-                    <h4>04. Validando el codigo con postman</h4>
-
-                    <div class="box_img">
-                        <img src="./assests/images/authmongo/z04.png" alt="modulo">
-                    </div>
-                </section>
-
-                <div class="line_endsession">End Auth Mongo</div>
-            </section>
-        </div>
-    </main>
-
-    <script src="./js/main.js"></script>
-</body>
-
+		<script src="./js/main.js"></script>
+	</body>
 </html>

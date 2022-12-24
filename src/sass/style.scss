@@ -35,6 +35,13 @@ body {
 	min-height: 100vh;
 }
 
+/*
+	tag-a: estilos generales para esta etiqueta
+*/
+a {
+	text-decoration: none;
+}
+
 /*  
     header_component: definimos position: fixed junto con sus 
 	propiedades top, left, right y z-index para fijar el menu
@@ -71,27 +78,38 @@ body {
 		align-items: center;
 
 		/*
-			header_box_logo
-		*/
-		.header_box_logo {
-			/*
-				tag-a	
-			*/
-			a {
-				text-decoration: none;
+            dispositivos menores a 719px: modificamos
+            la propiedad justify-content y definimos 
+            un espaciado en el eje-X para esta medida
+        */
+		@media (max-width: 719px) {
+			justify-content: space-between;
+			padding: 0 30px;
+		}
 
-				/*
-					tag-img: definimos vertical-align: top para remover un 
-					espaciado que generan los navegadores en las img, finalmente 
-					con object-fit ajustamos la img a su contenedor 
-				*/
-				img {
-					vertical-align: top;
-					width: 70px;
-					height: 70px;
-					object-fit: cover;
-				}
-			}
+		/*
+            dispositivos menores a 472px: modificamos 
+            el espaciado en el eje-X para esta medida
+        */
+		@media (max-width: 472px) {
+			padding: 0 20px;
+		}
+
+		/*  
+            tag-h4
+        */
+		.nitlogo_box a h4 {
+			color: $colorFour;
+			font-size: 30px;
+		}
+
+		/*
+            tag-span: definimos un margen izquierdo para
+            generar una separacion frente a otros elementos
+        */
+		.nitlogo_box a h4 span {
+			color: $colorOne;
+			margin-left: 4px;
 		}
 
 		/*
@@ -109,7 +127,7 @@ body {
 				display: block;
 				width: 26px;
 				height: 3px;
-				background-color: $colorFour;
+				background-color: $colorOne;
 				border-radius: 10px;
 
 				/*
@@ -141,7 +159,8 @@ body {
 		top, left y z-index para fijar el menu de navegacion y
 		posicionarlo en la parte izquierda de la pantalla, con
 		hight: 100vh hacemos que este elemento tome todo el alto de la 
-		pantalla y finalmente definimos un espaciado en el eje-X y con 
+		pantalla y finalmente definimos un espaciado en el eje-X y 
+		personalizado en la parte inferior para generar separacion y con 
 		overflow: auto generamos un scroll en el eje-Y para cuando la altura 
 		de la pantalla sea menor a la altura del menu de navegacion
     */
@@ -153,7 +172,7 @@ body {
 		border-right: 1px solid $borderOne;
 		width: 240px;
 		height: 100vh;
-		padding: 0 25px;
+		padding: 0 25px 50px;
 		overflow: auto;
 
 		/*
@@ -294,7 +313,6 @@ body {
 					vertical los elementos que este contiene 
 				*/
 				a {
-					text-decoration: none;
 					color: $colorFour;
 					font-size: 1.1rem;
 					font-weight: 600;

@@ -96,7 +96,16 @@ router.get("/environments", (req, res) => {
 });
 
 /* 
-	______________________ bcrypt ______________________
+	______________________ exp-validator ______________________
+*/
+router.get("/exp-validator", (req, res) => {
+	res.render("pages/exp-validator", {
+		title: "exp-validator node",
+	});
+});
+
+/* 
+	______________________ bcryptjs ______________________
 */
 router.get("/bcrypt", (req, res) => {
 	res.render("pages/bcrypt", {
@@ -107,18 +116,84 @@ router.get("/bcrypt", (req, res) => {
 /* 
 	______________________ jwt ______________________
 */
-router.get("/jwt", (req, res) => {
-	res.render("pages/jwt", {
-		title: "jwt node",
+router.get("/sign-jwt", (req, res) => {
+	res.render("pages/sign-jwt", {
+		title: "generando un token node",
+	});
+});
+
+router.get("/authorization-jwt", (req, res) => {
+	res.render("pages/authorization-jwt", {
+		title: "autorizacion con token node",
 	});
 });
 
 /* 
-	______________________ exp-validator ______________________
+	______________________ credenciales db ______________________
 */
-router.get("/exp-validator", (req, res) => {
-	res.render("pages/exp-validator", {
-		title: "exp-validator node",
+router.get("/mongo-credenciales", (req, res) => {
+	res.render("pages/mongo-credenciales", {
+		title: "credenciales mongodb node",
+	});
+});
+
+/* 
+	______________________ mysql ______________________
+*/
+router.get("/connection-mysql", (req, res) => {
+	res.render("pages/connection-mysql", {
+		title: "conexion mysql con node",
+	});
+});
+
+router.get("/routes-mysql", (req, res) => {
+	res.render("pages/routes-mysql", {
+		title: "rutas mysql con node",
+	});
+});
+
+router.get("/auth-mysql", (req, res) => {
+	res.render("pages/auth-mysql", {
+		title: "auth mysql con node",
+	});
+});
+
+router.get("/crud-mysql", (req, res) => {
+	res.render("pages/crud-mysql", {
+		title: "crud mysql con node",
+	});
+});
+
+/* 
+	______________________ mongoDB ______________________
+*/
+router.get("/connect-mongo", (req, res) => {
+	res.render("pages/connect-mongo", {
+		title: "mongodb con node",
+	});
+});
+
+router.get("/schema-mongo", (req, res) => {
+	res.render("pages/schema-mongo", {
+		title: "schema mongodb con node",
+	});
+});
+
+router.get("/routes-mongo", (req, res) => {
+	res.render("pages/routes-mongo", {
+		title: "rutas mongodb con node",
+	});
+});
+
+router.get("/auth-mongo", (req, res) => {
+	res.render("pages/auth-mongo", {
+		title: "auth mongodb con node",
+	});
+});
+
+router.get("/crud-mongo", (req, res) => {
+	res.render("pages/crud-mongo", {
+		title: "crud mongodb con node",
 	});
 });
 
@@ -137,69 +212,6 @@ router.get("/nodemailer", (req, res) => {
 router.get("/authenticate", (req, res) => {
 	res.render("pages/authenticate", {
 		title: "authenticate node",
-	});
-});
-
-/* 
-	______________________ credenciales db ______________________
-*/
-router.get("/mongo-credenciales", (req, res) => {
-	res.render("pages/mongo-credenciales", {
-		title: "credenciales mongodb node",
-	});
-});
-
-router.get("/mongo", (req, res) => {
-	res.render("pages/mongo", {
-		title: "mongodb con node",
-	});
-});
-
-router.get("/schema", (req, res) => {
-	res.render("pages/schema", {
-		title: "schema mongodb con node",
-	});
-});
-
-router.get("/auth-mongo", (req, res) => {
-	res.render("pages/auth-mongo", {
-		title: "auth mongodb con node",
-	});
-});
-
-router.get("/crud-mongo", (req, res) => {
-	res.render("pages/crud-mongo", {
-		title: "crud mongodb con node",
-	});
-});
-
-/* 
-	______________________ mysql ______________________
-*/
-router.get("/mysql", (req, res) => {
-	res.render("pages/mysql", {
-		title: "mysql con node",
-	});
-});
-
-router.get("/auth-mysql", (req, res) => {
-	res.render("pages/auth-mysql", {
-		title: "auth mysql con node",
-	});
-});
-
-router.get("/crud-mysql", (req, res) => {
-	res.render("pages/crud-mysql", {
-		title: "crud mysql con node",
-	});
-});
-
-/* 
-	______________________ rutas ______________________
-*/
-router.get("/rutas", (req, res) => {
-	res.render("pages/rutas", {
-		title: "endpoints api node",
 	});
 });
 
