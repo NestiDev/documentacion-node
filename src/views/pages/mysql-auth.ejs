@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Schema</h2>
+					<h2>Auth</h2>
 
 					<!--  
 						banner_line_titles: esta tag la definimos para crear la
@@ -51,11 +51,13 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Los datos en <strong>mongoDB</strong> se guardan en
-						documentos los cuales deben contar con un esquema
-						definido. En el esquema definimos campos y propiedades
-						con los cuales estipulamos la manera en que los datos
-						seran recibidos.
+						En este apartado configuraremos el registro de un
+						usuario y el accesso del mismo a travez de rutas o
+						endpoints, estos endpoints hacen uso de un
+						<strong>req</strong> estos son los datos que el endpoint
+						solicita al cliente y que son recibidos y procesados por
+						el servidor el cual devuelve una <strong>res</strong> a
+						esa peticion.
 					</p>
 				</section>
 
@@ -68,34 +70,89 @@
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
 					<section class="sect_content">
-						<h3>01. Archivo para definir el schema</h3>
+						<h3>01. Endpoint signup</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/schema/s01.png"
-								alt="archivo para definir el schema"
+								src="./assets/images/authmysql/a01.png"
+								alt="endpoint signup"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Requerimiento de la conexion y mongoose</h3>
+						<h3>02. Datos requeridos por el endpoint</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/schema/s02.png"
-								alt="requerimiento de la conexion y mongoose"
+								src="./assets/images/authmysql/a02.png"
+								alt="datos requeridos por el endpoint"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Definicion del schema</h3>
+						<h3>03. Respuesta del endpoint</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/schema/s03.png"
-								alt="definicion del schema"
+								src="./assets/images/authmysql/a03.png"
+								alt="respuesta del endpoint"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Validando el endpoint con postman</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmysql/a04.png"
+								alt="validando el endpoint con postman"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>01. Endpoint signin</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmysql/b01.png"
+								alt="endpoint signin"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Datos requeridos por el endpoint</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmysql/b02.png"
+								alt="datos requeridos por el endpoint"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Respuesta del endpoint</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmysql/b03.png"
+								alt="Respuesta del endpoint"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Validando el endpoint con postman</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authmysql/b04.png"
+								alt="validando el endpoint con postman"
 							/>
 						</div>
 					</section>
@@ -103,7 +160,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Schema - Mongo</footer>
+					<footer class="section_footer">Auth - MySQL</footer>
 				</div>
 			</main>
 		</div>

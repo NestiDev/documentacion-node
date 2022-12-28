@@ -36,10 +36,7 @@
                     y 1 tag-p
                 -->
 				<section class="section_banner">
-					<!--  
-                        tag-h2: en esta definimos el titulo del banner
-                    -->
-					<h2>Server</h2>
+					<h2>Authorizations</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -51,11 +48,10 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Al momento de configurar un servidor, primero debemos
-						definir el archivo encargado de ejecutar las sentencias,
-						estas sentencias consisten en requerir el modulo de
-						<strong>express</strong> definir el puerto para el
-						servidor y finalmente ejecutarlo.
+						Las autorizaciones nos permiten restringirle a los
+						usuarios el acceso a nuestros endpoints sin antes
+						haberse autenticado como tambien evita que este realice
+						acciones para las cuales no tiene autorizacion.
 					</p>
 				</section>
 
@@ -67,70 +63,103 @@
 					<!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-					<section class="sect_content">
-						<!--  
-							tag-h3: en esta definimos el titulo de la seccion
-						-->
-						<h3>01. Archivo index.js</h3>
 
-						<!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
+					<section class="sect_content">
+						<h3>01. Middleware authenticate.js</h3>
+
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express/e05.png"
-								alt="archivo index.js"
+								src="./assets/images/authenticate/a01.png"
+								alt="Middleware authenticate.js"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Requerimiento de express</h3>
+						<h3>02. Exportacion del modulo</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/express/e06.png"
-								alt="requerimiento de express"
+								src="./assets/images/authenticate/a02.png"
+								alt="exportacion del modulo"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Configuracion del servidor</h3>
+						<h3>03. Configurando el header authorization</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/express/e07.png"
-								alt="Configuracion del servidor"
+								src="./assets/images/authenticate/a03.png"
+								alt="configurando el header authorization"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>04. Servidor configurado correctamente</h3>
-
-						<!--  
-							tag-p: definida para declarar el codigo en ejecucion
-						-->
-						<p class="code_box">
-							<span>> </span><strong>node </strong>index.js
-						</p>
+						<h3>04. Extrayendo y almacenando el token</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="../../assets/images/express/e08.png"
-								alt="servidor configurado correctamente"
+								src="./assets/images/authenticate/a04.png"
+								alt="extrayendo y almacenando el token"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>05. Validacion en el navegador</h3>
+						<h3>05. El usuario no cuenta con autorizacion</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/nodemon/n05.png"
-								alt="validacion en el navegador"
+								src="./assets/images/authenticate/a05.png"
+								alt="el usuario no cuenta con autorizacion"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>06. Importacion del middleware authenticate.js</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authenticate/a06.png"
+								alt="importacion del middleware authenticate.js"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>07. Validando el codigo con postman</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authenticate/a08.png"
+								alt="validando el codigo con postman"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>01. Verificacion del token</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authenticate/a07.png"
+								alt="verificacion del
+							token"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Validando el codigo con postman</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/authenticate/a10.png"
+								alt="validando el codigo con postman"
 							/>
 						</div>
 					</section>
@@ -138,7 +167,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Server - Express</footer>
+					<footer class="section_footer">Authorizations - Jwt</footer>
 				</div>
 			</main>
 		</div>

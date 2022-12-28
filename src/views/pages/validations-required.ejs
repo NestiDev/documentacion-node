@@ -36,26 +36,22 @@
                     y 1 tag-p
                 -->
 				<section class="section_banner">
-					<!--  
-                        tag-h2: en esta definimos el titulo del banner
-                    -->
-					<h2>Routes</h2>
+					<h2>Required</h2>
 
 					<!--  
-						banner_line_titles: esta tag la definimos para crear la
-						linea del titulo
-					-->
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
 					<div class="banner_line_titles"></div>
 
 					<!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Para definir nuestras rutas primero debemos crear un
-						archivo en el cual solicitamos el esquema de la base de
-						datos seguido del requerimiento de un modulo de
-						<strong>express</strong> y finalmente realizamos la
-						exportacion e implementacion de este archivo.
+						Esta validacion nos permite asegurarnos de que ninguno
+						de los campos del formulario se encuentre vacio al
+						momento de ser enviado por un usuario, lo que significa
+						que la base de datos no almacenara datos innecesarios.
 					</p>
 				</section>
 
@@ -68,36 +64,30 @@
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
 					<section class="sect_content">
-						<h3>01. Archivo para definir las rutas</h3>
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Campos obligatorios</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/rutas/r01.png"
-								alt="archivo para definir las rutas"
+								src="./assets/images/express-validator/w01.png"
+								alt="campos obligatorios"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>
-							02. Requerimiento del esquema y express.Router()
-						</h3>
+						<h3>02. Respuesta del servidor</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/rutas/r04.png"
-								alt="requerimiento del esquema y express.Router()"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>03. Requerimiento y uso del archivo</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/rutas/r03.png"
-								alt="requerimiento y uso del archivo"
+								src="./assets/images/express-validator/w02.png"
+								alt="modulo"
 							/>
 						</div>
 					</section>
@@ -105,7 +95,9 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Routes - Mongo</footer>
+					<footer class="section_footer">
+						Required - Validations
+					</footer>
 				</div>
 			</main>
 		</div>

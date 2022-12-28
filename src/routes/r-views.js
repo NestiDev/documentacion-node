@@ -23,9 +23,9 @@ router.get("/", (req, res) => {
 /* 
 	______________________ start ______________________
 */
-router.get("/start-node", (req, res) => {
-	res.render("pages/start-node", {
-		title: "iniciar con node",
+router.get("/start", (req, res) => {
+	res.render("pages/start", {
+		title: "start",
 	});
 });
 
@@ -34,13 +34,13 @@ router.get("/start-node", (req, res) => {
 */
 router.get("/express-install", (req, res) => {
 	res.render("pages/express-install", {
-		title: "intalacion de express",
+		title: "express-install",
 	});
 });
 
 router.get("/express-server", (req, res) => {
 	res.render("pages/express-server", {
-		title: "servidor con express",
+		title: "express-server",
 	});
 });
 
@@ -49,40 +49,34 @@ router.get("/express-server", (req, res) => {
 */
 router.get("/nodemon", (req, res) => {
 	res.render("pages/nodemon", {
-		title: "nodemon node",
-	});
-});
-
-router.get("/mysql-credenciales", (req, res) => {
-	res.render("pages/mysql-credenciales", {
-		title: "credenciales mysql node",
+		title: "nodemon",
 	});
 });
 
 /* 
 	______________________ middlewares ______________________
 */
-router.get("/json-middleware", (req, res) => {
-	res.render("pages/json-middleware", {
-		title: "json middleware",
+router.get("/middlewares-urlencoded", (req, res) => {
+	res.render("pages/middlewares-urlencoded", {
+		title: "middlewares-urlencoded",
 	});
 });
 
-router.get("/url-middleware", (req, res) => {
-	res.render("pages/url-middleware", {
-		title: "url middleware",
+router.get("/middlewares-json", (req, res) => {
+	res.render("pages/middlewares-json", {
+		title: "middlewares-json",
 	});
 });
 
-router.get("/cors-middleware", (req, res) => {
-	res.render("pages/cors-middleware", {
-		title: "cors middleware",
+router.get("/middlewares-cors", (req, res) => {
+	res.render("pages/middlewares-cors", {
+		title: "middlewares-cors",
 	});
 });
 
-router.get("/morgan-middleware", (req, res) => {
-	res.render("pages/morgan-middleware", {
-		title: "morgan middleware",
+router.get("/middlewares-morgan", (req, res) => {
+	res.render("pages/middlewares-morgan", {
+		title: "middlewares-morgan",
 	});
 });
 
@@ -91,16 +85,28 @@ router.get("/morgan-middleware", (req, res) => {
 */
 router.get("/environments", (req, res) => {
 	res.render("pages/environments", {
-		title: "environments node",
+		title: "environments",
 	});
 });
 
 /* 
 	______________________ exp-validator ______________________
 */
-router.get("/exp-validator", (req, res) => {
-	res.render("pages/exp-validator", {
-		title: "exp-validator node",
+router.get("/validations-required", (req, res) => {
+	res.render("pages/validations-required", {
+		title: "validations-required",
+	});
+});
+
+router.get("/validations-querys", (req, res) => {
+	res.render("pages/validations-querys", {
+		title: "validations-querys",
+	});
+});
+
+router.get("/validations-exp-validator", (req, res) => {
+	res.render("pages/validations-exp-validator", {
+		title: "validations-exp-validator",
 	});
 });
 
@@ -109,91 +115,97 @@ router.get("/exp-validator", (req, res) => {
 */
 router.get("/bcrypt", (req, res) => {
 	res.render("pages/bcrypt", {
-		title: "bcryptjs node",
+		title: "bcryptjs",
 	});
 });
 
 /* 
 	______________________ jwt ______________________
 */
-router.get("/sign-jwt", (req, res) => {
-	res.render("pages/sign-jwt", {
-		title: "generando un token node",
+router.get("/jsonwebtoken-sign", (req, res) => {
+	res.render("pages/jsonwebtoken-sign", {
+		title: "jsonwebtoken-sign",
 	});
 });
 
-router.get("/authorization-jwt", (req, res) => {
-	res.render("pages/authorization-jwt", {
-		title: "autorizacion con token node",
+router.get("/jsonwebtoken-authorizations", (req, res) => {
+	res.render("pages/jsonwebtoken-authorizations", {
+		title: "jsonwebtoken-authorizations",
 	});
 });
 
 /* 
 	______________________ credenciales db ______________________
 */
-router.get("/mongo-credenciales", (req, res) => {
-	res.render("pages/mongo-credenciales", {
-		title: "credenciales mongodb node",
+router.get("/credenciales-mongodb", (req, res) => {
+	res.render("pages/credenciales-mongodb", {
+		title: "credenciales-mongoDB",
+	});
+});
+
+router.get("/credenciales-mysql", (req, res) => {
+	res.render("pages/credenciales-mysql", {
+		title: "credenciales-mysql",
 	});
 });
 
 /* 
 	______________________ mysql ______________________
 */
-router.get("/connection-mysql", (req, res) => {
-	res.render("pages/connection-mysql", {
-		title: "conexion mysql con node",
+router.get("/mysql-connection", (req, res) => {
+	res.render("pages/mysql-connection", {
+		title: "mysql-connection",
 	});
 });
 
-router.get("/routes-mysql", (req, res) => {
-	res.render("pages/routes-mysql", {
-		title: "rutas mysql con node",
+router.get("/mysql-routes", (req, res) => {
+	res.render("pages/mysql-routes", {
+		title: "mysql-routes",
 	});
 });
 
-router.get("/auth-mysql", (req, res) => {
-	res.render("pages/auth-mysql", {
-		title: "auth mysql con node",
+router.get("/mysql-auth", (req, res) => {
+	res.render("pages/mysql-auth", {
+		title: "mysql-auth",
 	});
 });
 
-router.get("/crud-mysql", (req, res) => {
-	res.render("pages/crud-mysql", {
-		title: "crud mysql con node",
+router.get("/mysql-crud", (req, res) => {
+	res.render("pages/mysql-crud", {
+		title: "mysql-crud",
 	});
 });
 
 /* 
 	______________________ mongoDB ______________________
 */
-router.get("/connect-mongo", (req, res) => {
-	res.render("pages/connect-mongo", {
-		title: "mongodb con node",
+router.get("/mongodb-connect", (req, res) => {
+	res.render("pages/mongodb-connect", {
+		title: "mongoDB-connect",
 	});
 });
 
-router.get("/schema-mongo", (req, res) => {
-	res.render("pages/schema-mongo", {
-		title: "schema mongodb con node",
+router.get("/mongodb-schema", (req, res) => {
+	res.render("pages/mongodb-schema", {
+		title: "mongoDB-schema",
 	});
 });
 
-router.get("/routes-mongo", (req, res) => {
-	res.render("pages/routes-mongo", {
-		title: "rutas mongodb con node",
+router.get("/mongodb-routes", (req, res) => {
+	res.render("pages/mongodb-routes", {
+		title: "mongoDB-routes",
 	});
 });
 
-router.get("/auth-mongo", (req, res) => {
-	res.render("pages/auth-mongo", {
-		title: "auth mongodb con node",
+router.get("/mongodb-auth", (req, res) => {
+	res.render("pages/mongodb-auth", {
+		title: "mongoDB-auth",
 	});
 });
 
-router.get("/crud-mongo", (req, res) => {
-	res.render("pages/crud-mongo", {
-		title: "crud mongodb con node",
+router.get("/mongodb-crud", (req, res) => {
+	res.render("pages/mongodb-crud", {
+		title: "mongoDB-crud",
 	});
 });
 
@@ -202,25 +214,22 @@ router.get("/crud-mongo", (req, res) => {
 */
 router.get("/nodemailer", (req, res) => {
 	res.render("pages/nodemailer", {
-		title: "nodemailer con node",
+		title: "nodemailer",
 	});
 });
 
 /* 
-	______________________ authenticate ______________________
+	______________________ deploy  ______________________
 */
-router.get("/authenticate", (req, res) => {
-	res.render("pages/authenticate", {
-		title: "authenticate node",
+router.get("/deploy-heroku", (req, res) => {
+	res.render("pages/deploy-heroku", {
+		title: "deploy-heroku",
 	});
 });
 
-/* 
-	______________________ heroku  ______________________
-*/
-router.get("/heroku", (req, res) => {
-	res.render("pages/heroku", {
-		title: "heroku con node",
+router.get("/deploy-vercel", (req, res) => {
+	res.render("pages/deploy-vercel", {
+		title: "deploy-vercel",
 	});
 });
 

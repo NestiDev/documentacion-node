@@ -30,7 +30,7 @@
 		li_dropdown: contenedor de 1 tag-a
 	-->
 	<li class="li_dropdown">
-		<a href="/start-node">01. Inicio</a>
+		<a href="/start">01. Start</a>
 	</li>
 
 	<!--  
@@ -56,9 +56,9 @@
 			:navegacion interno
 		-->
 		<ul class="dropdown_menu">
-			<li><a href="/express-install">a. Instalacion</a></li>
+			<li><a href="/express-install">a. Install</a></li>
 
-			<li><a href="/express-server">b. Servidor</a></li>
+			<li><a href="/express-server">b. Server</a></li>
 		</ul>
 	</li>
 
@@ -69,6 +69,31 @@
 	<li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
 			04. Middlewares
+
+			<!--          
+				tag-svg: en este definimos el icono del del item
+			-->
+			<svg viewBox="0 0 24 24">
+				<path
+					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+				></path>
+			</svg>
+		</a>
+
+		<ul class="dropdown_menu">
+			<li><a href="/middlewares-urlencoded">a. Urlencoded</a></li>
+
+			<li><a href="/middlewares-json">b. Json</a></li>
+
+			<li><a href="/middlewares-cors">c. Cors</a></li>
+
+			<li><a href="/middlewares-morgan">d. Morgan</a></li>
+		</ul>
+	</li>
+
+	<li class="li_dropdown">
+		<a href="#" data-toggle="dropdown">
+			05. Ejs
 
 			<!--          
 				tag-svg: en este definimos el icono del del item
@@ -92,20 +117,12 @@
 	</li>
 
 	<li class="li_dropdown">
-		<a href="/environments">05. Environments</a>
-	</li>
-
-	<li class="li_dropdown">
-		<a href="/exp-validator">06. Exp-validator</a>
-	</li>
-
-	<li class="li_dropdown">
-		<a href="/bcrypt">07. Bcryptjs</a>
+		<a href="/environments">06. Environments</a>
 	</li>
 
 	<li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			08. Jsonwebtoken
+			07. Validations
 
 			<svg viewBox="0 0 24 24">
 				<path
@@ -116,36 +133,26 @@
 
 		<ul class="dropdown_menu">
 			<li>
-				<a href="/sign-jwt">a. Sign</a>
+				<a href="/validations-required">a. Required</a>
 			</li>
 
 			<li>
-				<a href="/authorization-jwt">b. Authorizations</a>
+				<a href="/validations-querys">b. Querys</a>
+			</li>
+
+			<li>
+				<a href="/validations-exp-validator">c. Exp-validator</a>
 			</li>
 		</ul>
 	</li>
 
 	<li class="li_dropdown">
-		<a href="#" data-toggle="dropdown">
-			09. Credenciales
-
-			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
-		</a>
-
-		<ul class="dropdown_menu">
-			<li><a href="/mongo-credenciales">a. Mongo DB</a></li>
-
-			<li><a href="/mysql-credenciales">b. MySQL</a></li>
-		</ul>
+		<a href="/bcrypt">08. Bcryptjs</a>
 	</li>
 
 	<li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			10. Mysql
+			09. Jsonwebtoken
 
 			<svg viewBox="0 0 24 24">
 				<path
@@ -156,26 +163,36 @@
 
 		<ul class="dropdown_menu">
 			<li>
-				<a href="/connection-mysql">a. Connection</a>
+				<a href="/jsonwebtoken-sign">a. Sign</a>
 			</li>
 
 			<li>
-				<a href="/routes-mysql">b. Routes</a>
-			</li>
-
-			<li>
-				<a href="/auth-mysql">c. Auth</a>
-			</li>
-
-			<li>
-				<a href="/crud-mysql">d. Crud</a>
+				<a href="/jsonwebtoken-authorizations">b. Authorizations</a>
 			</li>
 		</ul>
 	</li>
 
 	<li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			11. MongoDB
+			10. Credenciales
+
+			<svg viewBox="0 0 24 24">
+				<path
+					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+				></path>
+			</svg>
+		</a>
+
+		<ul class="dropdown_menu">
+			<li><a href="/credenciales-mongodb">a. MongoDB</a></li>
+
+			<li><a href="/credenciales-mysql">b. MySQL</a></li>
+		</ul>
+	</li>
+
+	<li class="li_dropdown">
+		<a href="#" data-toggle="dropdown">
+			11. MySQL
 
 			<svg viewBox="0 0 24 24">
 				<path
@@ -186,40 +203,80 @@
 
 		<ul class="dropdown_menu">
 			<li>
-				<a href="/connect-mongo">a. Connect</a>
+				<a href="/mysql-connection">a. Connection</a>
 			</li>
 
 			<li>
-				<a href="/schema-mongo">b. Schema</a>
+				<a href="/mysql-routes">b. Routes</a>
 			</li>
 
 			<li>
-				<a href="/routes-mongo">c. Routes</a>
+				<a href="/mysql-auth">c. Auth</a>
 			</li>
 
 			<li>
-				<a href="/auth-mongo">d. Auth</a>
-			</li>
-
-			<li>
-				<a href="/crud-mongo">e. Crud</a>
+				<a href="/mysql-crud">d. Crud</a>
 			</li>
 		</ul>
 	</li>
 
 	<li class="li_dropdown">
-		<a href="/nodemailer">12. Nodemailer</a>
+		<a href="#" data-toggle="dropdown">
+			12. MongoDB
+
+			<svg viewBox="0 0 24 24">
+				<path
+					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+				></path>
+			</svg>
+		</a>
+
+		<ul class="dropdown_menu">
+			<li>
+				<a href="/mongodb-connect">a. Connect</a>
+			</li>
+
+			<li>
+				<a href="/mongodb-schema">b. Schema</a>
+			</li>
+
+			<li>
+				<a href="/mongodb-routes">c. Routes</a>
+			</li>
+
+			<li>
+				<a href="/mongodb-auth">d. Auth</a>
+			</li>
+
+			<li>
+				<a href="/mongodb-crud">e. Crud</a>
+			</li>
+		</ul>
 	</li>
 
 	<li class="li_dropdown">
-		<a href="/heroku">13. Heroku</a>
+		<a href="/nodemailer">13. Nodemailer</a>
 	</li>
 
 	<li class="li_dropdown">
-		<a href="#">14. Ejs</a>
-	</li>
+		<a href="#" data-toggle="dropdown">
+			14. Deploy
 
-	<li class="li_dropdown">
-		<a href="#">15. Vercel</a>
+			<svg viewBox="0 0 24 24">
+				<path
+					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
+				></path>
+			</svg>
+		</a>
+
+		<ul class="dropdown_menu">
+			<li>
+				<a href="/deploy-heroku">a. Heroku</a>
+			</li>
+
+			<li>
+				<a href="/deploy-vercel">b. Vercel</a>
+			</li>
+		</ul>
 	</li>
 </ul>
