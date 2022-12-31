@@ -36,7 +36,7 @@
                     y 1 tag-p
                 -->
 				<section class="section_banner">
-					<h2>Querys</h2>
+					<h2>Verify</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -48,9 +48,10 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Esta validacion nos permite hacer consultas a la base de
-						datos y con ello validar la informacion suministrada por
-						el usuario con el fin de comprobar su autenticidad.
+						Nos permiten verificar la validez del token de
+						autentificacion permitiendo con ello proteger los
+						endopoints evitando que el usuario realice acciones para
+						las cuales no tiene autorizacion.
 					</p>
 				</section>
 
@@ -62,96 +63,103 @@
 					<!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-					<section class="sect_content">
-						<!--  
-							tag-h3: en esta definimos el titulo de la seccion
-						-->
-						<h3>01. Validando existencia del email - MongoDB</h3>
 
-						<!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
+					<section class="sect_content">
+						<h3>01. Middleware authenticate.js</h3>
+
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/r01.png"
-								alt="validando existencia del email - MongoDB"
+								src="./assets/images/jsonwebtoken/verify/a01.png"
+								alt="Middleware authenticate.js"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Respuesta del servidor</h3>
+						<h3>02. Exportacion del modulo</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/r02.png"
-								alt="respuesta del servidor"
+								src="./assets/images/jsonwebtoken/verify/a02.png"
+								alt="exportacion del modulo"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Validando existencia del usuario - MongoDB</h3>
+						<h3>03. Configurando el header authorization</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/k01.png"
-								alt="validando existencia del usuario - MongoDB"
+								src="./assets/images/jsonwebtoken/verify/a03.png"
+								alt="configurando el header authorization"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>04. Respuesta del servidor</h3>
+						<h3>04. Extrayendo y almacenando el token</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/k02.png"
-								alt="respuesta del servidor"
+								src="./assets/images/jsonwebtoken/verify/a04.png"
+								alt="extrayendo y almacenando el token"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>01. Validando existencia del email - Mysql</h3>
+						<h3>05. El usuario no cuenta con autorizacion</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/r040.png"
-								alt="validando existencia del email - Mysql"
+								src="./assets/images/jsonwebtoken/verify/a05.png"
+								alt="el usuario no cuenta con autorizacion"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Respuesta del servidor</h3>
+						<h3>06. Importacion del middleware authenticate.js</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/r020.png"
-								alt="respuesta del servidor"
+								src="./assets/images/jsonwebtoken/verify/a06.png"
+								alt="importacion del middleware authenticate.js"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Validando existencia del usuario - Mysql</h3>
+						<h3>07. Validando el codigo con postman</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/y01.png"
-								alt="validando existencia del usuario - Mysql"
+								src="./assets/images/jsonwebtoken/verify/a08.png"
+								alt="validando el codigo con postman"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>04. Respuesta del servidor</h3>
+						<h3>01. Verificacion del token</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/y02.png"
-								alt="respuesta del servidor"
+								src="./assets/images/jsonwebtoken/verify/a07.png"
+								alt="verificacion del
+							token"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Validando el codigo con postman</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/jsonwebtoken/verify/a10.png"
+								alt="validando el codigo con postman"
 							/>
 						</div>
 					</section>
@@ -159,7 +167,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Querys - Validations</footer>
+					<footer class="section_footer">Verify - Jwt</footer>
 				</div>
 			</main>
 		</div>

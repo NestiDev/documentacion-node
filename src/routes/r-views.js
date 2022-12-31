@@ -120,38 +120,44 @@ router.get("/bcrypt", (req, res) => {
 });
 
 /* 
-	______________________ jwt ______________________
+	______________________ jsonwebtoken ______________________
 */
+router.get("/jsonwebtoken-install", (req, res) => {
+	res.render("pages/jsonwebtoken-install", {
+		title: "jsonwebtoken-install",
+	});
+});
+
 router.get("/jsonwebtoken-sign", (req, res) => {
 	res.render("pages/jsonwebtoken-sign", {
 		title: "jsonwebtoken-sign",
 	});
 });
 
-router.get("/jsonwebtoken-authorizations", (req, res) => {
-	res.render("pages/jsonwebtoken-authorizations", {
-		title: "jsonwebtoken-authorizations",
+router.get("/jsonwebtoken-verify", (req, res) => {
+	res.render("pages/jsonwebtoken-verify", {
+		title: "jsonwebtoken-verify",
 	});
 });
 
 /* 
-	______________________ credenciales db ______________________
+	______________________ controllers ______________________
 */
-router.get("/credenciales-mongodb", (req, res) => {
-	res.render("pages/credenciales-mongodb", {
-		title: "credenciales-mongoDB",
-	});
-});
-
-router.get("/credenciales-mysql", (req, res) => {
-	res.render("pages/credenciales-mysql", {
-		title: "credenciales-mysql",
+router.get("/controllers", (req, res) => {
+	res.render("pages/controllers", {
+		title: "controllers",
 	});
 });
 
 /* 
 	______________________ mysql ______________________
 */
+router.get("/mysql-credenciales", (req, res) => {
+	res.render("pages/mysql-credenciales", {
+		title: "mysql-credenciales",
+	});
+});
+
 router.get("/mysql-connection", (req, res) => {
 	res.render("pages/mysql-connection", {
 		title: "mysql-connection",
@@ -179,6 +185,12 @@ router.get("/mysql-crud", (req, res) => {
 /* 
 	______________________ mongoDB ______________________
 */
+router.get("/mongodb-credenciales", (req, res) => {
+	res.render("pages/mongodb-credenciales", {
+		title: "mongoDB-credenciales",
+	});
+});
+
 router.get("/mongodb-connect", (req, res) => {
 	res.render("pages/mongodb-connect", {
 		title: "mongoDB-connect",

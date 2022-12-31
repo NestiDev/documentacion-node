@@ -36,22 +36,24 @@
                     y 1 tag-p
                 -->
 				<section class="section_banner">
-					<h2>Authorizations</h2>
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Controllers</h2>
 
 					<!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
-                    -->
+						banner_line_titles: esta tag la definimos para crear la
+						linea del titulo
+					-->
 					<div class="banner_line_titles"></div>
 
 					<!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Las autorizaciones nos permiten restringirle a los
-						usuarios el acceso a nuestros endpoints sin antes
-						haberse autenticado como tambien evita que este realice
-						acciones para las cuales no tiene autorizacion.
+						Estos nos permiten separar las funciones de los
+						endpoints permitiendonos con ello tener una estructura
+						de trabajo mas sencilla de mantener e interpretar.
 					</p>
 				</section>
 
@@ -63,103 +65,57 @@
 					<!--  
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
-
 					<section class="sect_content">
-						<h3>01. Middleware authenticate.js</h3>
+						<h3>01. Archivo para definir los controladores</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/authenticate/a01.png"
-								alt="Middleware authenticate.js"
+								src="./assets/images/controllers/c02.png"
+								alt="archivo para definir los controladores"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Exportacion del modulo</h3>
+						<h3>02. Definicion del controlador</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/authenticate/a02.png"
-								alt="exportacion del modulo"
+								src="./assets/images/controllers/c03.png"
+								alt="Definicion del controlador"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Configurando el header authorization</h3>
+						<h3>03. Requerimiento y uso del controlador</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/authenticate/a03.png"
-								alt="configurando el header authorization"
+								src="./assets/images/controllers/c04.png"
+								alt="requerimiento y uso del controlador"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>04. Extrayendo y almacenando el token</h3>
+						<h3>03. Requerimiento y uso de las rutas</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/authenticate/a04.png"
-								alt="extrayendo y almacenando el token"
+								src="./assets/images/rutas/r03.png"
+								alt="requerimiento y uso de las rutas"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>05. El usuario no cuenta con autorizacion</h3>
+						<h3>05. Validacion en el navegador</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/authenticate/a05.png"
-								alt="el usuario no cuenta con autorizacion"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>06. Importacion del middleware authenticate.js</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/authenticate/a06.png"
-								alt="importacion del middleware authenticate.js"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>07. Validando el codigo con postman</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/authenticate/a08.png"
-								alt="validando el codigo con postman"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>01. Verificacion del token</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/authenticate/a07.png"
-								alt="verificacion del
-							token"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>02. Validando el codigo con postman</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/authenticate/a10.png"
-								alt="validando el codigo con postman"
+								src="./assets/images/controllers/c05.png"
+								alt="Validacion en el navegador"
 							/>
 						</div>
 					</section>
@@ -167,7 +123,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Authorizations - Jwt</footer>
+					<footer class="section_footer">Controllers - Node</footer>
 				</div>
 			</main>
 		</div>
