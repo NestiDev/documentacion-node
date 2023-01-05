@@ -36,7 +36,10 @@
                     y 1 tag-p
                 -->
 				<section class="section_banner">
-					<h2>Required</h2>
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Compare</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -48,10 +51,11 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Esta validacion nos permite asegurarnos de que ninguno
-						de los campos del formulario se encuentre vacio al
-						momento de ser enviado por un usuario, lo que significa
-						que la base de datos no almacenara datos innecesarios.
+						Nos permite comparar contraseñas o claves planas con
+						contraseñas o claves encriptdas, este metodo recibe una
+						contraseña o clave plana seguido de la contraseña o
+						clave encriptda la cual debemos traer haciendo una
+						consulta a la base de datos.
 					</p>
 				</section>
 
@@ -67,27 +71,52 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Campos obligatorios</h3>
+						<h3>
+							01. Comparacion de contraseñas encriptadas - MongoDB
+						</h3>
 
 						<!--  
 							sect_box_img: contenedor de 1 tag-img
 						-->
-
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/w01.png"
-								alt="campos obligatorios"
+								src="./assets/images/bcryptjs/compare/c02.png"
+								alt="comparacion de contraseñas encriptadas mongoDB"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Respuesta del servidor</h3>
+						<h3>02. Validando contraseñas encriptadas</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/express-validator/w02.png"
-								alt="modulo"
+								src="./assets/images/bcryptjs/compare/c05.png"
+								alt="validando comparacion de las contraseñas encriptadas"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>
+							03. Comparacion de contraseñas encriptadas - Mysql
+						</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/bcryptjs/compare/n01.png"
+								alt="comparacion de contraseñas encriptadas mysql"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Validando contraseñas encriptadas</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/bcryptjs/compare/c05.png"
+								alt="validando comparacion de las contraseñas encriptadas"
 							/>
 						</div>
 					</section>
@@ -95,9 +124,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">
-						Required - Validations
-					</footer>
+					<footer class="section_footer">Compare - Bcryptjs</footer>
 				</div>
 			</main>
 		</div>

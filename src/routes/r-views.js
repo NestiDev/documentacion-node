@@ -81,6 +81,27 @@ router.get("/middlewares-morgan", (req, res) => {
 });
 
 /* 
+	______________________ ejs ______________________
+*/
+router.get("/ejs-install", (req, res) => {
+	res.render("pages/ejs-install", {
+		title: "ejs-install",
+	});
+});
+
+router.get("/ejs-config", (req, res) => {
+	res.render("pages/ejs-config", {
+		title: "ejs-config",
+	});
+});
+
+router.get("/ejs-partials", (req, res) => {
+	res.render("pages/ejs-partials", {
+		title: "ejs-partials",
+	});
+});
+
+/* 
 	______________________ environments ______________________
 */
 router.get("/environments", (req, res) => {
@@ -92,9 +113,9 @@ router.get("/environments", (req, res) => {
 /* 
 	______________________ exp-validator ______________________
 */
-router.get("/validations-required", (req, res) => {
-	res.render("pages/validations-required", {
-		title: "validations-required",
+router.get("/validations-exp-validator", (req, res) => {
+	res.render("pages/validations-exp-validator", {
+		title: "validations-exp-validator",
 	});
 });
 
@@ -104,18 +125,24 @@ router.get("/validations-querys", (req, res) => {
 	});
 });
 
-router.get("/validations-exp-validator", (req, res) => {
-	res.render("pages/validations-exp-validator", {
-		title: "validations-exp-validator",
-	});
-});
-
 /* 
 	______________________ bcryptjs ______________________
 */
-router.get("/bcrypt", (req, res) => {
-	res.render("pages/bcrypt", {
-		title: "bcryptjs",
+router.get("/bcrypt-install", (req, res) => {
+	res.render("pages/bcrypt-install", {
+		title: "bcrypt-install",
+	});
+});
+
+router.get("/bcrypt-hash", (req, res) => {
+	res.render("pages/bcrypt-hash", {
+		title: "bcrypt-hash",
+	});
+});
+
+router.get("/bcrypt-compare", (req, res) => {
+	res.render("pages/bcrypt-compare", {
+		title: "bcrypt-compare",
 	});
 });
 
@@ -233,15 +260,15 @@ router.get("/nodemailer", (req, res) => {
 /* 
 	______________________ deploy  ______________________
 */
-router.get("/deploy-heroku", (req, res) => {
-	res.render("pages/deploy-heroku", {
-		title: "deploy-heroku",
-	});
-});
-
 router.get("/deploy-vercel", (req, res) => {
 	res.render("pages/deploy-vercel", {
 		title: "deploy-vercel",
+	});
+});
+
+router.get("/deploy-heroku", (req, res) => {
+	res.render("pages/deploy-heroku", {
+		title: "deploy-heroku",
 	});
 });
 

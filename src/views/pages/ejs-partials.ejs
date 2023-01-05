@@ -39,7 +39,7 @@
 					<!--  
                         tag-h2: en esta definimos el titulo del banner
                     -->
-					<h2>Schema</h2>
+					<h2>Partials</h2>
 
 					<!--  
 						banner_line_titles: esta tag la definimos para crear la
@@ -51,11 +51,13 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Los datos en <strong>mongoDB</strong> se guardan en
-						documentos los cuales deben contar con un esquema
-						definido. En el esquema definimos campos y propiedades
-						con los cuales estipulamos la manera en que los datos
-						seran recibidos.
+						No permiten crear componentes que pueden ser
+						reutilizados en diferentes vistas de nuestro proyecto,
+						para esto es necesario incluir el
+						<strong>partial</strong>
+						en el componente especifico. Cabe decir que podemos
+						incluir uno o mas parciales dentro de un mismo
+						componente.
 					</p>
 				</section>
 
@@ -68,34 +70,45 @@
 						sect_content: contenedor de 1 tag-h3 y de sect_box_img
 					-->
 					<section class="sect_content">
-						<h3>01. Archivo para definir el schema</h3>
+						<h3>01. Parcial head.ejs</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/mongoDB/schema/s01.png"
-								alt="archivo para definir el schema"
+								src="../../assets/images/ejs/partials/p01.png"
+								alt="parcial head.ejs"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Requerimiento de la conexion y mongoose</h3>
+						<h3>02. Inclusion del parcial head.js</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/mongoDB/schema/s02.png"
-								alt="requerimiento de la conexion y mongoose"
+								src="../../assets/images/ejs/partials/p02.png"
+								alt="inclusion del parcial head.js"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Definicion del schema</h3>
+						<h3>03. Definiendo la ruta del parcial</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/mongoDB/schema/s03.png"
-								alt="definicion del schema"
+								src="../../assets/images/ejs/partials/p03.png"
+								alt="definiendo la ruta del parcial"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Validacion en el navegador</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/partials/p04.png"
+								alt="validacion en el navegador"
 							/>
 						</div>
 					</section>
@@ -103,7 +116,7 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Schema - MongoDB</footer>
+					<footer class="section_footer">Partials - Ejs</footer>
 				</div>
 			</main>
 		</div>
