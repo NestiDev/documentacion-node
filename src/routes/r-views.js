@@ -80,6 +80,12 @@ router.get("/middlewares-morgan", (req, res) => {
 	});
 });
 
+router.get("/middlewares-404", (req, res) => {
+	res.render("pages/middlewares-404", {
+		title: "middlewares-404",
+	});
+});
+
 /* 
 	______________________ ejs ______________________
 */
@@ -98,6 +104,24 @@ router.get("/ejs-config", (req, res) => {
 router.get("/ejs-partials", (req, res) => {
 	res.render("pages/ejs-partials", {
 		title: "ejs-partials",
+	});
+});
+
+router.get("/ejs-variables", (req, res) => {
+	res.render("pages/ejs-variables", {
+		title: "ejs-variables",
+	});
+});
+
+router.get("/ejs-condicionales", (req, res) => {
+	res.render("pages/ejs-condicionales", {
+		title: "ejs-condicionales",
+	});
+});
+
+router.get("/ejs-ciclos", (req, res) => {
+	res.render("pages/ejs-ciclos", {
+		title: "ejs-ciclos",
 	});
 });
 
@@ -173,6 +197,42 @@ router.get("/jsonwebtoken-verify", (req, res) => {
 router.get("/controllers", (req, res) => {
 	res.render("pages/controllers", {
 		title: "controllers",
+	});
+});
+
+/*
+	______________________ session ______________________
+*/
+router.get("/session-install", (req, res) => {
+	res.render("pages/session-install", {
+		title: "session-install",
+	});
+});
+
+router.get("/session-variables", (req, res) => {
+	res.render("pages/session-variables", {
+		title: "session-variables",
+	});
+});
+
+router.get("/session-destroy", (req, res) => {
+	res.render("pages/session-destroy", {
+		title: "session-destroy",
+	});
+});
+
+/*
+	______________________ flash ______________________
+*/
+router.get("/flash-install", (req, res) => {
+	res.render("pages/flash-install", {
+		title: "flash-install",
+	});
+});
+
+router.get("/flash-messages", (req, res) => {
+	res.render("pages/flash-messages", {
+		title: "flash-messages",
 	});
 });
 

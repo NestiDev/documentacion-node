@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Destroy</h2>
+
+					<!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Con <strong>session-destroy</strong> nos aseguramos de
+						destruir la sesion iniciada por un unsuario una vez este
+						cierre sesion o deje de estar activo en la aplicacion
+						evitando con ello problemas de seguridad.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Requiriendo session-destroy</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/session/destroy/d01.png"
+								alt="requiriendo session-destroy"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Configuracion del endpoint</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/session/destroy/d02.png"
+								alt="configuracion del endpoint"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Boton para cerrar sesion</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/session/destroy/d03.png"
+								alt="boton para cerrar sesion"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Validando en el navegador</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/session/destroy/d04.png"
+								alt="validando en el navegador"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>05. Redireccionamiento por cierre de sesion</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/session/destroy/d05.png"
+								alt="redireccionamiento por cierre de sesion"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">
+						Destroy - Express - Session
+					</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

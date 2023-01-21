@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Ciclos</h2>
+
+					<!--  
+						banner_line_titles: esta tag la definimos para crear la
+						linea del titulo
+					-->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Haciendo uso del modulo <strong>ejs</strong> podemos
+						definir ciclos en las vistas los cuales son utiles
+						cuando necesitamos traer y mostrar informacion definida
+						en los endpoints como tambien si necesitamos repetir una
+						estructura HTML.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<h3>01. Definicion del arreglo</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/ciclos/c01.png"
+								alt="definicion del arreglo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Ciclo forEach</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/ciclos/c02.png"
+								alt="ciclo forEach"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Validando en el navegador</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/ciclos/c03.png"
+								alt="validando en el navegador"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>01. Ciclo for</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/ciclos/c04.png"
+								alt="Ciclo for"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Validando en el navegador</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/ciclos/c05.png"
+								alt="validando en el navegador"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">Ciclos - Ejs</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

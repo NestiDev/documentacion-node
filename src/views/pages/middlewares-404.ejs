@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>404</h2>
+
+					<!--  
+                        banner_line_titles: esta tag la definimos para crear la
+                        linea del titulo
+                    -->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Nos ayuda a redirigir al usuario a una pagina
+						informativa cuando este intenta ingresar a un endpoint o
+						ruta que no existe.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Definiendo la pagina 404</h3>
+
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/middlewares/404/n01.png"
+								alt="definiendo la pagina 404"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Configuracion del middleware</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/middlewares/404/n02.png"
+								alt="configuracion del middleware"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Requerimiento y uso del middleware</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/middlewares/404/n03.png"
+								alt="requerimiento y uso del middleware"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>04. Validacion en el navegador</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="./assets/images/middlewares/404/n04.png"
+								alt="validacion en el navegador"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">404 - Middlewares</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

@@ -36,7 +36,10 @@
                     y 1 tag-p
                 -->
 				<section class="section_banner">
-					<h2>Verify</h2>
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Messages</h2>
 
 					<!--  
                         banner_line_titles: esta tag la definimos para crear la
@@ -48,10 +51,11 @@
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Nos permiten verificar la validez del token de
-						autentificacion permitiendo con ello proteger los
-						endopoints evitando que el usuario realice acciones para
-						las cuales no tiene autorizacion.
+						Estos nos permiten brindarle al usuario una guia
+						informativa de las acciones que debe realzar. Para ello,
+						el middleware toma la variables generada luego de la
+						accion en el endpoint y comparte el valor almacenado en
+						esta directamente con la vista.
 					</p>
 				</section>
 
@@ -61,117 +65,98 @@
                 -->
 				<div class="sections_container">
 					<!--  
-						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+						sect_content: contenedor de 1 tag-h3, 1 tag-p y de sect_box_img
 					-->
-
 					<section class="sect_content">
-						<h3>01. Middleware authenticate.js</h3>
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3>01. Middleware de mensajes</h3>
 
+						<!--  
+							sect_box_img: contenedor de 1 tag-img
+						-->
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a01.png"
-								alt="Middleware authenticate.js"
+								src="../../assets/images/flash/messages/m01.png"
+								alt="middleware de mensajes"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Exportacion del modulo</h3>
+						<h3>02. Definiendo variables y valores</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a02.png"
-								alt="exportacion del modulo"
+								src="../../assets/images/flash/messages/m02.png"
+								alt="definiendo variables y valores"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>03. Configurando el header authorization</h3>
+						<h3>03. Implementando variable en la vista</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a03.png"
-								alt="configurando el header authorization"
+								src="../../assets/images/flash/messages/m03.png"
+								alt="implementando variable en la vista"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>04. Extrayendo y almacenando el token</h3>
+						<h3>04. Validando en el navegador</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a04.png"
-								alt="extrayendo y almacenando el token"
+								src="../../assets/images/flash/messages/m04.png"
+								alt="validando en el navegador"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>05. El usuario no cuenta con autorizacion</h3>
+						<h3>05. Middleware de mensajes</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a05.png"
-								alt="el usuario no cuenta con autorizacion"
+								src="../../assets/images/flash/messages/v01.png"
+								alt="middleware de mensajes"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>06. Importacion del middleware authenticate.js</h3>
+						<h3>06. Connect-flash con express-validator</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a06.png"
-								alt="importacion del middleware authenticate.js"
+								src="../../assets/images/flash/messages/v02.png"
+								alt="Connect-flash con express-validator"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>07. Validando el codigo con postman</h3>
+						<h3>07. Implementando variable en la vista</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a08.png"
-								alt="validando el codigo con postman"
+								src="../../assets/images/flash/messages/v03.png"
+								alt="implementando variable en la vista"
 							/>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>01. Verificacion del token desde el endpoint</h3>
+						<h3>08. Validando en el navegador</h3>
 
 						<div class="sect_box_img">
 							<img
-								src="./assets/images/jsonwebtoken/verify/a07.png"
-								alt="verificacion del
-							token desde el endpoint"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>02. Verificacion del token desde el middleware</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/jsonwebtoken/verify/e01.png"
-								alt="verificacion del
-							token desde el middleware"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>03. Validando el codigo con postman</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/jsonwebtoken/verify/a10.png"
-								alt="validando el codigo con postman"
+								src="../../assets/images/flash/messages/v04.png"
+								alt="validando en el navegador"
 							/>
 						</div>
 					</section>
@@ -179,7 +164,9 @@
 					<!--  
                         section_footer
                     -->
-					<footer class="section_footer">Verify - Jwt</footer>
+					<footer class="section_footer">
+						Messages - Connect - Flash
+					</footer>
 				</div>
 			</main>
 		</div>

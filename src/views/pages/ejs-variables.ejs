@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component">
+			<%- include('../partials/header'); %>
+		</header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav">
+				<%- include('../partials/navbar'); %>
+			</nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 tag-h2, de banner_line_titles
+                    y 1 tag-p
+                -->
+				<section class="section_banner">
+					<!--  
+                        tag-h2: en esta definimos el titulo del banner
+                    -->
+					<h2>Variables</h2>
+
+					<!--  
+						banner_line_titles: esta tag la definimos para crear la
+						linea del titulo
+					-->
+					<div class="banner_line_titles"></div>
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						Nos permiten almacenar valores que posteriormente
+						podemos compartir con las vistas con el fin de mostrar
+						informacion al usuario, estas se pueden definir en los
+						endpoint o en los parciales que finalmente son
+						implementadas en las vistas.
+					</p>
+				</section>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<h3>01. Definicion en los endpoints</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/variables/v01.png"
+								alt="definicion en los endpoints"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Implementacion en las vistas</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/variables/v02.png"
+								alt="implementacion en las vistas"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Validando en el navegador</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/variables/v03.png"
+								alt="validando en el navegador"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>01. Definicion en los parciales</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/variables/v04.png"
+								alt="definicion en los parciales"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>02. Definiendo el valor en las vistas</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/variables/v05.png"
+								alt="Definiendo el valor en las vistas"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3>03. Validacion en el navegador</h3>
+
+						<div class="sect_box_img">
+							<img
+								src="../../assets/images/ejs/variables/v06.png"
+								alt="validacion en el navegador"
+							/>
+						</div>
+					</section>
+
+					<!--  
+                        section_footer
+                    -->
+					<footer class="section_footer">Variables - Ejs</footer>
+				</div>
+			</main>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>
