@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <div class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Package.json</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+                        Es el encargado de gestionar las diferentes dependencias, es decir los paquetes 
+                        que necesita nuestra aplicación para funcionar correctamente. Este puede tener metadatos con información como tambien <strong>scripts</strong> que se encargan de ejecutar 
+                        acciones dentro de la aplicación.
+                    </p>
+				</div>
+
+				<!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#definicion">01. Definicion</a></li>
+                                    <li><a href="#creacion-del-package.json">02. Creación del package.json</a></li>
+                                    <li><a href="#archivo-package.json">03. Archivo package.json</a></li>
+                                    <li><a href="#configuracion-de-modulos">04. Configuración de modulos</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+					<!--  
+						sect_content: contenedor de 1 tag-h3 y de sect_box_img
+					-->
+					<section class="sect_content">
+						<!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3 id="carpeta-proeycto">01. Carpeta proyecto</h3>
+
+                        <p>
+                            Es la encargada de contener los diferentes archivos como pueden
+                            ser imagenes, videos, archivos html, css javascript etc, 
+                            los cuales hacen parte de la construcción de nuestro proyecto.  
+                        </p>
+
+                        <p class="second_paragraph">
+                            A continuación mostramos como se crea una carpeta proyecto en el escritorio y como se abre en <strong>visual studio code</strong> desde una consola de comandos externa.
+                        </p>
+
+                        <div class="code_box">
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_console">
+                                <pre><code><span class="console">Microsoft Windows [Version 10.0.17758.1]</span></code></pre>
+                                <pre><code><span class="console">(c) 2018 Microsoft Corporation. All Rights Reserved.</span></code></pre>
+                                <br>
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">></span><span class="objects">cd </span>desktop</span></code></pre>
+                                <br>
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">></span><span class="objects">mkdir </span>carpeta-proyecto</span></code></pre>
+                                <br>
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">></span><span class="parameters">cd </span><span>carpeta-proyecto</span></span></code></pre>
+                                <br>
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span>code <span class="objects">.</span></span></code></pre>
+                            </div>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="creacion-del-package.json">02. Creación del package.json</h3>
+
+                        <p>
+                            Para trabajar con <strong>NodeJs</strong> es obligatorio la creación de este archivo.
+                            Para ello, ejecutamos un comando de iniciación utilizando la bandera <strong>-y</strong> la cual indica que los pasos de configuración que basicamente son metadatos que solicita el package.json sobre nuestro proyecto sean ignorados.
+                        </p>
+
+                        <div class="code_box">
+                            <pre class="code_header"><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_console">
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span>npm init <span class="objects">-y</span></span></code></pre>
+                            </div>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="archivo-package.json">03. Archivo package.json</h3>
+
+                        <p>
+                            Es un archivo <strong>JSON</strong> compuesto por pares clave - valor
+                            que internamente puede contener <strong>objetos</strong> y <strong>arreglos</strong>
+                            Entre las claves mas importantes tenemos a <strong>main</strong> en la cual se define el nombre del archivo encargado de ejecutar nuestra la aplicación.
+                        </p>
+
+                        <div class="code_box">
+                            <pre class="code_header"><code><span class="console">package.json</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_index">02</span><span class="parameters">"name"</span><span class="keyword">: </span><span class="string">"carpeta-proyecto"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="parameters">"version"</span><span class="keyword">: </span><span class="string">"1.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="parameters">"description"</span><span class="keyword">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="parameters">"main"</span><span class="keyword">: </span><span class="string">"index.js"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">06</span><span class="parameters">"scripts"</span><span class="keyword">: </span><span class="functions">{</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="parameters">"test"</span><span class="keyword">: </span><span class="string">"echo \"Error: no test specified\" && exit 1"</span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="functions">}</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">09</span><span class="parameters">"keywords"</span><span class="keyword">: </span><span class="square">[]</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="parameters">"author"</span><span class="keyword">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="parameters">"license"</span><span class="keyword">: </span><span class="string">"ISC"</span></code></pre>
+                            <pre><code><span class="index inner_index">12</span><span class="brackets">}</span></code></pre>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="configuracion-de-modulos">04. Configuración de modulos</h3>
+
+                        <p>
+                            <strong>NodeJs</strong> por defecto viene configurado para trabajar con <strong>commonjs</strong> es por eso que, para utilizar un paquete hacemos uso de <strong>require()</strong> Ahora si lo que queremos es trabajar con <strong>import - export</strong> (modulos de ECMAScript) debemos hacer una configuración adicional en el archivo <strong>package.json</strong>
+                        </p>
+
+                        <div class="code_box">
+                            <pre class="code_header"><code><span class="console">package.json</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="parameters">"main"</span><span class="keyword">: </span><span class="string">"index.js"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="return">--> </span><span class="parameters">"type"</span><span class="keyword">: </span><span class="string">"module"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index inner_index">13</span><span class="brackets">}</span></code></pre>
+                        </div>
+					</section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination"></div>
+
+					<!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Package.json - NodeJs") %>
+				</div>
+			</main>
+		</div>
+
+		<script type="module" src="./js/main.js"></script>
+	</body>
+</html>

@@ -22,9 +22,7 @@
                 .nav_component: contenedor de la sesion, definimos un ID 
                 .para implementar este elemento en './src/js/main.js'
             -->
-			<nav class="nav_component" id="menu-nav">
-				<%- include('../partials/navbar'); %>
-			</nav>
+			<nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
 
 			<!--  
                 main_components: contenedor de section_banner,
@@ -35,29 +33,80 @@
                     section_banner: contenedor de 1 tag-h2, de banner_line_titles
                     y 1 tag-p
                 -->
-				<section class="section_banner">
+				<div class="section_banner">
 					<!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-					<h2>Install</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Express</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
 					<!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-					<div class="banner_line_titles"></div>
+                    <hr class="line_titles" />
 
 					<!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Por medio de <strong>npm</strong> podemos realizar la
-						instalacion de <strong>express</strong> este paquete nos
-						ofrece multiples herramientas entre estas la posibilidad
-						de configurar un servidor local para nuestro proyecto
-						backend.
+						Es un framework de <strong>NodeJs</strong> el cuál proporciona diversas herramientas que simplifican la construcción tanto de <strong>apis rest</strong> como de aplicaciones web del lado del servidor gracias a su estructura flexible y fácil de utilizar. 
 					</p>
-				</section>
+				</div>
+
+				<!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#instalacion">01. Instalación</a></li>
+                                    <li><a href="#validacion-de-la-instalacion">02. Validación de la instalación</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
 				<!--  
                     sections_container: contenedor de las secciones que componen
@@ -71,45 +120,84 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Instalando express</h3>
+						<h3>01. Instalación</h3>
 
-						<!--  
-							tag-p: definida para declarar el codigo en ejecucion
-						-->
-						<p class="code_box">
-							<span>> </span><strong>npm </strong>i express
+						<p>
+							para la instalación correcta de <strong>express</strong> primero debemos
+							asegurarnos de encontrarnos dentro de nuestra carpeta proyecto.
+							Aclarado este punto, ejecutamos el comando...
 						</p>
 
-						<!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-						<div class="sect_box_img">
-							<img
-								src="../../assets/images/express/install/e01.png"
-								alt="instalando express"
-							/>
-						</div>
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_console">
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span>npm <span class="parameters">install </span>express </span><span class="console">|| npm i express</span></code></pre>
+                            </div>
+                        </div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Validacion de la instalacion</h3>
+						<h3 id="validacion-de-la-instalacion">02. Validación de la instalación</h3>
 
-						<div class="sect_box_img">
-							<img
-								src="../../assets/images/express/install/e03.png"
-								alt="validacion de la instalacion"
-							/>
-						</div>
+						<p>
+							Si abrimos nuestro archivo <strong>package.json</strong> podemos 
+							notar que dentro de este se ha creado una nueva clave llamada 
+							<strong>dependencies</strong> la cual se encarga de administrar
+							los diferentes modulos o paquetes que vayamos instalando.
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">package.json</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_index">02</span><span class="parameters">"name"</span><span class="keyword">: </span><span class="string">"carpeta-proyecto"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="parameters">"version"</span><span class="keyword">: </span><span class="string">"1.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="parameters">"description"</span><span class="keyword">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="parameters">"main"</span><span class="keyword">: </span><span class="string">"index.js"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">06</span><span class="parameters">"scripts"</span><span class="keyword">: </span><span class="functions">{</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="parameters">"test"</span><span class="keyword">: </span><span class="string">"echo \"Error: no test specified\" && exit 1"</span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="functions">}</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">09</span><span class="parameters">"keywords"</span><span class="keyword">: </span><span class="square">[]</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="parameters">"author"</span><span class="keyword">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="parameters">"license"</span><span class="keyword">: </span><span class="string">"ISC"</span><span class="semi_colon">,</span></code></pre>
+							<pre><code><span class="index inner_index">12</span><span class="return">--> </span><span class="parameters">"dependencies"</span><span class="keyword">: </span><span class="functions">{</span></code></pre>
+							<pre><code><span class="index outer_doble_index">13</span><span class="parameters">"express"</span><span class="keyword">: </span><span class="string">"^4.18.2" </span></code></pre>
+							<pre><code><span class="index outer_index">14</span><span class="functions">}</span></code></pre>
+                            <pre><code><span class="index inner_index">15</span><span class="brackets">}</span>
+							</code></pre>
+                        </div>
 					</section>
 
 					<!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-					<footer class="section_footer">Install - Express</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a class="not_previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="./express-server">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+					<!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Express - NodeJs") %>
 				</div>
 			</main>
 		</div>
 
-		<script src="./js/main.js"></script>
+		<script type="module" src="./js/main.js"></script>
 	</body>
 </html>

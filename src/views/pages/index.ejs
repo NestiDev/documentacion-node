@@ -49,7 +49,7 @@
 					<!--  
 						hag-h1: en esta definimos el titulo de la tecnologia
 					-->
-					<h1>¿ Que es <span>node</span> ?</h1>
+					<h1>¿ Que es <span>NodeJs</span> ?</h1>
 				</section>
 
 				<!--  
@@ -62,33 +62,23 @@
 						de descripcion
 					-->
 					<p class="description_paragraph">
-						Es un sistema de gestion de datos el cual nos permite
-						guardar informacion en tablas, estas tablas tambien
-						conocidas como colecciones se componen de filas y
-						columnas y pueden ser relacionadas entre si.
+						Es un entorno de ejecución de javascript del lado del servidor que en lugar de ser interpretado y ejecutado directamente por el navegador es ejecutado desde el propio servidor.
 					</p>
 
 					<p class="description_paragraph">
-						En esta documentacion veremos como se crean y se
-						manipulan las bases de datos en mysql, tambien veremos
-						como se crea una tabla y aprenderemos a insertar,
-						consultar, editar y eliminar datos utilizando la consola
-						de comandos CMD.
+						<strong>NodeJs </strong> es de código abierto y está basado en el motor v8 de Google Chrome lo cual le permite ser mas rápido y eficiente al momento de ejecutar código javascript.
+						Además de que es conocido por su naturaleza asincrónica, lo cual le permite manejar múltiples operaciones de manera simultánea sin bloquear el hilo principal de ejecución.
+
 					</p>
 				</div>
 
 				<!--  
-					section_footer
+					incluimos el partial footer.ejs
 				-->
-				<footer class="section_footer">
-					&copy; Jefferson Salazar 2022
-				</footer>
+				<%- include('../partials/footer', titleSection = "Created by Jefferson Salazar 2024") %>
 			</main>
 		</div>
 
-		<!--  
-			definicion de los custom js
-		-->
-		<script src="../../js/main.js"></script>
+		<script type="module" src="./js/main.js"></script>
 	</body>
 </html>

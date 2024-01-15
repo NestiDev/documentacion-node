@@ -2,7 +2,7 @@
 	variables para definir altura para los elementos
 	que tienen position: fixed
 */
-$heightFixed: 70px;
+$heightFixed: 60px;
 
 /*
 	variables para definir colores
@@ -11,11 +11,30 @@ $colorOne: #4caf50;
 $colorThree: #fff;
 $colorFour: #5c5b5b;
 $colorFive: #ccc;
+$colorSix: #d8d8d8;
+
+/*
+	variables para definir color de fondo
+*/
+$backgroundColorOne: #242936;
+$backgroundColorTwo: #fff;
+
+/*
+	variables para definir el color
+    de los iconos
+*/
+$iconsColor: #c3c3c3;
 
 /*
 	variables para definir bordes
 */
-$borderOne: #eaecef;
+$borderOne: #f6f6f6;
+
+/*
+	variables para definir sombras
+*/
+$shadowOne: #b3b1b14d;
+$shadowTwo: #c1c1c1;
 
 /*
 	formatiamos las margenes y espaciados que definen los
@@ -32,7 +51,142 @@ $borderOne: #eaecef;
 */
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	min-height: 100vh;
+    color: $colorFour;
+
+    /*
+        ::-webkit-scrollbar: definimos un ancho del
+        scrollbar
+    */
+    &::-webkit-scrollbar {
+        width: 14px;
+        background-color: #f1f1f1;
+    }
+
+    /*
+        ::-webkit-scrollbar-thumb
+    */
+    &::-webkit-scrollbar-thumb {
+        background-color: #c1c1c1;
+    }
+
+    &.js_scroll_hidden {
+        overflow-y: hidden;
+    }
+
+    &.js_dark_mode {
+        background-color: $backgroundColorOne;
+        color: #d8d8d8;
+
+        &::-webkit-scrollbar {
+            background-color: #2c303a;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #444857;
+        }
+
+        .header_component {
+            background-color: $backgroundColorOne;
+            border-color: #444857;
+        }
+
+        .components_container .main_components .banner_component h1 {
+            color: #d8d8d8;
+        }
+
+        .components_container .nav_component {
+            background-color: $backgroundColorOne;
+            border-color: #2c303a;
+
+            &::-webkit-scrollbar {
+                background-color: #2c303a;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #444857;
+            }
+        }
+
+        .components_container .nav_component .menu_nav .line_nav {
+            border-color: #444857;
+        }
+
+        .components_container .nav_component .menu_nav .li_dropdown {
+            &:hover > a {
+                color: $colorOne;
+            }
+
+            &:hover svg {
+                fill: $colorOne;
+            }
+        }
+
+        .components_container .nav_component .menu_nav .li_dropdown a {
+            color: #d8d8d8;
+        }
+
+        .components_container .nav_component .menu_nav .li_dropdown a svg {
+            fill: #d8d8d8;
+        }
+
+        .components_container .main_components .modal_section .modal_container .hidden_modal {
+            background-color: #242936;
+
+            .content_modal ul {
+                &::-webkit-scrollbar {
+                    background-color: #2c303a;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #444857;
+                }
+
+                li a {
+                    color: #d8d8d8;
+
+                    &:hover {
+                        color: $colorOne;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 719px) {
+            .components_container .nav_component {
+                background-color: $backgroundColorOne;
+            }
+        }
+
+        input[type="search"] {
+            background-color: #444857;
+            color: $colorSix;
+            border: 2px solid #242933;
+        }
+
+        .components_container .main_components .sections_container .sect_content .code_box {
+            box-shadow: 0 0 8px 0 #232323;
+        }
+
+        .components_container .main_components .section_pagination a {
+            background-color: #3d4353c1;
+            box-shadow: 0 3px 8px 0 #232323;
+
+            &:hover {
+                background-color: #505461;
+            }
+        }
+
+        .components_container .main_components .section_footer .box_gotop.js_show_gotop {
+            box-shadow: 0 2px 6px 0 #232323;
+        }
+    }
+}
+
+/*
+	tag-li: estilos generales para esta etiqueta
+*/
+li {
+    list-style: none;
 }
 
 /*
@@ -40,6 +194,58 @@ body {
 */
 a {
 	text-decoration: none;
+}
+
+a.links {
+    color: #fd51e6;
+    text-decoration: underline;
+}
+
+/*
+    tag-img y tag-svg: definimos vertical-align: top para remover 
+    un espaciado que generan los navegadores en las imagenes y 
+    los iconos 
+*/
+img,
+svg {
+    vertical-align: top;
+}
+
+/*
+    line_titles: : definimos un margen inferior para generar 
+    separacion frente a otros elementos
+*/
+.line_titles {
+    border: 1px solid $colorOne;
+    width: 100px;
+    box-shadow: 0 0 8px 0 $colorOne;
+    margin-bottom: 30px;
+}
+
+/*
+    input[type="search"]: definimos outline: none  para 
+    remover el borde que generan los navegadores en los inputs, 
+    tambien un espaciado en el eje-Y para este elemento
+*/
+input[type="search"] {
+    outline: none;
+    border: 2px solid #f6f6f6;
+    background-color: #fff;
+    color: $colorFour;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    height: 35px;
+    padding: 0 10px;
+
+    /*
+        hacemos uso del pseudo elemento ::palceholder para 
+        modificar el color del texto por defecto
+    */
+    &::placeholder {
+        color: $colorSix;
+    }
 }
 
 /*  
@@ -58,95 +264,150 @@ a {
 	transition: box-shadow 0.2s;
 
 	/*
-		js_header_scroll: clase añadida con javascript en "./src/js/main.js"
-		definimos una sombra cuando inicia el scroll
-	*/
-	&.js_header_scroll {
-		box-shadow: 0 2px 5px #b3b1b14d;
-	}
-
-	/*
-		header_container: definimos display flex junto con sus 
-		propiedades justify-content y align-items mas una altura 
-		para centrar de manera vertical y horizontal los elementos 
-		que este contiene	
+		header_container: definimos flexbox con su propiedad
+        justify-content para generar un espaciado entre
+        el logo y el menu y align-items para centrar de manera
+        vertical los elementos que este contiene 
 	*/
 	.header_container {
 		display: flex;
-		justify-content: space-around;
-		height: $heightFixed;
-		align-items: center;
+        justify-content: space-between;
+        height: $heightFixed;
+        align-items: center;
+        padding: 0 6%;
 
-		/*
-            dispositivos menores a 719px: modificamos
-            la propiedad justify-content y definimos 
-            un espaciado en el eje-X para esta medida
+        /*
+            nitlogo_box
         */
-		@media (max-width: 719px) {
-			justify-content: space-between;
-			padding: 0 30px;
-		}
+        .nitlogo_box {
+            /*
+                tag-a
+            */
+            a {
+                /*  
+                    tag-h4
+                */
+                h4 {
+                    color: $colorOne;
+                    font-size: 27px;
+                    text-shadow: 0 0 2px rgb(76 175 80 / 70%);
+                }
+            }
+        }
 
-		/*
-            dispositivos menores a 472px: modificamos 
-            el espaciado en el eje-X para esta medida
+        /*
+            menu_box: definimos flexbox con su propiedad align-items 
+            para centrar de manera vertical los elementos que este contiene 
         */
-		@media (max-width: 472px) {
-			padding: 0 20px;
-		}
+        .menu_box {
+            display: flex;
+            align-items: center;
+            grid-gap: 8px;
 
-		/*  
-            tag-h4
-        */
-		.nitlogo_box a h4 {
-			color: $colorFour;
-			font-size: 30px;
-		}
+            /*
+                search_box
+            */
+            li.search_box {
+                /*
+                    dispositivos menores a 719px: definimos display: none 
+                    para ocultar el buscador de la vista en esta medida
+                */
+                @media (max-width: 719px) {
+                    display: none;
+                }
 
-		/*
-            tag-span: definimos un margen izquierdo para
-            generar una separacion frente a otros elementos
-        */
-		.nitlogo_box a h4 span {
-			color: $colorOne;
-			margin-left: 4px;
-		}
+                /*
+                    dispositivos mayores a 720px: definimos flexbox con su 
+                    propiedad align-items para centrar de manera vertical 
+                    los elementos que este contiene
+                */
+                @media (min-width: 720px) {
+                    display: flex;
+                    align-items: center;
+                    grid-gap: 8px;
 
-		/*
-			header_box_menu_icon
-		*/
-		.header_box_menu_icon {
-			cursor: pointer;
+                    /*
+                        tag-input: definimos la propiedad display: none para remover este 
+                        elemento de la vista
+                    */
+                    input {
+                        display: none;
 
-			/*
-				tag-span: definimos la propiedad display: block para hacer 
-				visible las lineas del menu hamburgesa, finalmente definimos
-				un ancho y alto para darles tamaño	
-			*/
-			span {
-				display: block;
-				width: 26px;
-				height: 3px;
-				background-color: $colorOne;
-				border-radius: 10px;
+                        /*
+                            js_input_hidden: clase añadida con javascript en "./src/js/main.js"
+                            modificamos la propiedad display a block para hacer visible este 
+                            elemento
+                        */
+                        &.js_input_hidden {
+                            display: block;
+                        }
+                    }
 
-				/*
-					seleccionamos el segundo elemento tag-span y generamos
-					un margen en el eje-Y
-				*/
-				&:nth-child(2) {
-					margin: 4px 0;
-				}
+                    /*
+                        tag-svg: definimos un margen superior para generar 
+                        separacion frente a otros elementos 
+                    */
+                    svg {
+                        margin-top: 2px;
+                    }
+                }
+            }
 
-				/*
-					dispositivos mayores a 720px: definimos display: none 
-					para ocultar el icono de menu de la vista
-				*/
-				@media (min-width: 720px) {
-					display: none;
-				}
-			}
-		}
+            /*  
+                tag-li
+            */
+            li {
+                cursor: pointer;
+
+                /*  
+                    tag-a: definimos un padding derecho 
+                    para generar espaciado en referencia a su contenedor
+                */
+                a {
+                    color: $colorSix;
+                    font-size: 22px;
+                    font-weight: 600;
+                    letter-spacing: 1.1px;
+                    padding-right: 24px;
+
+                    /*
+                        dispositivos menores a 719px: modificamos el
+                        padding para esta medida
+                    */
+                    @media (max-width: 719px) {
+                        padding-right: 4px;
+                    }
+
+                    /*
+                        cuando la tag-a tiene el pseudo elemento :hover modificamos 
+                        su color
+                    */
+                    &:hover {
+                        color: $colorOne;
+                    }
+                }
+
+                /*  
+                    tag-svg
+                */
+                svg {
+                    fill: $iconsColor;
+                    width: 24px;
+                    height: 24px;
+                }
+
+                /*
+                    hacemos uso del :pseudo elemento last-child para 
+                    seleccionar la ultima tag-svg dentro de la tag-li 
+                    y le definimos propiedades personalizadas
+                */
+                &:last-child svg {
+                    fill: $colorOne;
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
 	}
 }
 
@@ -169,48 +430,34 @@ a {
 		top: $heightFixed;
 		left: 0;
 		z-index: 8;
-		border-right: 1px solid $borderOne;
-		width: 240px;
+		width: 260px;
 		height: 100vh;
-		padding: 0 25px 50px;
+		background-color: $backgroundColorTwo;
+		border-right: 1px solid $borderOne;
+		padding: 0 14px 0 28px;
 		overflow: auto;
 
 		/*
 			::-webkit-scrollbar: definimos un ancho del
 			scrollbar
 		*/
-		&::-webkit-scrollbar {
-			width: 8px;
-		}
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: #f1f1f1;
+        }
 
-		/*
-			::-webkit-scrollbar-thumb: definimos display: none
-			para ocultar el scrollbar
+        /*
+			::-webkit-scrollbar-thumb
 		*/
-		&::-webkit-scrollbar-thumb {
-			background-color: #c1c1c1;
-			border-radius: 4px;
-			display: none;
-		}
-
-		/*
-			cuando hacemos :hover sobre nav_component 
-			seleccionamos el pseudo elemento 
-			::-webkit-scrollbar-thumb y definimos display: block
-			para hacer visible el scrollbar
-		*/
-		&:hover {
-			&::-webkit-scrollbar-thumb {
-				display: block;
-			}
-		}
+        &::-webkit-scrollbar-thumb {
+            background-color: #c1c1c1;
+        }
 
 		/*
 			dispositivos menores a 719px: definimos transform: translateX() 
 			para desplazar el menu de navegacion ocultandolo de la vista
 		*/
 		@media (max-width: 719px) {
-			background-color: $colorThree;
 			transform: translateX(-1000px);
 			transition: transform 0.3s;
 
@@ -225,66 +472,69 @@ a {
 		}
 
 		/*
-			search_box: definimos flexbox con su propiedad
-			align-items y una altura para centrar de manera vertical 
-			los elementos que este contiene, finalmente definimos 
-			un margen en la parte superior 
+			dispositivos mayores a 720px
 		*/
-		.search_box {
-			display: flex;
-			height: 35px;
-			align-items: center;
-			border: 1px solid $borderOne;
-			border-radius: 50px;
-			margin-top: 30px;
-
-			/*
-				tag-input: definimos border: none y outline: none 
-				para remover un borde que generan los navegadores 
-				en los inputs, finalmente definimos un espaciado 
-				en el eje-Y para este elemento 
+        @media (min-width: 720px) {
+            /*
+				js_show_navbar: clase añadida con javascript en "./src/js/main.js"
+				definimos transform: translateX() para desplazar el menu de 
+                navegacion ocultandolo de la vista
 			*/
-			input {
-				border: none;
-				outline: none;
-				background-color: transparent;
-				color: $colorFour;
-				font-size: 17px;
-				letter-spacing: 0.5px;
-				width: 145px;
-				padding: 0 8px 0 14px;
-			}
+            &.js_show_navbar {
+                transform: translateX(-1000px);
+            }
 
-			/*
-				search_btn
+            /*
+				cuando nav_component tiene esta clase seleccionamos a main_component 
+                y modificamos su ancho
 			*/
-			.search_btn {
-				/*
-					tag-svg: definimos vertical-align: top para remover un 
-					espaciado que generan los navegadores en los iconos 
-				*/
-				svg {
-					vertical-align: top;
-					fill: $colorOne;
-					width: 24px;
-					height: 24px;
-				}
-			}
-		}
+            &.js_show_navbar ~ .main_components {
+                width: 100%;
+            }
+        }
 
 		/*
-			nav_menu: definimos un espaciado en el eje-Y para este elemento 
+			menu_nav: definimos un espaciado personalizado en el eje-Y para este elemento 
+			el espaciado inferior permite solucionar un error que se presenta 
+			impidiendo que el ultimo item del menu se vea correctamente
 		*/
-		.nav_menu {
-			padding: 30px 0;
+		.menu_nav {
+			padding: 24px 0 70px;
+
+            li input[type="search"] {
+                width: 100%;
+                margin-bottom: 30px;
+
+                /*
+                    dispositivos mayores a 720px: definimos display: none 
+                    para ocultar el buscador de la vista en esta medida
+                */
+                @media (min-width: 720px) {
+                    display: none;
+                }
+            }
 
 			/*
-				li_dropdown: definimos un margen en la parte inferior de este 
-				elemento
+				li_dropdown
 			*/
 			.li_dropdown {
 				list-style: none;
-				margin-bottom: 18px;
+
+				/*
+                    cuando hacemos :hover sobre la tag-li, seleccionamos a 
+                    tag-a y modificamos el color de este elemento
+                */
+                &:hover > a {
+                    color: $colorOne;
+                }
+
+                /*
+                    cuando hacemos :hover sobre la tag-li, seleccionamos a 
+                    tag-svg y modificamos el color de este elemento
+                */
+                &:hover svg {
+                    fill: $colorOne;
+                }
 
 				/*
 					cuando li_dropdown tiene la clase js_show_dropdown_menu
@@ -313,28 +563,37 @@ a {
 					vertical los elementos que este contiene 
 				*/
 				a {
-					color: $colorFour;
-					font-size: 1.1rem;
-					font-weight: 600;
 					display: flex;
-					justify-content: space-between;
-					align-items: center;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $colorFour;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    margin-bottom: 18px;
 
-					/*
-						cuando hacemos :hover sobre la tag-a modificamos
-						el color de este elemento
-					*/
-					&:hover {
-						color: $colorOne;
-					}
+                    /*  
+                        js_active_link: cuando tag-a tiene esta clase 
+                        modificamos el color de estos elementos
+                    */
+                    &.js_active_link {
+                        color: $colorOne;
+                    }
 
-					&.js_active_link {
-						color: $colorOne;
-					}
+                    /*  
+                        js_active_link svg: cuando tag-a tiene esta clase 
+                        seleccionamos a tag-svg y modificamos el color del icono
+                    */
+                    &.js_active_link svg {
+                        fill: $colorOne;
+                    }
 
-					&.js_active_link svg {
-						fill: $colorOne;
-					}
+                    /*  
+                        js_link_hidden: cuando tag-a tiene esta clase 
+                        definimos display: none para ocultar los elementos
+                    */
+                    &.js_link_hidden {
+                        display: none;
+                    }
 
 					/*
 						tag-svg: definimos vertical-align: top para remover un 
@@ -343,10 +602,9 @@ a {
 						icono al momento de hacer click en li_dropdown
 					*/
 					svg {
-						vertical-align: top;
 						fill: $colorFour;
-						width: 12px;
-						height: 12px;
+						width: 26px;
+                        height: 26px;
 						transition: transform 0.3s;
 					}
 				}
@@ -368,9 +626,6 @@ a {
 						tag-li: definimos un espaciado en el eje-Y para este elemento
 					*/
 					li {
-						list-style: none;
-						padding: 10px 0;
-
 						/*
 							tag-a
 						*/
@@ -388,69 +643,62 @@ a {
 					}
 				}
 			}
+
+			/*
+                line_nav: definimos un margen inferior
+                para generar separacion frente a otros elementos
+            */
+            .line_nav {
+                border: 1px solid $borderOne;
+                width: 96%;
+                margin-bottom: 18px;
+
+                /*
+                    js_hidden_line_nav: clase añadida con javascript 
+                    definimos display: none para remover este elemento
+                */
+                &.js_hidden_line_nav {
+                    display: none;
+                }
+            }
 		}
 	}
 
 	/* 
         main_components: definimos position alsolute junto con su 
-		propiedade top para posicionar este elemento
+		propiedad top para posicionar este elemento, tambien definimos 
+        una altura minima calculada para que tome todo el alto de la 
+        patalla. Finalmente, definimos un espaciado en el eje-X para este elemento
     */
 	.main_components {
 		position: absolute;
-		top: $heightFixed;
-		color: $colorFour;
+        top: $heightFixed;
+        min-height: calc(100% - 60px);
+        padding: 0 6%;
 
 		/*
 			dispositivos mayores a 720px: definimos right: 0 para
 			posicionar este elemento a la parte derecha de la
 			pantalla para que le deje el espacio al menu de navegacion, 
 			tambien definimos un ancho calculado y a 100% y le 
-			restamos el ancho del menu de navegacion, finalmente 
-			definimos un espaciado en el eje-X para este elemento
+			restamos el ancho del menu de navegacion
 		*/
-		@media (min-width: 720px) {
-			right: 0;
-			width: calc(100% - 240px);
-			padding: 0 50px;
-		}
+        @media (min-width: 720px) {
+            right: 0;
+            width: calc(100% - 260px);
+        }
 
-		/*
-			dispositivos mayores a 900px: definimos un espaciado
-			en el eje-X para este elemento
-		*/
-		@media (min-width: 900px) {
-			padding: 0 60px;
-		}
-
-		/*
-			dispositivos mayores a 1200px: modificamos el espaciado
-			en el eje-X para este elemento
-		*/
-		@media (min-width: 1200px) {
-			padding: 0 80px;
-		}
-
-		/*
+        /*
 			dispositivos menores a 719px: definimos left: 0 para
 			posicionar este elemento a la parte izquierda de la
 			pantalla para que tome el espacio dejado por el 
 			menu de navegacion, finalmente modificamos el ancho a
-			100% para que tome el ancho total de la pantalla y
-			definimos un espaciado en el eje-X para este elemento
+			100% para que tome el ancho total de la pantalla 
 		*/
-		@media (max-width: 719px) {
-			left: 0;
-			width: 100%;
-			padding: 0 30px;
-		}
-
-		/*
-			dispositivos menores a 472px: modificamos el espaciado
-			en el eje-X para este elemento
-		*/
-		@media (max-width: 472px) {
-			padding: 0 20px;
-		}
+        @media (max-width: 719px) {
+            left: 0;
+            width: 100%;
+        }
 
 		/*
 			banner_component
@@ -461,21 +709,37 @@ a {
 			margin: 30px 0 40px;
 
 			/*
-				dispositivos menores a 952px: modificamos el tamaño de
-				fuente y el margen inferior de este elemento
+				dispositivos menores a 1200px: modificamos el tamaño de
+				fuente y el margen del eje-Y de este elemento
 			*/
-			@media (max-width: 952px) {
-				font-size: 1.9rem;
-				margin: 30px 0;
-			}
+            @media (max-width: 1200px) {
+                font-size: 2.6rem;
+                margin: 30px 0;
+            }
 
-			/*
+            /*
+				dispositivos menores a 952px: modificamos el tamaño de
+				fuente de este elemento
+			*/
+            @media (max-width: 952px) {
+                font-size: 1.9rem;
+            }
+
+            /*
+				dispositivos menores a 788px: modificamos el tamaño de
+				fuente de este elemento
+			*/
+            @media (max-width: 788px) {
+                font-size: 1.6rem;
+            }
+
+            /*
 				dispositivos menores a 418px: modificamos el tamaño de
 				fuente de este elemento
 			*/
-			@media (max-width: 418px) {
-				font-size: 1.3rem;
-			}
+            @media (max-width: 418px) {
+                font-size: 1.1rem;
+            }
 
 			/*
 				tag-h1
@@ -488,6 +752,7 @@ a {
 				*/
 				span {
 					color: $colorOne;
+                    text-shadow: 0 0 2px #4caf4fa8;
 				}
 			}
 		}
@@ -501,6 +766,7 @@ a {
 				en el eje-Y para este elemento
 			*/
 			.description_paragraph {
+				text-align: justify;
 				font-size: 1.5rem;
 				line-height: 1.5;
 				margin-bottom: 30px;
@@ -519,39 +785,199 @@ a {
 		*/
 		.section_banner {
 			/*
-				tag-h2: definimos un margen en la parte superior de
-				este elemento
-			*/
-			h2 {
-				font-size: 2.8rem;
-				margin-top: 30px;
-			}
+                index_container: definimos flexbox con su propiedad
+                justify-content y align-items para centrar de manera
+                vertical y horizontal los elementos que este contiene,
+                finalmente definimos un margen en la parte superior 
+                de este elemento
+            */
+            .index_container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
 
-			/*
-				banner_line_titles
-			*/
-			.banner_line_titles {
-				border: 2px solid $colorOne;
-				width: 100px;
-			}
+                /*
+                    tag-svg
+                */
+                svg {
+                    fill: $iconsColor;
+                    width: 38px;
+                    height: 38px;
+                    cursor: pointer;
+                }
 
-			/*
-				tag-p: definimos una separacion de lineas y un margen 
-				en el eje-Y para este elemento
-			*/
-			p {
-				font-size: 1.5rem;
-				line-height: 1.5;
-				margin: 30px 0 80px;
+                /*
+                    tag-h2
+                */
+                h2 {
+                    font-size: 2.8rem;
 
-				/*
+                    /*
+                        dispositivos menores a 381px: modificamos el tamaño de
+                        fuente para este elemento
+                    */
+                    @media (max-width: 381px) {
+                        font-size: 2.4rem;
+                    }
+
+                    /*
+                        dispositivos menores a 333px: modificamos el tamaño de
+                        fuente para este elemento
+                    */
+                    @media (max-width: 333px) {
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+
+            /*
+				tag-p
+			*/
+            p {
+                text-align: justify;
+                font-size: 20px;
+                line-height: 1.5;
+
+                /*
 					tag-strong
 				*/
-				strong {
-					color: $colorOne;
-				}
-			}
+                strong {
+                    color: $colorOne;
+                    text-shadow: 0 0 2px #4caf4fa8;
+                }
+            }
 		}
+
+		/*
+            modal_section
+        */
+        .modal_section {
+            /*
+                container_name
+            */
+            .modal_container {
+                /*
+                    hidden_modal: definimos position: fixed y sus propiedades
+                    top, left, right, bottom y z-index para que este contenedor
+                    tome el ancho y alto total de la pantalla
+                    implementamos display: none para ocultar el modal y las 
+                    propiedades justify-content y align-items para centrar 
+                    los elementos horizontal y verticalmente
+                */
+                .hidden_modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 99;
+                    background-color: $backgroundColorTwo;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    /*
+                        js_show_hidden_modal: clase añadida con javascript
+                        la cual implementa display: flex la cual hace visible
+                        el modal y centra los elementos
+                    */
+                    &.js_show_hidden_modal {
+                        display: flex;
+                    }
+
+                    /*
+                        js_show_hidden_modal: cuando hidden_modal tiene esta clase 
+                        añadida con javascript relaciona a content_modal y le añade
+                        la animacion animationModal la cual hace que el modal
+                        emerja desde la parte izquierda
+                    */
+                    &.js_show_hidden_modal .content_modal {
+                        @keyframes animationModal {
+                            0% {
+                                transform: translateY(-70px);
+                            }
+
+                            100% {
+                                transform: translateY(0px);
+                            }
+                        }
+                    }
+
+                    /*
+                        content_modal: definimos un ancho maximo para que este 
+                        elemento no crezca en anchura despues de 700px, tambien
+                        un espaciado en el eje-X y finalmente ejecutamos la animacion 
+                        animationModal
+                    */
+                    .content_modal {
+                        width: 100%;
+                        max-width: 500px;
+                        padding: 0 6%;
+                        animation: animationModal 0.8s;
+
+                        /*
+                            tag-h2
+                        */
+                        h2 {
+                            font-size: 42px;
+                        }
+
+                        /*
+                            tag-ul: definimos una altura junto con un overflow-y 
+                            para que oculte los elementos que sobrepasen la altura
+                            de su contenedor padre
+                        */
+                        ul {
+                            height: 350px;
+                            overflow-y: auto;
+
+                            /*
+                                ::-webkit-scrollbar: definimos un ancho del
+                                scrollbar
+                            */
+                            &::-webkit-scrollbar {
+                                width: 10px;
+                                background-color: #f1f1f1;
+                            }
+
+                            /*
+                                ::-webkit-scrollbar-thumb
+                            */
+                            &::-webkit-scrollbar-thumb {
+                                background-color: #c1c1c1;
+                            }
+
+                            /*
+                                tag-li: definimos un margen superior para generar 
+                                separacion frente a otros elementos 
+                            */
+                            li {
+                                margin-top: 18px;
+
+                                /*
+                                    tag-a
+                                */
+                                a {
+                                    color: $colorFour;
+                                    font-size: 18px;
+                                    font-weight: 500;
+
+                                    /*
+                                        cuando la tag-a tiene el pseudo elemento :hover 
+                                        modificamos su color
+                                    */
+                                    &:hover {
+                                        color: $colorOne;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
 		/*
 			sections_container
@@ -568,36 +994,48 @@ a {
 				h3 {
 					font-size: 2rem;
 					line-height: 1.2;
-					margin-bottom: 40px;
+					padding: 80px 0 20px;
+
+                    /*
+						dispositivos menores a 336px: modificamos el tamaño de
+						fuente de este elemento
+					*/
+                    @media (max-width: 336px) {
+                        font-size: 1.7rem;
+                    }
 				}
 
 				/*
-					code_box: definimos un margen en la parte inferior de este 
-					elemento y un espaciado de 12px para todos los ejes
-				*/
-				.code_box {
-					background-color: #343d4d;
-					color: $colorThree;
-					border-radius: 5px;
-					box-shadow: 0 2px 6px 0 #ccc;
-					margin-bottom: 40px;
-					padding: 12px;
+                    tag-p
+                */
+                p {
+                    text-align: justify;
+                    font-size: 20px;
+                    line-height: 1.5;
 
-					/*
+                    /*
 						tag-strong
 					*/
-					strong {
-						color: $colorOne;
-					}
-				}
+                    strong {
+                        color: $colorOne;
+                        text-shadow: 0 0 2px #4caf4fa8;
+                    }
+                }
+
+                /*
+                    tag-p: definimos un margen personalizado en el eje-Y para 
+                    generar sepracion frente a otros elementos
+                */
+                p.second_paragraph {
+                    margin-block: 20px;
+                }
 
 				/*
-					sect_box_img: definimos un margen en la parte inferior
+					sect_box_img: definimos un margen en la parte superior
 					de este elemento
 				*/
-				.sect_box_img {
-					text-align: center;
-					margin-bottom: 80px;
+				.img_box {
+					margin-top: 30px;
 
 					/*
 						tag-img: definimos vertical-align: top para remover un 
@@ -605,35 +1043,316 @@ a {
 						finalmente con object-fit ajustamos la img a su contenedor 
 					*/
 					img {
-						vertical-align: top;
 						width: 100%;
-						height: auto;
-						object-fit: cover;
-						box-shadow: 0 2px 6px 0 #ccc;
+						box-shadow: 0 2px 8px 0 $shadowTwo;
 					}
 				}
-			}
 
-			/*
-				division_line: definimos un margen en la parte
-				inferior para este elemento
-			*/
-			.division_line {
-				text-align: center;
-				color: $colorFive;
-				margin-bottom: 90px;
+				/*
+					code_box: definimos un margen en la parte inferior de este 
+					elemento y un espaciado de 12px para todos los ejes
+				*/
+				.code_box {
+					background-color: $backgroundColorOne;
+					color: $colorThree;
+                    font-size: 17px;
+					border-radius: 5px;
+					padding: 20px;
+                    margin-top: 38px;
+                    overflow-x: auto;
+					box-shadow: 0 2px 8px 0 $shadowTwo;
+
+                    /*
+                    	::-webkit-scrollbar: definimos un alto del
+                    	scrollbar
+                    */
+                    &::-webkit-scrollbar {
+                        height: 12px;
+                    }
+
+                    /*
+                    	::-webkit-scrollbar-thumb
+                    */
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #434a58;
+                    }
+
+                    pre.code_header {
+                        margin-bottom: 28px;
+                    }
+
+                    pre {
+                        code {
+                            // padding: 0 20px;
+
+                            span.circle {
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;
+                                margin-right: 6px;
+                                border-radius: 50px;
+                            }
+
+                            span.first_circle {
+                                background-color: #fc5f55;
+                            }
+
+                            span.second_circle {
+                                background-color: #fabd24;
+                            }
+
+                            span.thirt_circle {
+                                background-color: #26c83f;
+                            }
+
+                            span.index {
+                                display: inline-block;
+                                margin-bottom: 3px;
+                                color: #4c525d;
+                                user-select: none;
+                            }
+
+                            span.inner_index {
+                                padding-right: 12px;
+                            }
+
+                            span.outer_index {
+                                padding-right: 50px;
+                            }
+
+                            span.outer_doble_index {
+                                padding-right: 88px;
+                            }
+
+                            span.variable {
+                                color: #aa87fb;
+                            }
+
+                            span.numbers {
+                                color: #ffbff4;
+                            }
+
+                            span.symbols {
+                                color: #2da8ff;
+                            }
+
+                            span.parameters {
+                                color: #8cbdd9;
+                            }
+
+                            span.string {
+                                color: #d5ff80;
+                            }
+
+                            span.function {
+                                color: #7eb7ff;
+                            }
+
+                            span.objects {
+                                color: #84d5f4;
+                            }
+
+                            span.return {
+                                color: #ff66a1;
+                            }
+
+                            span.functions {
+                                color: #ffad66;
+                            }
+
+                            span.brackets {
+                                color: #ffd700;
+                            }
+
+                            span.console {
+                                color: #c1c1c1ad;
+                            }
+
+                            span.keyword {
+                                color: #f783f7;
+                            }
+
+                            span.square {
+                                color: goldenrod;
+                            }
+
+                            span.semi_colon {
+                                color: #808080;
+                            }
+
+                            span.methods {
+                                color: #ffd173;
+                            }
+
+                            span.text {
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    // .output_box {
+                    //     pre {
+                    //         color: #83f8b0;
+                    //         margin-bottom: 4px;
+                    //         padding: 0 20px;
+
+                    //         &.error {
+                    //             color: #ff6666;
+                    //         }
+
+                    //         &:first-of-type {
+                    //             border-bottom: 1px solid #171b24;
+                    //             margin: 36px 0 20px;
+                    //         }
+
+                    //         span {
+                    //             color: #4c525d;
+                    //         }
+
+                    //         span.key {
+                    //             color: #73d0ff;
+                    //         }
+
+                    //         span.text {
+                    //             color: #fff;
+                    //         }
+
+                    //         span.flat {
+                    //             color: #f783f7;
+                    //         }
+                    //     }
+                    // }
+				}
 			}
 		}
 
 		/*
-			section_footer: definimos un margen personalizado en
-			el eje-Y para este elemento 
+			section_pagination: definimos flexbox con su propiedad
+            justify-content para generar un espaciado entre los 
+            elementos que este contiene, finalmente definimos un margen 
+            en el eje-Y para generar separacion frente a otros elementos
 		*/
-		.section_footer {
-			text-align: center;
-			color: $colorFive;
-			font-size: 1.2rem;
-			margin: 60px 0 30px;
-		}
+        .section_pagination {
+            display: flex;
+            justify-content: space-between;
+            margin: 80px 0;
+
+            /*
+                tag-a: definimos un espaciado para generar el efecto boton
+            */
+            a {
+                background-color: $backgroundColorOne;
+                border-radius: 5px;
+                padding: 5px;
+                box-shadow: 0 3px 8px 0 $shadowTwo;
+
+                /*
+                    cuando la tag-a tiene el pseudo elemento :hover modificamos 
+                    su color de fondo
+                */
+                &:hover {
+                    background-color: #242936c1;
+                }
+
+                /*
+                    cuando la tag-a tiene la clase not_previous o not_next cancelamos 
+                    su seleccion con la propiedad pointer-events
+                */
+                &.not_previous,
+                &.not_next {
+                    background-color: #2429367f;
+                    pointer-events: none;
+                }
+
+                /*
+                    tag-svg
+                */
+                svg {
+                    fill: $colorThree;
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+
+        /*
+            section_footer: definimos un margen inferior
+            para generar separacion frente a otros elementos
+        */
+        .section_footer {
+            margin-bottom: 30px;
+
+            /*
+                box_gotop: implementamos fixed y sus propiedades right, 
+                y bottom para darle posicion a esta caja, luego hacemos
+                uso de flexbox y sus propiedades justify-content y
+                align-items para centrar vertical y horizontalmente el icono,
+                finalmente overflow: hidden para ocualtar la caja
+            */
+            .box_gotop {
+                position: fixed;
+                right: 2%;
+                bottom: 85px;
+                z-index: 98;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 39px;
+                height: 39px;
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+
+                /*
+                    añadimos la clase javascript js_show_gotop para agregar 
+                    color de fondo, una sombra y overflow: visible para 
+                    visible nuevamente esta caja 
+                */
+                &.js_show_gotop {
+                    background-color: $colorOne;
+                    box-shadow: 0 2px 6px 0 $shadowTwo;
+                    overflow: visible;
+
+                    /*
+                        cuando hacemos :hover sobre box_gotop,
+                        relacionamos a tag-svg y modificamos el 
+                        tamaño del icono
+                    */
+                    &:hover svg {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+                /*
+                    añadimos la clase javascript js_show_gotop, 
+                    relacionamos a tag-svg para añadirle color 
+                    al icono
+                */
+                &.js_show_gotop svg {
+                    fill: $backgroundColorOne;
+                }
+
+                /*
+                    tag-svg: importante definir fill: transparent 
+                    para ocultar el icono
+                */
+                svg {
+                    fill: transparent;
+                    width: 27px;
+                    height: 27px;
+                }
+            }
+
+            /*
+                tag-h4
+            */
+            h4 {
+                text-align: center;
+                color: $colorSix;
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
 	}
 }

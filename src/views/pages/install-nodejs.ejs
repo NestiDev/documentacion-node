@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<%- include('../partials/head'); %>
+	</head>
+
+	<body>
+		<!--  
+            .header_component: contenedor de la sesion, definimos un ID
+            .para implementar este elemento en './src/js/main.js'
+        -->
+		<header class="header_component" id="header-component"><%- include('../partials/header'); %></header>
+
+		<!--  
+            components_container: contenedor de nav_component y de main_components
+        -->
+		<div class="components_container">
+			<!--  
+                .nav_component: contenedor de la sesion, definimos un ID 
+                .para implementar este elemento en './src/js/main.js'
+            -->
+			<nav class="nav_component" id="menu-nav"><%- include('../partials/navbar'); %></nav>
+
+			<!--  
+                main_components: contenedor de section_banner,
+                section_container y 1 tag-footer
+            -->
+			<main class="main_components">
+				<!--  
+                    section_banner: contenedor de 1 index_container, de 1 tag-hr
+                    y 1 tag-p
+                -->
+                <div class="section_banner">
+                    <!--  
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
+                    -->
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Instalación</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
+
+                    <!--  
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
+                    -->
+                    <hr class="line_titles" />
+
+
+					<!--  
+                        tag-p: en esta definimos el parrafo de la seccion
+                    -->
+					<p>
+						<strong>NodeJs</strong> es compatible con varios sistemas operativos, incluyendo Windows, MacOS y Linux. Asegúrate de seleccionar la versión correcta según tu sistema operativo.
+					</p>
+				</div>
+
+				<!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#nodejs.org">01. NodeJs.org</a></li>
+                                    <li><a href="#setup">02. Setup</a></li>
+                                    <li><a href="#instalador">03. instalador</a></li>
+                                    <li><a href="#licencia-de-acuerdo">04. Licencia de acuerdo</a></li>
+                                    <li><a href="#carpeta-destino">05. Carpeta destino</a></li>
+                                    <li><a href="#configuracion-personalizada">06. Configuración personalizada</a></li>
+                                    <li><a href="#herramientas-nativas">07. Herramientas nativas</a></li>
+                                    <li><a href="#instalacion">08. Instalación</a></li>
+                                    <li><a href="#instalacion-exitosa">09. Instalación exitosa</a></li>
+                                    <li><a href="#validacion-de-la-instalacion">10. Validación de la instalación</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+				<!--  
+                    sections_container: contenedor de las secciones que componen
+                    esta vista
+                -->
+				<div class="sections_container">
+                    <!--  
+						sect_content: contenedor de 1 tag-h3 y de img_box
+					-->
+                    <section class="sect_content">
+                        <!--  
+							tag-h3: en esta definimos el titulo de la seccion
+						-->
+						<h3 id="nodejs.org">01. Nodejs.org</h3>
+
+                        <!--  
+                            tag-p: en esta definimos el parrafo de la seccion
+                        -->
+                        <p>
+                            Desde la web oficial 
+                            <a class="links" href="https://nodejs.org/en/download" title="Ir a nodejs.org">nodejs.org</a>
+                            podemos realizar la descarga de <strong>NodeJs</strong> Cabe recordar que esta trae incluida la descarga de <strong>Npm</strong> en su ultima versión y que la versión recomendada para instalar es la versión <strong>LTS</strong> 
+                        </p>
+
+                        <!--  
+							img_box: contenedor de 1 tag-img
+						-->
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/nodejs.org.png"
+								alt="nodejs.org"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="setup">02. Setup</h3>
+
+                        <p>
+                            Una vez finalizada la descarga, podemos dirigirnos a la carpeta de descargas y ejecutar el setup.
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/setup.png"
+								alt="setup"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="instalador">03. Instalador</h3>
+
+                        <p>
+                            Esta ventana nos indica que podemos iniciar la instalación de <strong>NodeJs</strong>
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/node1.png"
+								alt="instalador"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="licencia-de-acuerdo">04. Licencia de acuerdo</h3>
+
+                        <p>
+                            Luego de iniciar la instalación, debemos aceptar la licencia
+                            de acuerdo.
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/node2.png"
+								alt="licencia de acuerdo"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="carpeta-destino">05. Carpeta destino</h3>
+
+                        <p>
+                            Esta ventana nos indica la ruta de destino donde se va a instalar 
+                            <strong>NodeJs</strong> y todos sus componentes.
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/node3.png"
+								alt="carpeta destino"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="configuracion-personalizada">06. Configuración personalizada</h3>
+
+                        <p>
+                            Esta es una opción para personalizar la instalación de 
+                            <strong>NodeJs</strong> la cual no necesita 
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/node4.png"
+								alt="configuración personalizada"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="herramientas-nativas">07. Herramientas nativas</h3>
+
+                        <p>
+                            Las herramientas nativas nos ofrece la instalación de 
+                            <strong>Chocolatey</strong> la cual yo recomiendo no 
+                            instalar a menos que ya trabajes con ella.
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/node5.png"
+								alt="herramientas nativas"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="instalacion">08. Instalación</h3>
+
+                        <p>
+                            Finalmente podemos inicar el proceso de instalación.
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/node6.png"
+								alt="iniciar instalación"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="instalacion-exitosa">09. Instalación exitosa</h3>
+
+                        <p>
+                            Luego del proceso de instalación nos muestra una ventana que 
+                            nos indica que <strong>NodeJs</strong> ha sido instaldo 
+                            correctamente.
+                        </p>
+
+						<div class="img_box">
+							<img
+								src="../../assets/images/install/node7.png"
+								alt="instalación exitosa"
+							/>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="validacion-de-la-instalacion">10. Validación de la instalación</h3>
+
+                        <p>
+                            para validar la instalación de <strong>NodeJs</strong> y <strong>Npm</strong>
+                            podemos abrir una consola de comandos externa y ejecutar...
+                        </p>
+
+                        <div class="code_box">
+                            <!--  
+                                output_box: en esta definimos la salida en respuesta al codigo
+                            -->
+                            <div class="output_console">
+                                <pre><code><span class="console">Microsoft Windows [Version 10.0.17758.1]</span></code></pre>
+                                <pre><code><span class="console">(c) 2018 Microsoft Corporation. All Rights Reserved.</span></code></pre>
+                                <br>
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">></span>node <span class="objects">-v </span><span class="console">|| node --version</span></span></code></pre>
+                                <pre><span class="text">v20.9.0</span></pre>
+                                <br>
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">></span>npm <span class="objects">-v </span><span class="console"> npm --version</span></span></code></pre>
+                                <pre><span class="text">10.1.0</span></pre>
+                            </div>
+                        </div>
+					</section>
+
+                    <!--  
+                        section_pagination: contenedor de 2 tags-a
+                    -->
+                    <div class="section_pagination"></div>
+
+					<!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Instalación - NodeJs") %>
+				</div>
+			</main>
+		</div>
+
+		<script type="module" src="./js/main.js"></script>
+	</body>
+</html>

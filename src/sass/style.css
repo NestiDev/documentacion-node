@@ -7,7 +7,17 @@
 	variables para definir colores
 */
 /*
+	variables para definir color de fondo
+*/
+/*
+	variables para definir el color
+    de los iconos
+*/
+/*
 	variables para definir bordes
+*/
+/*
+	variables para definir sombras
 */
 /*
 	formatiamos las margenes y espaciados que definen los
@@ -24,7 +34,111 @@
 */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+  color: #5c5b5b;
+  /*
+      ::-webkit-scrollbar: definimos un ancho del
+      scrollbar
+  */
+  /*
+      ::-webkit-scrollbar-thumb
+  */
+}
+body::-webkit-scrollbar {
+  width: 14px;
+  background-color: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+}
+body.js_scroll_hidden {
+  overflow-y: hidden;
+}
+body.js_dark_mode {
+  background-color: #242936;
+  color: #d8d8d8;
+}
+body.js_dark_mode::-webkit-scrollbar {
+  background-color: #2c303a;
+}
+body.js_dark_mode::-webkit-scrollbar-thumb {
+  background-color: #444857;
+}
+body.js_dark_mode .header_component {
+  background-color: #242936;
+  border-color: #444857;
+}
+body.js_dark_mode .components_container .main_components .banner_component h1 {
+  color: #d8d8d8;
+}
+body.js_dark_mode .components_container .nav_component {
+  background-color: #242936;
+  border-color: #2c303a;
+}
+body.js_dark_mode .components_container .nav_component::-webkit-scrollbar {
+  background-color: #2c303a;
+}
+body.js_dark_mode .components_container .nav_component::-webkit-scrollbar-thumb {
+  background-color: #444857;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .line_nav {
+  border-color: #444857;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown:hover > a {
+  color: #4caf50;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown:hover svg {
+  fill: #4caf50;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown a {
+  color: #d8d8d8;
+}
+body.js_dark_mode .components_container .nav_component .menu_nav .li_dropdown a svg {
+  fill: #d8d8d8;
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal {
+  background-color: #242936;
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul::-webkit-scrollbar {
+  background-color: #2c303a;
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul::-webkit-scrollbar-thumb {
+  background-color: #444857;
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li a {
+  color: #d8d8d8;
+}
+body.js_dark_mode .components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li a:hover {
+  color: #4caf50;
+}
+@media (max-width: 719px) {
+  body.js_dark_mode .components_container .nav_component {
+    background-color: #242936;
+  }
+}
+body.js_dark_mode input[type=search] {
+  background-color: #444857;
+  color: #d8d8d8;
+  border: 2px solid #242933;
+}
+body.js_dark_mode .components_container .main_components .sections_container .sect_content .code_box {
+  box-shadow: 0 0 8px 0 #232323;
+}
+body.js_dark_mode .components_container .main_components .section_pagination a {
+  background-color: rgba(61, 67, 83, 0.7568627451);
+  box-shadow: 0 3px 8px 0 #232323;
+}
+body.js_dark_mode .components_container .main_components .section_pagination a:hover {
+  background-color: #505461;
+}
+body.js_dark_mode .components_container .main_components .section_footer .box_gotop.js_show_gotop {
+  box-shadow: 0 2px 6px 0 #232323;
+}
+
+/*
+	tag-li: estilos generales para esta etiqueta
+*/
+li {
+  list-style: none;
 }
 
 /*
@@ -32,6 +146,60 @@ body {
 */
 a {
   text-decoration: none;
+}
+
+a.links {
+  color: #fd51e6;
+  text-decoration: underline;
+}
+
+/*
+    tag-img y tag-svg: definimos vertical-align: top para remover 
+    un espaciado que generan los navegadores en las imagenes y 
+    los iconos 
+*/
+img,
+svg {
+  vertical-align: top;
+}
+
+/*
+    line_titles: : definimos un margen inferior para generar 
+    separacion frente a otros elementos
+*/
+.line_titles {
+  border: 1px solid #4caf50;
+  width: 100px;
+  box-shadow: 0 0 8px 0 #4caf50;
+  margin-bottom: 30px;
+}
+
+/*
+    input[type="search"]: definimos outline: none  para 
+    remover el borde que generan los navegadores en los inputs, 
+    tambien un espaciado en el eje-Y para este elemento
+*/
+input[type=search] {
+  outline: none;
+  border: 2px solid #f6f6f6;
+  background-color: #fff;
+  color: #5c5b5b;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  height: 35px;
+  padding: 0 10px;
+  /*
+      hacemos uso del pseudo elemento ::palceholder para 
+      modificar el color del texto por defecto
+  */
+}
+input[type=search]::-moz-placeholder {
+  color: #d8d8d8;
+}
+input[type=search]::placeholder {
+  color: #d8d8d8;
 }
 
 /*  
@@ -46,96 +214,147 @@ a {
   right: 0;
   z-index: 9;
   background-color: #fff;
-  border-bottom: 1px solid #eaecef;
+  border-bottom: 1px solid #f6f6f6;
   transition: box-shadow 0.2s;
   /*
-  	js_header_scroll: clase añadida con javascript en "./src/js/main.js"
-  	definimos una sombra cuando inicia el scroll
+  	header_container: definimos flexbox con su propiedad
+         justify-content para generar un espaciado entre
+         el logo y el menu y align-items para centrar de manera
+         vertical los elementos que este contiene 
   */
-  /*
-  	header_container: definimos display flex junto con sus 
-  	propiedades justify-content y align-items mas una altura 
-  	para centrar de manera vertical y horizontal los elementos 
-  	que este contiene	
-  */
-}
-.header_component.js_header_scroll {
-  box-shadow: 0 2px 5px rgba(179, 177, 177, 0.3019607843);
 }
 .header_component .header_container {
   display: flex;
-  justify-content: space-around;
-  height: 70px;
+  justify-content: space-between;
+  height: 60px;
   align-items: center;
+  padding: 0 6%;
   /*
-            dispositivos menores a 719px: modificamos
-            la propiedad justify-content y definimos 
-            un espaciado en el eje-X para esta medida
-        */
+      nitlogo_box
+  */
   /*
-            dispositivos menores a 472px: modificamos 
-            el espaciado en el eje-X para esta medida
-        */
+      menu_box: definimos flexbox con su propiedad align-items 
+      para centrar de manera vertical los elementos que este contiene 
+  */
+}
+.header_component .header_container .nitlogo_box {
+  /*
+      tag-a
+  */
+}
+.header_component .header_container .nitlogo_box a {
   /*  
-            tag-h4
-        */
+      tag-h4
+  */
+}
+.header_component .header_container .nitlogo_box a h4 {
+  color: #4caf50;
+  font-size: 27px;
+  text-shadow: 0 0 2px rgba(76, 175, 80, 0.7);
+}
+.header_component .header_container .menu_box {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
   /*
-            tag-span: definimos un margen izquierdo para
-            generar una separacion frente a otros elementos
-        */
+      search_box
+  */
+  /*  
+      tag-li
+  */
+}
+.header_component .header_container .menu_box li.search_box {
   /*
-  	header_box_menu_icon
+      dispositivos menores a 719px: definimos display: none 
+      para ocultar el buscador de la vista en esta medida
+  */
+  /*
+      dispositivos mayores a 720px: definimos flexbox con su 
+      propiedad align-items para centrar de manera vertical 
+      los elementos que este contiene
   */
 }
 @media (max-width: 719px) {
-  .header_component .header_container {
-    justify-content: space-between;
-    padding: 0 30px;
-  }
-}
-@media (max-width: 472px) {
-  .header_component .header_container {
-    padding: 0 20px;
-  }
-}
-.header_component .header_container .nitlogo_box a h4 {
-  color: #5c5b5b;
-  font-size: 30px;
-}
-.header_component .header_container .nitlogo_box a h4 span {
-  color: #4caf50;
-  margin-left: 4px;
-}
-.header_component .header_container .header_box_menu_icon {
-  cursor: pointer;
-  /*
-  	tag-span: definimos la propiedad display: block para hacer 
-  	visible las lineas del menu hamburgesa, finalmente definimos
-  	un ancho y alto para darles tamaño	
-  */
-}
-.header_component .header_container .header_box_menu_icon span {
-  display: block;
-  width: 26px;
-  height: 3px;
-  background-color: #4caf50;
-  border-radius: 10px;
-  /*
-  	seleccionamos el segundo elemento tag-span y generamos
-  	un margen en el eje-Y
-  */
-  /*
-  	dispositivos mayores a 720px: definimos display: none 
-  	para ocultar el icono de menu de la vista
-  */
-}
-.header_component .header_container .header_box_menu_icon span:nth-child(2) {
-  margin: 4px 0;
-}
-@media (min-width: 720px) {
-  .header_component .header_container .header_box_menu_icon span {
+  .header_component .header_container .menu_box li.search_box {
     display: none;
   }
+}
+@media (min-width: 720px) {
+  .header_component .header_container .menu_box li.search_box {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    /*
+        tag-input: definimos la propiedad display: none para remover este 
+        elemento de la vista
+    */
+    /*
+        tag-svg: definimos un margen superior para generar 
+        separacion frente a otros elementos 
+    */
+  }
+  .header_component .header_container .menu_box li.search_box input {
+    display: none;
+    /*
+        js_input_hidden: clase añadida con javascript en "./src/js/main.js"
+        modificamos la propiedad display a block para hacer visible este 
+        elemento
+    */
+  }
+  .header_component .header_container .menu_box li.search_box input.js_input_hidden {
+    display: block;
+  }
+  .header_component .header_container .menu_box li.search_box svg {
+    margin-top: 2px;
+  }
+}
+.header_component .header_container .menu_box li {
+  cursor: pointer;
+  /*  
+      tag-a: definimos un padding derecho 
+      para generar espaciado en referencia a su contenedor
+  */
+  /*  
+      tag-svg
+  */
+  /*
+      hacemos uso del :pseudo elemento last-child para 
+      seleccionar la ultima tag-svg dentro de la tag-li 
+      y le definimos propiedades personalizadas
+  */
+}
+.header_component .header_container .menu_box li a {
+  color: #d8d8d8;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  padding-right: 24px;
+  /*
+      dispositivos menores a 719px: modificamos el
+      padding para esta medida
+  */
+  /*
+      cuando la tag-a tiene el pseudo elemento :hover modificamos 
+      su color
+  */
+}
+@media (max-width: 719px) {
+  .header_component .header_container .menu_box li a {
+    padding-right: 4px;
+  }
+}
+.header_component .header_container .menu_box li a:hover {
+  color: #4caf50;
+}
+.header_component .header_container .menu_box li svg {
+  fill: #c3c3c3;
+  width: 24px;
+  height: 24px;
+}
+.header_component .header_container .menu_box li:last-child svg {
+  fill: #4caf50;
+  width: 36px;
+  height: 36px;
 }
 
 /*  
@@ -154,61 +373,51 @@ a {
      */
   /* 
          main_components: definimos position alsolute junto con su 
-  	propiedade top para posicionar este elemento
+  	propiedad top para posicionar este elemento, tambien definimos 
+         una altura minima calculada para que tome todo el alto de la 
+         patalla. Finalmente, definimos un espaciado en el eje-X para este elemento
      */
 }
 .components_container .nav_component {
   position: fixed;
-  top: 70px;
+  top: 60px;
   left: 0;
   z-index: 8;
-  border-right: 1px solid #eaecef;
-  width: 240px;
+  width: 260px;
   height: 100vh;
-  padding: 0 25px 50px;
+  background-color: #fff;
+  border-right: 1px solid #f6f6f6;
+  padding: 0 14px 0 28px;
   overflow: auto;
   /*
   	::-webkit-scrollbar: definimos un ancho del
   	scrollbar
   */
   /*
-  	::-webkit-scrollbar-thumb: definimos display: none
-  	para ocultar el scrollbar
-  */
-  /*
-  	cuando hacemos :hover sobre nav_component 
-  	seleccionamos el pseudo elemento 
-  	::-webkit-scrollbar-thumb y definimos display: block
-  	para hacer visible el scrollbar
+  	::-webkit-scrollbar-thumb
   */
   /*
   	dispositivos menores a 719px: definimos transform: translateX() 
   	para desplazar el menu de navegacion ocultandolo de la vista
   */
   /*
-  	search_box: definimos flexbox con su propiedad
-  	align-items y una altura para centrar de manera vertical 
-  	los elementos que este contiene, finalmente definimos 
-  	un margen en la parte superior 
+  	dispositivos mayores a 720px
   */
   /*
-  	nav_menu: definimos un espaciado en el eje-Y para este elemento 
+  	menu_nav: definimos un espaciado personalizado en el eje-Y para este elemento 
+  	el espaciado inferior permite solucionar un error que se presenta 
+  	impidiendo que el ultimo item del menu se vea correctamente
   */
 }
 .components_container .nav_component::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
+  background-color: #f1f1f1;
 }
 .components_container .nav_component::-webkit-scrollbar-thumb {
   background-color: #c1c1c1;
-  border-radius: 4px;
-  display: none;
-}
-.components_container .nav_component:hover::-webkit-scrollbar-thumb {
-  display: block;
 }
 @media (max-width: 719px) {
   .components_container .nav_component {
-    background-color: #fff;
     transform: translateX(-1000px);
     transition: transform 0.3s;
     /*
@@ -221,55 +430,58 @@ a {
     transform: translateX(0px);
   }
 }
-.components_container .nav_component .search_box {
-  display: flex;
-  height: 35px;
-  align-items: center;
-  border: 1px solid #eaecef;
-  border-radius: 50px;
-  margin-top: 30px;
+@media (min-width: 720px) {
+  .components_container .nav_component {
+    /*
+    	js_show_navbar: clase añadida con javascript en "./src/js/main.js"
+    	definimos transform: translateX() para desplazar el menu de 
+                 navegacion ocultandolo de la vista
+    */
+    /*
+    	cuando nav_component tiene esta clase seleccionamos a main_component 
+                 y modificamos su ancho
+    */
+  }
+  .components_container .nav_component.js_show_navbar {
+    transform: translateX(-1000px);
+  }
+  .components_container .nav_component.js_show_navbar ~ .main_components {
+    width: 100%;
+  }
+}
+.components_container .nav_component .menu_nav {
+  padding: 24px 0 70px;
   /*
-  	tag-input: definimos border: none y outline: none 
-  	para remover un borde que generan los navegadores 
-  	en los inputs, finalmente definimos un espaciado 
-  	en el eje-Y para este elemento 
+  	li_dropdown
   */
   /*
-  	search_btn
-  */
+               line_nav: definimos un margen inferior
+               para generar separacion frente a otros elementos
+           */
 }
-.components_container .nav_component .search_box input {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #5c5b5b;
-  font-size: 17px;
-  letter-spacing: 0.5px;
-  width: 145px;
-  padding: 0 8px 0 14px;
-}
-.components_container .nav_component .search_box .search_btn {
+.components_container .nav_component .menu_nav li input[type=search] {
+  width: 100%;
+  margin-bottom: 30px;
   /*
-  	tag-svg: definimos vertical-align: top para remover un 
-  	espaciado que generan los navegadores en los iconos 
+      dispositivos mayores a 720px: definimos display: none 
+      para ocultar el buscador de la vista en esta medida
   */
 }
-.components_container .nav_component .search_box .search_btn svg {
-  vertical-align: top;
-  fill: #4caf50;
-  width: 24px;
-  height: 24px;
+@media (min-width: 720px) {
+  .components_container .nav_component .menu_nav li input[type=search] {
+    display: none;
+  }
 }
-.components_container .nav_component .nav_menu {
-  padding: 30px 0;
-  /*
-  	li_dropdown: definimos un margen en la parte inferior de este 
-  	elemento
-  */
-}
-.components_container .nav_component .nav_menu .li_dropdown {
+.components_container .nav_component .menu_nav .li_dropdown {
   list-style: none;
-  margin-bottom: 18px;
+  /*
+                  cuando hacemos :hover sobre la tag-li, seleccionamos a 
+                  tag-a y modificamos el color de este elemento
+              */
+  /*
+      cuando hacemos :hover sobre la tag-li, seleccionamos a 
+      tag-svg y modificamos el color de este elemento
+  */
   /*
   	cuando li_dropdown tiene la clase js_show_dropdown_menu
   	seleccionamos a dropdown_menu y definimos display block
@@ -296,23 +508,38 @@ a {
   	para este elemento
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown.js_show_dropdown_menu .dropdown_menu {
+.components_container .nav_component .menu_nav .li_dropdown:hover > a {
+  color: #4caf50;
+}
+.components_container .nav_component .menu_nav .li_dropdown:hover svg {
+  fill: #4caf50;
+}
+.components_container .nav_component .menu_nav .li_dropdown.js_show_dropdown_menu .dropdown_menu {
   display: block;
   max-height: 999px;
 }
-.components_container .nav_component .nav_menu .li_dropdown.js_show_dropdown_menu a svg {
+.components_container .nav_component .menu_nav .li_dropdown.js_show_dropdown_menu a svg {
   transform: rotate(180deg);
 }
-.components_container .nav_component .nav_menu .li_dropdown a {
-  color: #5c5b5b;
-  font-size: 1.1rem;
-  font-weight: 600;
+.components_container .nav_component .menu_nav .li_dropdown a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*
-  	cuando hacemos :hover sobre la tag-a modificamos
-  	el color de este elemento
+  color: #5c5b5b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  /*  
+      js_active_link: cuando tag-a tiene esta clase 
+      modificamos el color de estos elementos
+  */
+  /*  
+      js_active_link svg: cuando tag-a tiene esta clase 
+      seleccionamos a tag-svg y modificamos el color del icono
+  */
+  /*  
+      js_link_hidden: cuando tag-a tiene esta clase 
+      definimos display: none para ocultar los elementos
   */
   /*
   	tag-svg: definimos vertical-align: top para remover un 
@@ -321,23 +548,22 @@ a {
   	icono al momento de hacer click en li_dropdown
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown a:hover {
+.components_container .nav_component .menu_nav .li_dropdown a.js_active_link {
   color: #4caf50;
 }
-.components_container .nav_component .nav_menu .li_dropdown a.js_active_link {
-  color: #4caf50;
-}
-.components_container .nav_component .nav_menu .li_dropdown a.js_active_link svg {
+.components_container .nav_component .menu_nav .li_dropdown a.js_active_link svg {
   fill: #4caf50;
 }
-.components_container .nav_component .nav_menu .li_dropdown a svg {
-  vertical-align: top;
+.components_container .nav_component .menu_nav .li_dropdown a.js_link_hidden {
+  display: none;
+}
+.components_container .nav_component .menu_nav .li_dropdown a svg {
   fill: #5c5b5b;
-  width: 12px;
-  height: 12px;
+  width: 26px;
+  height: 26px;
   transition: transform 0.3s;
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu {
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu {
   max-height: 0;
   overflow: hidden;
   padding: 0 13px;
@@ -345,54 +571,51 @@ a {
   	tag-li: definimos un espaciado en el eje-Y para este elemento
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu li {
-  list-style: none;
-  padding: 10px 0;
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu li {
   /*
   	tag-a
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu li a {
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu li a {
   font-size: 1rem;
   /*
   	cuando hacemos :hover sobre la tag-a modificamos
   	el color de este elemento
   */
 }
-.components_container .nav_component .nav_menu .li_dropdown .dropdown_menu li a:hover {
+.components_container .nav_component .menu_nav .li_dropdown .dropdown_menu li a:hover {
   color: #4caf50;
+}
+.components_container .nav_component .menu_nav .line_nav {
+  border: 1px solid #f6f6f6;
+  width: 96%;
+  margin-bottom: 18px;
+  /*
+      js_hidden_line_nav: clase añadida con javascript 
+      definimos display: none para remover este elemento
+  */
+}
+.components_container .nav_component .menu_nav .line_nav.js_hidden_line_nav {
+  display: none;
 }
 .components_container .main_components {
   position: absolute;
-  top: 70px;
-  color: #5c5b5b;
+  top: 60px;
+  min-height: calc(100% - 60px);
+  padding: 0 6%;
   /*
   	dispositivos mayores a 720px: definimos right: 0 para
   	posicionar este elemento a la parte derecha de la
   	pantalla para que le deje el espacio al menu de navegacion, 
   	tambien definimos un ancho calculado y a 100% y le 
-  	restamos el ancho del menu de navegacion, finalmente 
-  	definimos un espaciado en el eje-X para este elemento
-  */
-  /*
-  	dispositivos mayores a 900px: definimos un espaciado
-  	en el eje-X para este elemento
-  */
-  /*
-  	dispositivos mayores a 1200px: modificamos el espaciado
-  	en el eje-X para este elemento
+  	restamos el ancho del menu de navegacion
   */
   /*
   	dispositivos menores a 719px: definimos left: 0 para
   	posicionar este elemento a la parte izquierda de la
   	pantalla para que tome el espacio dejado por el 
   	menu de navegacion, finalmente modificamos el ancho a
-  	100% para que tome el ancho total de la pantalla y
-  	definimos un espaciado en el eje-X para este elemento
-  */
-  /*
-  	dispositivos menores a 472px: modificamos el espaciado
-  	en el eje-X para este elemento
+  	100% para que tome el ancho total de la pantalla 
   */
   /*
   	banner_component
@@ -404,40 +627,32 @@ a {
   	section_banner  
   */
   /*
+            modal_section
+        */
+  /*
   	sections_container
   */
   /*
-  	section_footer: definimos un margen personalizado en
-  	el eje-Y para este elemento 
+  	section_pagination: definimos flexbox con su propiedad
+            justify-content para generar un espaciado entre los 
+            elementos que este contiene, finalmente definimos un margen 
+            en el eje-Y para generar separacion frente a otros elementos
+  */
+  /*
+      section_footer: definimos un margen inferior
+      para generar separacion frente a otros elementos
   */
 }
 @media (min-width: 720px) {
   .components_container .main_components {
     right: 0;
-    width: calc(100% - 240px);
-    padding: 0 50px;
-  }
-}
-@media (min-width: 900px) {
-  .components_container .main_components {
-    padding: 0 60px;
-  }
-}
-@media (min-width: 1200px) {
-  .components_container .main_components {
-    padding: 0 80px;
+    width: calc(100% - 260px);
   }
 }
 @media (max-width: 719px) {
   .components_container .main_components {
     left: 0;
     width: 100%;
-    padding: 0 30px;
-  }
-}
-@media (max-width: 472px) {
-  .components_container .main_components {
-    padding: 0 20px;
   }
 }
 .components_container .main_components .banner_component {
@@ -445,8 +660,16 @@ a {
   font-size: 3rem;
   margin: 30px 0 40px;
   /*
+  	dispositivos menores a 1200px: modificamos el tamaño de
+  	fuente y el margen del eje-Y de este elemento
+  */
+  /*
   	dispositivos menores a 952px: modificamos el tamaño de
-  	fuente y el margen inferior de este elemento
+  	fuente de este elemento
+  */
+  /*
+  	dispositivos menores a 788px: modificamos el tamaño de
+  	fuente de este elemento
   */
   /*
   	dispositivos menores a 418px: modificamos el tamaño de
@@ -456,15 +679,25 @@ a {
   	tag-h1
   */
 }
+@media (max-width: 1200px) {
+  .components_container .main_components .banner_component {
+    font-size: 2.6rem;
+    margin: 30px 0;
+  }
+}
 @media (max-width: 952px) {
   .components_container .main_components .banner_component {
     font-size: 1.9rem;
-    margin: 30px 0;
+  }
+}
+@media (max-width: 788px) {
+  .components_container .main_components .banner_component {
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 418px) {
   .components_container .main_components .banner_component {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 .components_container .main_components .banner_component h1 {
@@ -475,6 +708,7 @@ a {
 }
 .components_container .main_components .banner_component h1 span {
   color: #4caf50;
+  text-shadow: 0 0 2px rgba(76, 175, 79, 0.6588235294);
 }
 .components_container .main_components .description_component {
   /*
@@ -483,6 +717,7 @@ a {
   */
 }
 .components_container .main_components .description_component .description_paragraph {
+  text-align: justify;
   font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 30px;
@@ -495,43 +730,183 @@ a {
 }
 .components_container .main_components .section_banner {
   /*
-  	tag-h2: definimos un margen en la parte superior de
-  	este elemento
-  */
+               index_container: definimos flexbox con su propiedad
+               justify-content y align-items para centrar de manera
+               vertical y horizontal los elementos que este contiene,
+               finalmente definimos un margen en la parte superior 
+               de este elemento
+           */
   /*
-  	banner_line_titles
-  */
-  /*
-  	tag-p: definimos una separacion de lineas y un margen 
-  	en el eje-Y para este elemento
+  	tag-p
   */
 }
-.components_container .main_components .section_banner h2 {
-  font-size: 2.8rem;
+.components_container .main_components .section_banner .index_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 30px;
+  /*
+      tag-svg
+  */
+  /*
+      tag-h2
+  */
 }
-.components_container .main_components .section_banner .banner_line_titles {
-  border: 2px solid #4caf50;
-  width: 100px;
+.components_container .main_components .section_banner .index_container svg {
+  fill: #c3c3c3;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+.components_container .main_components .section_banner .index_container h2 {
+  font-size: 2.8rem;
+  /*
+      dispositivos menores a 381px: modificamos el tamaño de
+      fuente para este elemento
+  */
+  /*
+      dispositivos menores a 333px: modificamos el tamaño de
+      fuente para este elemento
+  */
+}
+@media (max-width: 381px) {
+  .components_container .main_components .section_banner .index_container h2 {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 333px) {
+  .components_container .main_components .section_banner .index_container h2 {
+    font-size: 2.1rem;
+  }
 }
 .components_container .main_components .section_banner p {
-  font-size: 1.5rem;
+  text-align: justify;
+  font-size: 20px;
   line-height: 1.5;
-  margin: 30px 0 80px;
   /*
   	tag-strong
   */
 }
 .components_container .main_components .section_banner p strong {
   color: #4caf50;
+  text-shadow: 0 0 2px rgba(76, 175, 79, 0.6588235294);
+}
+.components_container .main_components .modal_section {
+  /*
+      container_name
+  */
+}
+.components_container .main_components .modal_section .modal_container {
+  /*
+      hidden_modal: definimos position: fixed y sus propiedades
+      top, left, right, bottom y z-index para que este contenedor
+      tome el ancho y alto total de la pantalla
+      implementamos display: none para ocultar el modal y las 
+      propiedades justify-content y align-items para centrar 
+      los elementos horizontal y verticalmente
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /*
+      js_show_hidden_modal: clase añadida con javascript
+      la cual implementa display: flex la cual hace visible
+      el modal y centra los elementos
+  */
+  /*
+      js_show_hidden_modal: cuando hidden_modal tiene esta clase 
+      añadida con javascript relaciona a content_modal y le añade
+      la animacion animationModal la cual hace que el modal
+      emerja desde la parte izquierda
+  */
+  /*
+      content_modal: definimos un ancho maximo para que este 
+      elemento no crezca en anchura despues de 700px, tambien
+      un espaciado en el eje-X y finalmente ejecutamos la animacion 
+      animationModal
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal.js_show_hidden_modal {
+  display: flex;
+}
+@keyframes animationModal {
+  0% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal {
+  width: 100%;
+  max-width: 500px;
+  padding: 0 6%;
+  animation: animationModal 0.8s;
+  /*
+      tag-h2
+  */
+  /*
+      tag-ul: definimos una altura junto con un overflow-y 
+      para que oculte los elementos que sobrepasen la altura
+      de su contenedor padre
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal h2 {
+  font-size: 42px;
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul {
+  height: 350px;
+  overflow-y: auto;
+  /*
+      ::-webkit-scrollbar: definimos un ancho del
+      scrollbar
+  */
+  /*
+      ::-webkit-scrollbar-thumb
+  */
+  /*
+      tag-li: definimos un margen superior para generar 
+      separacion frente a otros elementos 
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f1f1f1;
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li {
+  margin-top: 18px;
+  /*
+      tag-a
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li a {
+  color: #5c5b5b;
+  font-size: 18px;
+  font-weight: 500;
+  /*
+      cuando la tag-a tiene el pseudo elemento :hover 
+      modificamos su color
+  */
+}
+.components_container .main_components .modal_section .modal_container .hidden_modal .content_modal ul li a:hover {
+  color: #4caf50;
 }
 .components_container .main_components .sections_container {
   /*
   	sect_content
-  */
-  /*
-  	division_line: definimos un margen en la parte
-  	inferior para este elemento
   */
 }
 .components_container .main_components .sections_container .sect_content {
@@ -540,58 +915,272 @@ a {
   	este elemento
   */
   /*
-  	code_box: definimos un margen en la parte inferior de este 
-  	elemento y un espaciado de 12px para todos los ejes
+                  tag-p
+              */
+  /*
+      tag-p: definimos un margen personalizado en el eje-Y para 
+      generar sepracion frente a otros elementos
   */
   /*
-  	sect_box_img: definimos un margen en la parte inferior
+  	sect_box_img: definimos un margen en la parte superior
   	de este elemento
+  */
+  /*
+  	code_box: definimos un margen en la parte inferior de este 
+  	elemento y un espaciado de 12px para todos los ejes
   */
 }
 .components_container .main_components .sections_container .sect_content h3 {
   font-size: 2rem;
   line-height: 1.2;
-  margin-bottom: 40px;
+  padding: 80px 0 20px;
+  /*
+  	dispositivos menores a 336px: modificamos el tamaño de
+  	fuente de este elemento
+  */
 }
-.components_container .main_components .sections_container .sect_content .code_box {
-  background-color: #343d4d;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 6px 0 #ccc;
-  margin-bottom: 40px;
-  padding: 12px;
+@media (max-width: 336px) {
+  .components_container .main_components .sections_container .sect_content h3 {
+    font-size: 1.7rem;
+  }
+}
+.components_container .main_components .sections_container .sect_content p {
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.5;
   /*
   	tag-strong
   */
 }
-.components_container .main_components .sections_container .sect_content .code_box strong {
+.components_container .main_components .sections_container .sect_content p strong {
   color: #4caf50;
+  text-shadow: 0 0 2px rgba(76, 175, 79, 0.6588235294);
 }
-.components_container .main_components .sections_container .sect_content .sect_box_img {
-  text-align: center;
-  margin-bottom: 80px;
+.components_container .main_components .sections_container .sect_content p.second_paragraph {
+  margin-block: 20px;
+}
+.components_container .main_components .sections_container .sect_content .img_box {
+  margin-top: 30px;
   /*
   	tag-img: definimos vertical-align: top para remover un 
   	espaciado que generan los navegadores en los imagenes, 
   	finalmente con object-fit ajustamos la img a su contenedor 
   */
 }
-.components_container .main_components .sections_container .sect_content .sect_box_img img {
-  vertical-align: top;
+.components_container .main_components .sections_container .sect_content .img_box img {
   width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  box-shadow: 0 2px 6px 0 #ccc;
+  box-shadow: 0 2px 8px 0 #c1c1c1;
 }
-.components_container .main_components .sections_container .division_line {
-  text-align: center;
-  color: #ccc;
-  margin-bottom: 90px;
+.components_container .main_components .sections_container .sect_content .code_box {
+  background-color: #242936;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 38px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px 0 #c1c1c1;
+  /*
+  	::-webkit-scrollbar: definimos un alto del
+  	scrollbar
+  */
+  /*
+  	::-webkit-scrollbar-thumb
+  */
+}
+.components_container .main_components .sections_container .sect_content .code_box::-webkit-scrollbar {
+  height: 12px;
+}
+.components_container .main_components .sections_container .sect_content .code_box::-webkit-scrollbar-thumb {
+  background-color: #434a58;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre.code_header {
+  margin-bottom: 28px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.circle {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  border-radius: 50px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.first_circle {
+  background-color: #fc5f55;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.second_circle {
+  background-color: #fabd24;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.thirt_circle {
+  background-color: #26c83f;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.index {
+  display: inline-block;
+  margin-bottom: 3px;
+  color: #4c525d;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.inner_index {
+  padding-right: 12px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.outer_index {
+  padding-right: 50px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.outer_doble_index {
+  padding-right: 88px;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.variable {
+  color: #aa87fb;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.numbers {
+  color: #ffbff4;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.symbols {
+  color: #2da8ff;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.parameters {
+  color: #8cbdd9;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.string {
+  color: #d5ff80;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.function {
+  color: #7eb7ff;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.objects {
+  color: #84d5f4;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.return {
+  color: #ff66a1;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.functions {
+  color: #ffad66;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.brackets {
+  color: #ffd700;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.console {
+  color: rgba(193, 193, 193, 0.6784313725);
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.keyword {
+  color: #f783f7;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.square {
+  color: goldenrod;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.semi_colon {
+  color: #808080;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.methods {
+  color: #ffd173;
+}
+.components_container .main_components .sections_container .sect_content .code_box pre code span.text {
+  color: #fff;
+}
+.components_container .main_components .section_pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+  /*
+      tag-a: definimos un espaciado para generar el efecto boton
+  */
+}
+.components_container .main_components .section_pagination a {
+  background-color: #242936;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 3px 8px 0 #c1c1c1;
+  /*
+      cuando la tag-a tiene el pseudo elemento :hover modificamos 
+      su color de fondo
+  */
+  /*
+      cuando la tag-a tiene la clase not_previous o not_next cancelamos 
+      su seleccion con la propiedad pointer-events
+  */
+  /*
+      tag-svg
+  */
+}
+.components_container .main_components .section_pagination a:hover {
+  background-color: rgba(36, 41, 54, 0.7568627451);
+}
+.components_container .main_components .section_pagination a.not_previous, .components_container .main_components .section_pagination a.not_next {
+  background-color: rgba(36, 41, 54, 0.4980392157);
+  pointer-events: none;
+}
+.components_container .main_components .section_pagination a svg {
+  fill: #fff;
+  width: 28px;
+  height: 28px;
 }
 .components_container .main_components .section_footer {
+  margin-bottom: 30px;
+  /*
+      box_gotop: implementamos fixed y sus propiedades right, 
+      y bottom para darle posicion a esta caja, luego hacemos
+      uso de flexbox y sus propiedades justify-content y
+      align-items para centrar vertical y horizontalmente el icono,
+      finalmente overflow: hidden para ocualtar la caja
+  */
+  /*
+      tag-h4
+  */
+}
+.components_container .main_components .section_footer .box_gotop {
+  position: fixed;
+  right: 2%;
+  bottom: 85px;
+  z-index: 98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  /*
+      añadimos la clase javascript js_show_gotop para agregar 
+      color de fondo, una sombra y overflow: visible para 
+      visible nuevamente esta caja 
+  */
+  /*
+      añadimos la clase javascript js_show_gotop, 
+      relacionamos a tag-svg para añadirle color 
+      al icono
+  */
+  /*
+      tag-svg: importante definir fill: transparent 
+      para ocultar el icono
+  */
+}
+.components_container .main_components .section_footer .box_gotop.js_show_gotop {
+  background-color: #4caf50;
+  box-shadow: 0 2px 6px 0 #c1c1c1;
+  overflow: visible;
+  /*
+      cuando hacemos :hover sobre box_gotop,
+      relacionamos a tag-svg y modificamos el 
+      tamaño del icono
+  */
+}
+.components_container .main_components .section_footer .box_gotop.js_show_gotop:hover svg {
+  width: 25px;
+  height: 25px;
+}
+.components_container .main_components .section_footer .box_gotop.js_show_gotop svg {
+  fill: #242936;
+}
+.components_container .main_components .section_footer .box_gotop svg {
+  fill: transparent;
+  width: 27px;
+  height: 27px;
+}
+.components_container .main_components .section_footer h4 {
   text-align: center;
-  color: #ccc;
+  color: #d8d8d8;
   font-size: 1.2rem;
-  margin: 60px 0 30px;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

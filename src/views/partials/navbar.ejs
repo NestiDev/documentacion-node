@@ -1,36 +1,26 @@
 <!--  
-	search_box: contenedor de 1 tag-input y 1 tag-a
+	menu_nav: en esta definimos los items del menu de navegacion
 -->
-<div class="search_box">
+<ul class="menu_nav">
 	<!--  
-		tag-input: en esta definimos el buscador
-	-->
-	<input type="text" name="search" placeholder="Buscar" />
+        tag-li: contenedor de 1 tag-input y 1 tag-svg
+    -->
+    <li>
+        <!--  
+            tag-input: en esta definimos el buscador de elementos
+        -->
+        <input class="input_hidden" type="search" name="search" placeholder="Buscar" autocomplete="off" />
+    </li>
 
-	<!--  
-		tag-a: contiene 1 tag-svg
-	-->
-	<a href="#" class="search_btn">
-		<!--  
-			tag-svg: en esta definimos el icono del buscador
-		-->
-		<svg viewBox="0 0 24 24">
-			<path
-				d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
-			></path>
-		</svg>
-	</a>
-</div>
+	<li class="li_dropdown">
+		<a href="/install-nodejs">Instalación</a>
+	</li>
 
-<!--  
-	nav_menu: en esta definimos los items del menu de navegacion
--->
-<ul class="nav_menu">
 	<!--  
 		li_dropdown: contenedor de 1 tag-a
 	-->
 	<li class="li_dropdown">
-		<a href="/start">01. Start</a>
+		<a href="/package-json">Package.json</a>
 	</li>
 
 	<!--  
@@ -39,16 +29,11 @@
 	-->
 	<li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			02. Express
+			Express
 
-			<!--          
-				tag-svg: en este definimos el icono del del item
-			-->
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<!--  
@@ -56,28 +41,23 @@
 			:navegacion interno
 		-->
 		<ul class="dropdown_menu">
-			<li><a href="/express-install">a. Install</a></li>
+			<li><a href="/express-install">Instalación</a></li>
 
-			<li><a href="/express-server">b. Server</a></li>
+			<li><a href="/express-server">Servidor</a></li>
 		</ul>
 	</li>
 
 	<li class="li_dropdown">
-		<a href="/nodemon">03. Nodemon</a>
+		<a href="/nodemon">Nodemon</a>
 	</li>
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			04. Middlewares
+			Middlewares
 
-			<!--          
-				tag-svg: en este definimos el icono del del item
-			-->
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -91,20 +71,15 @@
 
 			<li><a href="/middlewares-404">e. 404</a></li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			05. Ejs
+			Ejs
 
-			<!--          
-				tag-svg: en este definimos el icono del del item
-			-->
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -120,21 +95,19 @@
 
 			<li><a href="/ejs-ciclos">f. Ciclos</a></li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
-		<a href="/environments">06. Environments</a>
-	</li>
+	<!-- <li class="li_dropdown">
+		<a href="/environments">Environments</a>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			07. Validations
+			Validations
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -146,17 +119,15 @@
 				<a href="/validations-querys">b. Querys</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			08. Bcryptjs
+			Bcryptjs
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -172,17 +143,15 @@
 				<a href="/bcrypt-compare">c. Compare</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			09. Jsonwebtoken
+			Jsonwebtoken
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -198,21 +167,19 @@
 				<a href="/jsonwebtoken-verify">c. Verify</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
-		<a href="/controllers">10. Controllers</a>
-	</li>
+	<!-- <li class="li_dropdown">
+		<a href="/controllers">Controllers</a>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			11. Express-session
+			Express-session
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -226,17 +193,15 @@
 				<a href="/session-destroy">c. Destroy</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			12. Connect-flash
+			Connect-flash
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -246,21 +211,19 @@
 				<a href="/flash-messages">b. Messages</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
-		<a href="#">13. Passport</a>
-	</li>
+	<!-- <li class="li_dropdown">
+		<a href="#">Passport</a>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			14. MySQL
+			MySQL
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -282,17 +245,15 @@
 				<a href="/mysql-crud">e. Crud</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			15. MongoDB
+			MongoDB
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -318,21 +279,19 @@
 				<a href="/mongodb-crud">f. Crud</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 
-	<li class="li_dropdown">
-		<a href="/nodemailer">16. Nodemailer</a>
-	</li>
+	<!-- <li class="li_dropdown">
+		<a href="/nodemailer">Nodemailer</a>
+	</li> -->
 
-	<li class="li_dropdown">
+	<!-- <li class="li_dropdown">
 		<a href="#" data-toggle="dropdown">
-			17. Deploy
+			Deploy
 
 			<svg viewBox="0 0 24 24">
-				<path
-					d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"
-				></path>
-			</svg>
+                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+            </svg>
 		</a>
 
 		<ul class="dropdown_menu">
@@ -348,5 +307,5 @@
 				<a href="/deploy-heroku">c. Heroku</a>
 			</li>
 		</ul>
-	</li>
+	</li> -->
 </ul>

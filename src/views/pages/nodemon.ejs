@@ -35,29 +35,83 @@
                     section_banner: contenedor de 1 tag-h2, de banner_line_titles
                     y 1 tag-p
                 -->
-				<section class="section_banner">
+				<div class="section_banner">
 					<!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-					<h2>Nodemon</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Nodemon</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
 					<!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-					<div class="banner_line_titles"></div>
+                    <hr class="line_titles" />
 
 					<!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Nos permite guardar de manera automatica los cambios que
-						se generan en nuestro proyecto a lo largo de su
-						desarrollo evitando asi, tener que ejecutar el comando
-						<strong>node</strong>
-						por cada cambio que realicemos.
+						Es una herramienta que nos ayuda a reiniciar automáticamente la ejecución del servidor cuando se detectan cambios en nuestra aplicación. Evitando asi, tener que ejecutar manualmente el comando <strong>node</strong> por cada cambio que realicemos.
 					</p>
-				</section>
+				</div>
+
+				<!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#instalacion">01. Instalación</a></li>
+                                    <li><a href="#validacion-de-la-instalacion">02. Validación de la instalación</a></li>
+                                    <li><a href="#script-de-nodemon">03. Script de nodemon</a></li>
+                                    <li><a href="#script-de-nodejs">04. Script de NodeJs</a></li>
+                                    <li><a href="#ejecucion-del-servidor">04. Ejecución del servidor</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
 				<!--  
                     sections_container: contenedor de las secciones que componen
@@ -71,82 +125,136 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Instalando nodemon</h3>
+						<h3>01. Instalación</h3>
 
 						<!--  
-							tag-p: definida para declarar el codigo en ejecucion
+							tag-p: en esta definimos el parrafo de la seccion
 						-->
-						<p class="code_box">
-							<span>> </span><strong>npm </strong>i nodemon -D
+						<p>
+							Para instalar <strong>nodemon</strong> primero debemos
+							asegurarnos de encontrarnos dentro de nuestra carpeta proyecto.
+							Otro punto a tener en cuenta es que este paquete se debe instalar como 
+							una <strong>sub dependencia</strong> de desarrollo haciendo suo de la bandera <strong>-D</strong> ya que solo lo vamos a utilizar para ejecutar el servidor en modo de desarrollo. Aclarado este punto, ejecutamos el comando...
 						</p>
 
-						<!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/nodemon/n01.png"
-								alt="instalando nodemon"
-							/>
-						</div>
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="circle first_circle"></span><span class="circle second_circle"></span><span class="circle thirt_circle"></span></code></pre>
+
+                            <div class="output_console">
+                                <pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span>npm <span class="parameters">install </span>nodemon <span class="parameters">-D </span></span><span class="console">|| npm i nodmeon -D</span></code></pre>
+                            </div>
+                        </div>
 					</section>
 
 					<section class="sect_content">
-						<h3>02. Validacion de la instalacion</h3>
+						<h3>02. Validación de la instalación</h3>
 
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/nodemon/n02.png"
-								alt="validacion de la instalacion"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>03. Definiendo un script para nodemon</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/nodemon/n03.png"
-								alt="definiendo un script para nodemon"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>04. Ejecucion del script</h3>
-
-						<p class="code_box">
-							<span>> </span><strong>npm </strong>run nodemon
+						<p>
+							Si abrimos nuestro archivo <strong>package.json</strong> podemos 
+							notar que dentro de este se ha creado una nueva clave llamada 
+							<strong>devDpendencies</strong> la cual se encarga de administrar
+							los diferentes modulos o paquetes que vamos a instalar y que van a ser 
+							utilizados unicamente en modo de desarrollo. 
 						</p>
 
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/nodemon/n04.png"
-								alt="ejecucion del script"
-							/>
-						</div>
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">package.json</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index outer_index">02</span><span class="parameters">"name"</span><span class="keyword">: </span><span class="string">"carpeta-proyecto"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">03</span><span class="parameters">"version"</span><span class="keyword">: </span><span class="string">"1.0"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">04</span><span class="parameters">"description"</span><span class="keyword">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">05</span><span class="parameters">"main"</span><span class="keyword">: </span><span class="string">"index.js"</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">06</span><span class="parameters">"scripts"</span><span class="keyword">: </span><span class="functions">{</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="parameters">"test"</span><span class="keyword">: </span><span class="string">"echo \"Error: no test specified\" && exit 1"</span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="functions">}</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">09</span><span class="parameters">"keywords"</span><span class="keyword">: </span><span class="square">[]</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">10</span><span class="parameters">"author"</span><span class="keyword">: </span><span class="string">""</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index outer_index">11</span><span class="parameters">"license"</span><span class="keyword">: </span><span class="string">"ISC"</span><span class="semi_colon">,</span></code></pre>
+							<pre><code><span class="index outer_index">12</span><span class="parameters">"dependencies"</span><span class="keyword">: </span><span class="functions">{}</span><span class="semi_colon">,</span></code></pre>
+							<pre><code><span class="index inner_index">13</span><span class="return">--> </span><span class="parameters">"devDendencies"</span><span class="keyword">: </span><span class="functions">{</span></code></pre>
+							<pre><code><span class="index outer_doble_index">14</span><span class="parameters">"nodemon"</span><span class="keyword">: </span><span class="string">"^2.0.20" </span></code></pre>
+							<pre><code><span class="index outer_index">15</span><span class="functions">}</span></code></pre>
+                            <pre><code><span class="index inner_index">16</span><span class="brackets">}</span>
+							</code></pre>
+                        </div>
 					</section>
 
 					<section class="sect_content">
-						<h3>05. Validacion en el navegador</h3>
+						<h3 id="script-de-nodemon">03. Script de nodemon</h3>
 
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/nodemon/n05.png"
-								alt="validacion en el navegador"
-							/>
+						<p>
+							Podemos definir un script llamado <strong>dev</strong> (development - desarrollo) que se encargue de ejecutar nuestro servidor cada que se realice una solicitud. 
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">package.json</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="return">--> </span><span class="parameters">"scripts"</span><span class="keyword">: </span><span class="functions">{</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="parameters">"dev"</span><span class="keyword">: </span><span class="string">"nodemon src/index.js" </span><span class="console">|| nodemon src/index </span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="functions">}</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index inner_index">16</span><span class="brackets">}</span>
+							</code></pre>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="script-de-nodejs">03. Script de NodeJs</h3>
+
+						<p>
+							<strong>NodeJs</strong> en sus ultimas versiones ya nos ofrece una opción nativa de ejecutar el servidor sin la necesidad de utilizar herramientas externas como <strong>nodemon</strong>
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">package.json</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="brackets">{</span></code></pre>
+                            <pre><code><span class="index inner_index">06</span><span class="return">--> </span><span class="parameters">"scripts"</span><span class="keyword">: </span><span class="functions">{</span></code></pre>
+                            <pre><code><span class="index outer_doble_index">07</span><span class="parameters">"dev"</span><span class="keyword">: </span><span class="string">"node --watch src/index.js" </span><span class="console">|| node --watch src/index </span></code></pre>
+                            <pre><code><span class="index outer_index">08</span><span class="functions">}</span><span class="semi_colon">,</span></code></pre>
+                            <pre><code><span class="index inner_index">16</span><span class="brackets">}</span>
+							</code></pre>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="ejecucion-del-servidor">05. Ejecución del servidor</h3>
+
+						<p>
+							Para llevar a cabo esta ejecución podemos hacer uso de una 
+							consola de comandos externa. 
+							Una ejecución del servidor puede cerrarse si presionamos dentro de la consola de comandos la combinación de teclas <strong>ctrl + c</strong>
+						</p>
+
+						<div class="code_box">
+							<div class="output_console">
+								<pre><code><span class="console">Microsoft Windows [Version 10.0.17758.1]</span></code></pre>
+								<pre><code><span class="console">(c) 2018 Microsoft Corporation. All Rights Reserved.</span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">></span><span class="objects">cd </span>desktop</span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">></span><span class="parameters">cd </span><span>carpeta-proyecto</span></span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span>npm run <span class="parameters">dev</span></code></pre>
+								<pre><span>Servidor configurado en el puerto 3000</span></pre>
+							</div>
 						</div>
 					</section>
 
 					<!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-					<footer class="section_footer">Nodemon - Node</footer>
+                    <div class="section_pagination"></div>
+
+					<!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Nodemon - NodeJs") %>
 				</div>
 			</main>
 		</div>
 
-		<script src="./js/main.js"></script>
+		<script type="module" src="./js/main.js"></script>
 	</body>
 </html>

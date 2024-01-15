@@ -1,7 +1,12 @@
 /* 
+	Router: alamacena la importacion de Router del modulo express
+*/
+import { Router } from "express";
+
+/* 
 	router: almacena el requerimiento de express().Router
 */
-let router = require("express").Router();
+let router = Router();
 
 /* 
 	haciendo uso del metodo get(), definimos el endpoint 
@@ -21,11 +26,20 @@ router.get("/", (req, res) => {
 });
 
 /* 
-	______________________ start ______________________
+	______________________ instalación ______________________
 */
-router.get("/start", (req, res) => {
-	res.render("pages/start", {
-		title: "start",
+router.get("/install-nodejs", (req, res) => {
+	res.render("pages/install-nodejs", {
+		title: "instalación",
+	});
+});
+
+/* 
+	______________________ package.json ______________________
+*/
+router.get("/package-json", (req, res) => {
+	res.render("pages/package-json", {
+		title: "Package.json",
 	});
 });
 
@@ -335,4 +349,4 @@ router.get("/deploy-heroku", (req, res) => {
 /* 
 	finalmente realizamos una exportacion del modulo
 */
-module.exports = router;
+export default router;

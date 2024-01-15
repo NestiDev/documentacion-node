@@ -35,29 +35,85 @@
                     section_banner: contenedor de 1 tag-h2, de banner_line_titles
                     y 1 tag-p
                 -->
-				<section class="section_banner">
+				<div class="section_banner">
 					<!--  
-                        tag-h2: en esta definimos el titulo del banner
+                        index_container: contenedor de 1 tag-h2 y 1 tag-svg
                     -->
-					<h2>Server</h2>
+                    <section class="index_container">
+                        <!--  
+                            tag-h2: en esta definimos el titulo del banner
+                        -->
+                        <h2>Servidor</h2>
+
+                        <!--  
+                            tag-svg: en esta definimos el icono del temario, le 
+                            definimos un ID para trabajar este elemento con javascript
+                        -->
+                        <svg viewBox="0 0 24 24" id="show-modal">
+                            <path d="M19 15v-3h-2v3h-3v2h3v3h2v-3h3v-2h-.937zM4 7h11v2H4zm0 4h11v2H4zm0 4h8v2H4z"></path>
+                        </svg>
+                    </section>
 
 					<!--  
-                        banner_line_titles: esta tag la definimos para crear la
-                        linea del titulo
+                        tag-hr: esta tag la definimos la linea que acompaña
+                        al titulo de la seccion
                     -->
-					<div class="banner_line_titles"></div>
+                    <hr class="line_titles" />
 
 					<!--  
                         tag-p: en esta definimos el parrafo de la seccion
                     -->
 					<p>
-						Al momento de configurar un servidor, primero debemos
-						definir el archivo encargado de ejecutar las sentencias,
-						estas sentencias consisten en requerir el modulo de
-						<strong>express</strong> definir el puerto para el
-						servidor y finalmente ejecutarlo.
+						Es un software capaz de procesar solicitudes que provienen de los usuarios a través de internet y en base a estas, responder a los usuarios con los recursos correspondientes.
 					</p>
-				</section>
+				</div>
+
+				<!--  
+                    modal_section: contenedor de la seccion
+                -->
+                <div class="modal_section">
+                    <!--  
+                        modal_container: contenedor definido para manejar el 
+                        responsive
+                    -->
+                    <div class="modal_container">
+                        <!--  
+                            hidden_modal: parte oculta del modal, le
+                            definimos un ID para implementar este elemento
+                            en javascript
+                        -->
+                        <div class="hidden_modal" id="hidden-modal">
+                            <!--  
+                                content_modal: contenedor de 1 tag-h2 y 1 tag-ul
+                            -->
+                            <section class="content_modal">
+                                <!--  
+                                    tag-h2: en esta definimos el titulo de la seccion
+                                -->
+                                <h2>Temario</h2>
+
+                                <!--  
+                                    tag-hr: esta tag la definimos la linea que acompaña
+                                    al titulo de la seccion
+                                -->
+                                <hr class="line_titles" />
+
+                                <!--  
+                                    tag-ul: en esta definimos los items del temario del modal
+                                -->
+                                <ul>
+                                    <li><a href="#archivo-index.js">01. Archivo index.js</a></li>
+                                    <li><a href="#requerimiento-de-express">02. Requerimiento de express</a></li>
+                                    <li><a href="#importacion-de-express">02.1. Importación de express</a></li>
+                                    <li><a href="#declaracion-del-puerto">03. Declaración del puerto</a></li>
+                                    <li><a href="#listen()">04. Listen()</a></li>
+                                    <li><a href="#on()">05. On()</a></li>
+                                    <li><a href="#ejecucion-del-servidor">06. Ejecución del servidor</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
 
 				<!--  
                     sections_container: contenedor de las secciones que componen
@@ -71,78 +127,186 @@
 						<!--  
 							tag-h3: en esta definimos el titulo de la seccion
 						-->
-						<h3>01. Archivo index.js</h3>
+						<h3 id="archivo-index.js">01. Archivo index.js</h3>
 
-						<!--  
-							sect_box_img: contenedor de 1 tag-img
-						-->
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/express/server/e05.png"
-								alt="archivo index.js"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>02. Requerimiento de express</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="../../assets/images/express/server/e06.png"
-								alt="requerimiento de express"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>03. Configuracion del servidor</h3>
-
-						<div class="sect_box_img">
-							<img
-								src="../../assets/images/express/server/e07.png"
-								alt="Configuracion del servidor"
-							/>
-						</div>
-					</section>
-
-					<section class="sect_content">
-						<h3>04. Servidor configurado correctamente</h3>
-
-						<!--  
-							tag-p: definida para declarar el codigo en ejecucion
-						-->
-						<p class="code_box">
-							<span>> </span><strong>node </strong>index.js
+						<p>
+							Es conciderado como el archivo principal de la aplicación, debido a que es el 
+							encargado de la ejecución del servidor. Este se recomienda crear dentro de una 
+							carpeta conocida como <strong>src</strong>
 						</p>
 
-						<div class="sect_box_img">
-							<img
-								src="../../assets/images/express/server/e08.png"
-								alt="servidor configurado correctamente"
-							/>
+                        <p class="second_paragraph">
+                            A continuación mostramos como se crea la carpeta <strong>src</strong> y el archivo <strong>index.js</strong> desde una consola de comandos externa.
+                        </p>
+
+						<div class="code_box">
+							<div class="output_console">
+								<pre><code><span class="console">Microsoft Windows [Version 10.0.17758.1]</span></code></pre>
+								<pre><code><span class="console">(c) 2018 Microsoft Corporation. All Rights Reserved.</span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">></span><span class="objects">cd </span>desktop</span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">></span><span class="parameters">cd </span><span>carpeta-proyecto</span></span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span><span class="parameters">mkdir </span>src</code></pre>
+								<br>	
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span><span class="parameters">echo. </span><span class="console">> </span>src<span class="console">/</span>index.js</code></pre>
+							</div>
 						</div>
 					</section>
 
 					<section class="sect_content">
-						<h3>05. Validacion en el navegador</h3>
+						<h3 id="requerimiento-de-express">02. Requerimiento de express</h3>
 
-						<div class="sect_box_img">
-							<img
-								src="./assets/images/nodemon/n05.png"
-								alt="validacion en el navegador"
-							/>
+						<p>
+							Para hacer uso de los diferentes metodos que nos ofrece <strong>express</strong> para la construcción de nuestras aplicaciones, primero debemos requerir su modulo y posteriormente crear una instancia.
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">src/index.js</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">let </span>express <span class="keyword">= </span><span class="methods">require(<span><span class="string">"express"</span></span>)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>app <span class="keyword">= </span><span class="methods">express()</span><span class="semi_colon">;</span></code></pre>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="importacion-de-express">02.1. Importación de express</h3>
+
+						<p>
+							Para hacer uso de los diferentes metodos que nos ofrece <strong>express</strong> para la construcción de nuestras aplicaciones, primero debemos importar su modulo y posteriormente crear una instancia. Cabe recordar que para hacer uso de los modulos de 
+                            <strong>ECMAScript</strong> debemos realizar una modificación en el archivo <a class="links" href="./package-json#configuracion-de-modulos">package.json</a>
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">src/index.js</span></code></pre>
+
+                            <pre><code><span class="index inner_index">01</span><span class="variable">import </span>express <span class="variable">from </span><span class="string">"express"</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">02</span></code></pre>
+
+                            <pre><code><span class="index inner_index">03</span><span class="variable">let </span>app <span class="keyword">= </span><span class="methods">express()</span><span class="semi_colon">;</span></code></pre>
+						</div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="declaracion-del-puerto">03. Declaración del puerto</h3>
+
+						<p>
+							Definir el número de puerto haciendo uso de la variable de entorno 
+							<strong>PORT</strong> nos permite dejar a consideración del proveedor de nuve 
+							el número de puerto en el que va a correr nuestra aplicación en producción,
+							ya que en modo de desarrollo el puerto asignado será el puerto 3000. 
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">src/index.js</span></code></pre>
+
+                            <pre><code><span class="index inner_index">04</span><span class="variable">let </span>port <span class="keyword">= </span>proccess<span class="functions">.</span>env<span class="functions">.</span>PORT <span class="functions">|| </span><span class="numbers">3000</span><span class="semi_colon">;</span></span></code></pre>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="listen()">03. Listen()</h3>
+
+						<p>
+							Este metodo es el ejecargado de escuchar las peticiones <strong>HTTP</strong>
+							entrantes.
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">src/index.js</span></code></pre>
+
+                            <pre><code><span class="index inner_index">05</span>app<span class="functions">.</span><span class="methods">listen(</span>port<span class="semi_colon">, </span><span class="symbols">() </span><span class="functions">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">06</span></code></pre>
+
+                            <pre><code><span class="index outer_index">07</span><span class="console">console</span><span class="methods">.log(</span><span class="string">"Servidor configurado en el puerto"</span><span class="semi_colon">,</span> port<span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">08</span></code></pre>
+
+                            <pre><code><span class="index inner_index">09</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="on()">04. On()</h3>
+
+						<p>
+							Este metodo se utiliza para manejar eventos relacionados con el ciclo de vida de la aplicación y los errores.
+						</p>
+
+						<div class="code_box">
+                            <pre class="code_header"><code><span class="console">src/index.js</span></code></pre>
+
+                            <pre><code><span class="index inner_index">10</span>app<span class="functions">.</span><span class="methods">on(</span><span class="string">"error"</span><span class="semi_colon">, </span><span class="symbols">(<span class="numbers">err</span>) </span><span class="functions">=> </span><span class="brackets">{</span></code></pre>
+
+                            <pre><code><span class="index">11</span></code></pre>
+
+                            <pre><code><span class="index outer_index">12</span><span class="console">console</span><span class="methods">.error(</span><span class="numbers">err</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+
+                            <pre><code><span class="index">13</span></code></pre>
+
+                            <pre><code><span class="index inner_index">14</span><span class="brackets">}</span><span class="methods">)</span><span class="semi_colon">;</span></code></pre>
+                        </div>
+					</section>
+
+					<section class="sect_content">
+						<h3 id="ejecucion-del-servidor">05. Ejecución del servidor</h3>
+
+						<p>
+							Para llevar a cabo esta ejecución podemos hacer uso de una 
+							consola de comandos externa. 
+							Una ejecución del servidor puede cerrarse si presionamos dentro de la consola de comandos la combinación de teclas <strong>ctrl + c</strong>
+						</p>
+
+						<div class="code_box">
+							<div class="output_console">
+								<pre><code><span class="console">Microsoft Windows [Version 10.0.17758.1]</span></code></pre>
+								<pre><code><span class="console">(c) 2018 Microsoft Corporation. All Rights Reserved.</span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">></span><span class="objects">cd </span>desktop</span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">></span><span class="parameters">cd </span><span>carpeta-proyecto</span></span></code></pre>
+								<br>
+								<pre><code><span class="text">C<span class="console">:\</span>Users<span class="console">\</span>Admin<span class="console">\</span>Desktop<span class="console">\</span>carpeta-proyecto<span class="console">></span>node src<span class="console">/</span>index.js <span class="console">|| node src/index</span></span></code></pre>
+								<pre><span>Servidor configurado en el puerto 3000</span></pre>
+							</div>
 						</div>
 					</section>
 
 					<!--  
-                        section_footer
+                        section_pagination: contenedor de 2 tags-a
                     -->
-					<footer class="section_footer">Server - Express</footer>
+                    <div class="section_pagination">
+                        <!--  
+                            tag-a: en estas definimos el enlace de redireccionamiento
+                            a las diferentes secciones y el icono de redireccion
+                        -->
+                        <a href="./express-install">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path>
+                            </svg>
+                        </a>
+
+                        <a class="not_next">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+					<!--  
+                        incluimos el partial footer.ejs
+                    -->
+                    <%- include('../partials/footer', titleSection = "Servidor - Express") %>
 				</div>
 			</main>
 		</div>
 
-		<script src="./js/main.js"></script>
+		<script type="module" src="./js/main.js"></script>
 	</body>
 </html>
